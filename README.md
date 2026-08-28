@@ -813,7 +813,11 @@ marché en détresse. Le winsor bas empêche ces planchers de scorer 20/20.
 | Passoires thermiques (DPE ADEME) | `dpe_communes_candidates.csv` | 13 | ✅ |
 | Risques naturels + aléa minier (Géorisques) | `georisques_communes_candidates.csv` | 17 | ✅ |
 | Retrait-gonflement des argiles (DREAL/BRGM overlay) | `rga_communes_candidates.csv` | 10 | ✅ |
-| Reste à vivre (FiLoSoFi − logement − trajet) | `reste_a_vivre_communes_candidates.csv` | 15 | ✅ |
+| Reste à vivre (FiLoSoFi − logement − trajet) | `reste_a_vivre_communes_candidates.csv` | 15 | ⚠️ abandonné (fourre-tout hors sujet) |
+| **Dynamiques récentes** (pop 2011-2022, migration actifs IRAN, part modale mesurée) | `dynamiques_communes_candidates.csv` | 15 | ✅ (v2) |
+| **Fiscalité** (taxe foncière DGFiP 2025) | `fiscalite_communes_candidates.csv` | 8 | ✅ (v2) |
+| **Air — concentrations NO2** (stations fond Atmo HdF, plus proche) | `air_stations_communes_candidates.csv` | 11 | ✅ (v2) |
+| Validation externe du classement | `validation_classement.csv` | — | ✅ |
 | Bouchons (angle compagnon) | `bouchons_communes_lille.csv` | 20 | ✅ |
 
 **Convergence géographique** (colonne vertébrale narrative) : l'ex-bassin minier (Denaisis + frange
