@@ -35,6 +35,8 @@ def main() -> None:
     tcols = [f"score_{t}" for t in themes.index]
     M = s[tcols].to_numpy()                       # 411 x n_themes
 
+    # tranches par seuils fixes sur la note rescalee 0-20 (identique a build_scoring)
+    BINS = [-0.01, 8, 10, 12, 14, 20.01]
     ranks = np.zeros((len(s), N), dtype=int)
     tr = np.empty((len(s), N), dtype=object)
     for i in range(N):
@@ -42,8 +44,8 @@ def main() -> None:
         g = (M * w).sum(axis=1) / w.sum()
         order = pd.Series(g).rank(ascending=False, method="first").astype(int).to_numpy()
         ranks[:, i] = order
-        q = pd.qcut(pd.Series(g), 5, labels=TRANCHES)
-        tr[:, i] = q.to_numpy()
+        g20 = 20 * (g - g.min()) / (g.max() - g.min())
+        tr[:, i] = pd.cut(pd.Series(g20), bins=BINS, labels=TRANCHES).to_numpy()
 
     res = s[["code_insee", "commune", "dep", "rang", "tranche", "score_global"]].copy()
     res["rang_median"] = np.median(ranks, axis=1).astype(int)

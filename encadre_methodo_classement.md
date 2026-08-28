@@ -20,13 +20,13 @@ La note de chaque thème est la moyenne pondérée de ses indicateurs. Elle est 
 
 La **note globale** combine les dix thèmes selon une pondération par défaut : le transport pèse le plus (l'enjeu central du sujet), puis la santé, l'école, le cadre de vie. **Cette pondération n'est pas une vérité.** Elle reflète les priorités que nous prêtons à quelqu'un qui déménage pour travailler à Lille. Dans la version interactive, le lecteur règle lui-même l'importance de chaque thème et obtient son propre classement.
 
-## Cinq tranches, pas 411 places
+## Un rang, une fourchette, une tranche
 
-Les communes sont présentées par **tranches** — de « très favorable » à « défavorable » — et non classées de la 1ʳᵉ à la 411ᵉ place.
+Chaque commune a un **rang** (de 1 à 411) et une **tranche** (de « très favorable » à « défavorable »). Les tranches sont fixées par des **seuils de note** — « très favorable » à partir de 14 sur 20, « favorable » à partir de 12, etc. — et non par une découpe en parts égales : elles sont donc de tailles inégales (59 communes en tête, 101 dans la tranche « moyen », qui est de loin la plus fournie — la plupart des communes sont, précisément, moyennes).
 
-Ce choix vient de nos tests de robustesse : nous avons recalculé le classement 1 000 fois en faisant varier les pondérations. Les deux tranches extrêmes sont **stables** — une commune « très favorable » le reste dans 86 % des simulations, une commune « défavorable » dans 85 %. Les trois tranches du milieu sont plus poreuses : une commune classée « moyen » peut passer « favorable » ou « peu favorable » selon les priorités retenues. Publier un rang précis (« 187ᵉ ») donnerait une fausse impression d'exactitude.
+Mais le rang ne se lit pas de la même façon partout. Nous avons recalculé le classement **1 000 fois** en faisant varier les pondérations : dans le **haut du tableau, l'ordre tient** (le top 15 reste le top 15, une commune « très favorable » le reste dans 9 cas sur 10) ; dans le **milieu, deux communes séparées de trente ou quarante places sont en pratique à égalité**. Chaque commune affiche donc sa **fourchette** de rang (« 3ᵉ, entre la 1ʳᵉ et la 8ᵉ place ») et une position **solide** ou **à nuancer**.
 
-Chaque fiche commune indique si sa position est **solide** ou **à nuancer**.
+En clair : le podium et le bas de tableau sont des affirmations solides ; le classement précis du peloton, non.
 
 ## Ce que le classement ne dit pas
 

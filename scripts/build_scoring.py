@@ -120,14 +120,19 @@ def main() -> None:
     lo, hi = g_brut.min(), g_brut.max()
     master["score_global"] = (20 * (g_brut - lo) / (hi - lo)).round(2)
 
-    master = master.sort_values("score_global", ascending=False)
+    master = master.sort_values(["score_global", "score_global_brut"], ascending=False)
     master.insert(0, "rang", range(1, len(master) + 1))
-    master["tranche"] = pd.qcut(master["score_global"], 5, labels=TRANCHES)
+    # tranches par SEUILS DE NOTE fixes (choix editorial), pas par quintiles : les tailles
+    # refletent la distribution reelle (le "Moyen" gonfle -> c'est la realite).
+    master["tranche"] = pd.cut(master["score_global"], bins=[-0.01, 8, 10, 12, 14, 20.01],
+                               labels=TRANCHES)
+    # le rang n'est fiable que dans le haut (amplitude ~34 sur le top 42) et le bas
+    master["top15"] = master["rang"] <= 15
     master = master.reset_index()
 
     # --- exports ---
     master.to_csv(OUT / "scores_0_20.csv", index=False, encoding="utf-8-sig")
-    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "rang", "tranche", "score_global"]
+    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "rang", "top15", "tranche", "score_global"]
     master[base + theme_cols].to_json(OUT / "classement_final.json", orient="records",
                                       force_ascii=False, indent=1)
     detail = ["code_insee", "commune"] + [c for c in master.columns if c.startswith("score_")
@@ -144,10 +149,13 @@ def main() -> None:
 
     ren = {f"score_{t}": t[:5] for t in themes.index}
     show = ["rang", "commune", "dep", "tranche", "score_global"] + theme_cols
-    print("\n=== TOP 25 ===")
-    print(master.head(25)[show].rename(columns=ren).to_string(index=False))
-    print("\n=== communes par tranche ===")
-    print(master["tranche"].value_counts().reindex(TRANCHES[::-1]).to_string())
+    print("\n=== TOP 15 (rang ordonnancable) ===")
+    print(master.head(15)[show].rename(columns=ren).to_string(index=False))
+    print("\n=== communes par tranche (seuils fixes 8/10/12/14) ===")
+    vc = master["tranche"].value_counts().reindex(TRANCHES[::-1])
+    for t, n in vc.items():
+        pop = master.loc[master["tranche"] == t, "PMUN"].sum()
+        print(f"  {t:16s} : {n:3d} communes | {pop:>10,.0f} hab")
     print("\n--- reperes ---")
     for n in ["Marcq-en-Barœul", "Cysoing", "Lille", "Villeneuve-d'Ascq", "Gondecourt",
               "Templeuve-en-Pévèle", "Fromelles", "Péronne-en-Mélantois", "Denain", "Gruson"]:
