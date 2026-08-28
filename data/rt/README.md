@@ -46,11 +46,18 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 
 ## Fiabilité des autoroutes vers Lille (parallèle au TER)
 
-- **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** depuis **24 points
-  d'entrée** (`corridors_autoroutes.csv`) vers Lille-Flandres : 12 corridors autoroutiers + 12
-  points sur les axes **départementaux** là où la voiture prime sur le train (Weppes, Pévèle,
-  Mélantois, rocade nord-ouest / M652). Un instantané par run → `data/rt/autoroutes/<date>.csv`.
-  Ne poll qu'entre 04:00 et 18:00 UTC (06 h-20 h Paris) pour tenir le quota gratuit (~2 000 appels/j).
+- **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** :
+  - **26 points d'entrée** (`points_routes.csv`) → Lille : 12 corridors autoroutiers + 14 points
+    sur les axes **départementaux** (Weppes, Pévèle, Mélantois, rocade NO / M652, Ferrain, Lys).
+  - **9 de ces points** aussi en **retour** (Lille → point) le soir — l'angle « sortir de Lille ».
+  - **5 sondes de tronçon** (`troncons_routes.csv`) aux points noirs : échangeur d'Englos (A25),
+    rocade Lomme (M652), approche A1 Fretin-Ronchin, Croix-Wasquehal (A22), Haubourdin-Loos (RN41).
+  - **Échantillonnage adapté à l'heure** (quota gratuit ~1 700 appels/j) : tous les points +
+    tronçons à chaque run pendant les pointes (04:45-07:15 et 14:15-17:15 UTC), sinon aux minutes
+    00 / 30 seulement, rien la nuit.
+  - Sortie `data/rt/autoroutes/<date>.csv` : `poll_utc, categorie (point/troncon), libelle,
+    zone_axe, type, sens (vers_lille/depuis_lille), temps_live_min, temps_libre_min, retard_min,
+    distance_km`.
 - **`.github/workflows/poll-autoroutes.yml`** (`workflow_dispatch` seul), déclenché par le **même
   Worker Cloudflare** que le TER.
 - Clé TomTom = **secret GitHub Actions** `TOMTOM_KEY` (Settings → Secrets and variables → Actions).
@@ -77,8 +84,9 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 
 ### Exploitation
 
-`scripts/build_regularite_autoroutes.py` (à écrire) : `autoroutes/*.csv` → par corridor : temps
-médian, **temps tampon** (p95 − médiane), pire jour, % de « jours galère » (> 1,5× la médiane).
+`scripts/build_regularite_autoroutes.py` (à écrire) : `autoroutes/*.csv` → par point / tronçon /
+sens : temps médian, **temps tampon** (p95 − médiane), pire jour, % de « jours galère »
+(> 1,5× la médiane), courbe horaire, écart matin/soir.
 
 ## Exploitation TER (après ~3-4 semaines)
 

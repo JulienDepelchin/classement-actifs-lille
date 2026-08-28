@@ -1,0 +1,27 @@
+libelle,zone,type,lat,lon,retour
+Douai,Douaisis,autoroute A1,50.38172,3.09074,1
+Lens,Gohelle,autoroute A21 / A1,50.43761,2.82108,1
+Arras,Artois,autoroute A1,50.28991,2.76626,0
+Béthune,Béthunois,autoroute A26 / A25,50.52896,2.64298,0
+Dunkerque,Flandre maritime,autoroute A25,51.03053,2.33677,1
+Hazebrouck,Flandre intérieure,autoroute A25,50.72607,2.53861,1
+La Bassée,Weppes,autoroute RN41,50.53987,2.80943,0
+Valenciennes,Valenciennois,autoroute A23,50.35906,3.51630,1
+Tourcoing,Ferrain,autoroute A22,50.72573,3.15960,1
+Orchies,Pévèle,autoroute A23 / A27,50.46870,3.23904,0
+Maubeuge,Avesnois,autoroute A2 / A23,50.28423,3.96314,0
+Cambrai,Cambrésis,autoroute A2 / A23,50.17029,3.24229,0
+Wavrin,Weppes,départementale,50.57244,2.93299,1
+Sainghin-en-Weppes,Weppes,départementale,50.55913,2.89700,0
+Herlies,Weppes,départementale,50.58148,2.85257,0
+Fromelles,Weppes,départementale,50.61068,2.85414,0
+Templeuve-en-Pévèle,Pévèle,départementale,50.53261,3.17346,1
+Cappelle-en-Pévèle,Pévèle,départementale,50.50478,3.17443,0
+Cysoing,Pévèle,départementale,50.56454,3.21419,0
+Bourghelles,Pévèle,départementale,50.56340,3.24691,0
+Péronne-en-Mélantois,Mélantois,départementale,50.56434,3.17077,0
+Bouvines,Mélantois,départementale,50.58182,3.19275,0
+Pérenchies,rocade NO / M652,départementale,50.67006,2.96887,1
+Prémesques,rocade NO / M652,départementale,50.66043,2.94886,0
+Neuville-en-Ferrain,Ferrain,départementale,50.75394,3.15619,0
+Sailly-sur-la-Lys,Lys,départementale,50.65876,2.78329,0
