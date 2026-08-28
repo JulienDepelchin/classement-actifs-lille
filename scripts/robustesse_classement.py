@@ -54,7 +54,15 @@ def main() -> None:
     res["part_runs_meme_tranche"] = [
         round((pd.Series(r) == t).mean(), 2) for r, t in zip(tr, res["tranche"])]
 
+    res["position"] = np.where(res["part_runs_meme_tranche"] >= 0.75, "solide", "à nuancer")
     res.to_csv(OUT / "robustesse_classement.csv", index=False, encoding="utf-8-sig")
+
+    # enrichit les exports Lovable avec la stabilite
+    cf = pd.read_json(OUT / "classement_final.json")
+    cf["code_insee"] = cf["code_insee"].astype(str).str.zfill(5)
+    cf = cf.merge(res[["code_insee", "rang_p05", "rang_p95", "part_runs_meme_tranche", "position"]],
+                  on="code_insee", how="left")
+    cf.to_json(OUT / "classement_final.json", orient="records", force_ascii=False, indent=1)
 
     print(f"{N} tirages | poids d'etoiles perturbes +-1 par theme\n")
     print(f"amplitude de rang (p95 - p05) : med {res['rang_amplitude'].median():.0f} | "

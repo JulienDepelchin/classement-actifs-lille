@@ -871,15 +871,23 @@ sur le trajet quotidien vers Lille, les place dans la moyenne basse).
   précision.
 - **Tranches extrêmes solides** : Très favorable 86 % de stabilité, Défavorable 85 %. Le top 10
   reste toujours dans le top ~35.
-- **Milieu instable** : les 3 tranches centrales ne tiennent que 59-66 %. → présenter le milieu
-  comme un bloc, ou passer à **3 tranches** (Favorable / Intermédiaire / Défavorable).
+- **Milieu poreux** : les 3 tranches centrales ne tiennent que 59-66 %.
+
+**Décision (2026-08-28)** : on garde **5 tranches** (3 ne font plus un classement). Compensation :
+`robustesse_classement.py` enrichit `classement_final.json` avec `position` (`solide` si la commune
+reste dans sa tranche > 75 % des tirages — 170 communes / 411, sinon `à nuancer`), `rang_p05`,
+`rang_p95`. L'article titre sur la tranche « Très favorable » (robuste), l'interactif affiche la
+stabilité par commune, on ne met jamais un rang précis en avant.
+
+**Encadré méthodo** rédigé : `encadre_methodo_classement.md` (à passer en `style-vdn` + `verif-data`).
 
 # Prochaines étapes
 
-1. Trancher : 5 tranches (+ avertissement) ou 3 tranches.
-2. Encadré méthodo « ce que ce classement ne dit pas » + phrase d'humilité.
-3. `verif-data` avant publication.
-4. Intégrer la ponctualité TER quand la collecte GTFS-RT aura tourné 3-4 semaines.
+1. `verif-data` sur le classement, l'encadré et les chiffres clés.
+2. `style-vdn` sur l'encadré + les textes de l'article.
+3. Angle compagnon « sans voiture » + curseur interactif (Lovable) + export.
+4. Intégrer la ponctualité TER quand la collecte GTFS-RT aura tourné 3-4 semaines
+   (collecte live : Cloudflare Worker → dispatch toutes les 10 min → `data/rt/updates/`).
 3. Angle compagnon « sans voiture » + curseur interactif + export Lovable.
 3. Éventuelles V2 : correspondances TER, réseaux urbains hors MEL.
 4. `verif-data` avant publication.

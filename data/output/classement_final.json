@@ -17,7 +17,11 @@
   "score_commerces":18.06,
   "score_sport_nature":9.82,
   "score_dynamique":14.1,
-  "score_cout_logement":3.74
+  "score_cout_logement":3.74,
+  "rang_p05":1,
+  "rang_p95":4,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59386",
@@ -37,7 +41,11 @@
   "score_commerces":17.64,
   "score_sport_nature":10.84,
   "score_dynamique":16.67,
-  "score_cout_logement":1.25
+  "score_cout_logement":1.25,
+  "rang_p05":1,
+  "rang_p95":8,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59560",
@@ -57,7 +65,11 @@
   "score_commerces":18.06,
   "score_sport_nature":11.8,
   "score_dynamique":11.42,
-  "score_cout_logement":7.64
+  "score_cout_logement":7.64,
+  "rang_p05":1,
+  "rang_p95":7,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59266",
@@ -77,7 +89,11 @@
   "score_commerces":15.26,
   "score_sport_nature":13.09,
   "score_dynamique":9.96,
-  "score_cout_logement":6.9
+  "score_cout_logement":6.9,
+  "rang_p05":2,
+  "rang_p95":12,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59202",
@@ -97,7 +113,11 @@
   "score_commerces":15.03,
   "score_sport_nature":10.15,
   "score_dynamique":10.36,
-  "score_cout_logement":9.39
+  "score_cout_logement":9.39,
+  "rang_p05":2,
+  "rang_p95":11,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59527",
@@ -117,7 +137,11 @@
   "score_commerces":17.68,
   "score_sport_nature":10.24,
   "score_dynamique":12.07,
-  "score_cout_logement":2.3
+  "score_cout_logement":2.3,
+  "rang_p05":5,
+  "rang_p95":17,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59017",
@@ -137,7 +161,11 @@
   "score_commerces":18.29,
   "score_sport_nature":9.06,
   "score_dynamique":13.33,
-  "score_cout_logement":10.6
+  "score_cout_logement":10.6,
+  "rang_p05":2,
+  "rang_p95":16,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59278",
@@ -157,7 +185,11 @@
   "score_commerces":13.49,
   "score_sport_nature":10.1,
   "score_dynamique":15.62,
-  "score_cout_logement":6.44
+  "score_cout_logement":6.44,
+  "rang_p05":3,
+  "rang_p95":27,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59295",
@@ -177,7 +209,11 @@
   "score_commerces":17.47,
   "score_sport_nature":12.81,
   "score_dynamique":7.19,
-  "score_cout_logement":13.21
+  "score_cout_logement":13.21,
+  "rang_p05":1,
+  "rang_p95":26,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59586",
@@ -197,7 +233,11 @@
   "score_commerces":15.82,
   "score_sport_nature":14.45,
   "score_dynamique":15.28,
-  "score_cout_logement":5.64
+  "score_cout_logement":5.64,
+  "rang_p05":4,
+  "rang_p95":35,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59360",
@@ -217,7 +257,11 @@
   "score_commerces":18.08,
   "score_sport_nature":11.44,
   "score_dynamique":11.88,
-  "score_cout_logement":6.08
+  "score_cout_logement":6.08,
+  "rang_p05":7,
+  "rang_p95":25,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59648",
@@ -237,7 +281,11 @@
   "score_commerces":15.46,
   "score_sport_nature":11.59,
   "score_dynamique":12.69,
-  "score_cout_logement":6.75
+  "score_cout_logement":6.75,
+  "rang_p05":8,
+  "rang_p95":23,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59317",
@@ -257,7 +305,11 @@
   "score_commerces":12.73,
   "score_sport_nature":10.18,
   "score_dynamique":9.81,
-  "score_cout_logement":10.69
+  "score_cout_logement":10.69,
+  "rang_p05":7,
+  "rang_p95":23,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59009",
@@ -277,7 +329,11 @@
   "score_commerces":18.9,
   "score_sport_nature":11.99,
   "score_dynamique":10.26,
-  "score_cout_logement":2.38
+  "score_cout_logement":2.38,
+  "rang_p05":7,
+  "rang_p95":47,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59466",
@@ -297,7 +353,11 @@
   "score_commerces":17.09,
   "score_sport_nature":12.53,
   "score_dynamique":11.23,
-  "score_cout_logement":5.15
+  "score_cout_logement":5.15,
+  "rang_p05":10,
+  "rang_p95":37,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59350",
@@ -317,7 +377,11 @@
   "score_commerces":19.38,
   "score_sport_nature":9.5,
   "score_dynamique":11.92,
-  "score_cout_logement":3.44
+  "score_cout_logement":3.44,
+  "rang_p05":7,
+  "rang_p95":71,
+  "part_runs_meme_tranche":0.97,
+  "position":"solide"
  },
  {
   "code_insee":"59383",
@@ -337,7 +401,11 @@
   "score_commerces":15.98,
   "score_sport_nature":11.14,
   "score_dynamique":11.88,
-  "score_cout_logement":13.69
+  "score_cout_logement":13.69,
+  "rang_p05":9,
+  "rang_p95":30,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59368",
@@ -357,7 +425,11 @@
   "score_commerces":18.39,
   "score_sport_nature":9.4,
   "score_dynamique":14.01,
-  "score_cout_logement":2.7
+  "score_cout_logement":2.7,
+  "rang_p05":11,
+  "rang_p95":62,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59286",
@@ -377,7 +449,11 @@
   "score_commerces":16.6,
   "score_sport_nature":11.54,
   "score_dynamique":8.15,
-  "score_cout_logement":7.69
+  "score_cout_logement":7.69,
+  "rang_p05":14,
+  "rang_p95":32,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62836",
@@ -397,7 +473,11 @@
   "score_commerces":11.66,
   "score_sport_nature":11.78,
   "score_dynamique":14.64,
-  "score_cout_logement":12.89
+  "score_cout_logement":12.89,
+  "rang_p05":7,
+  "rang_p95":49,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59449",
@@ -417,7 +497,11 @@
   "score_commerces":18.22,
   "score_sport_nature":12.38,
   "score_dynamique":6.01,
-  "score_cout_logement":8.3
+  "score_cout_logement":8.3,
+  "rang_p05":9,
+  "rang_p95":55,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59462",
@@ -437,7 +521,11 @@
   "score_commerces":14.94,
   "score_sport_nature":13.73,
   "score_dynamique":7.61,
-  "score_cout_logement":6.34
+  "score_cout_logement":6.34,
+  "rang_p05":12,
+  "rang_p95":49,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59143",
@@ -457,7 +545,11 @@
   "score_commerces":16.79,
   "score_sport_nature":8.66,
   "score_dynamique":12.37,
-  "score_cout_logement":9.63
+  "score_cout_logement":9.63,
+  "rang_p05":12,
+  "rang_p95":61,
+  "part_runs_meme_tranche":0.99,
+  "position":"solide"
  },
  {
   "code_insee":"62817",
@@ -477,7 +569,11 @@
   "score_commerces":8.3,
   "score_sport_nature":13.46,
   "score_dynamique":15.8,
-  "score_cout_logement":13.04
+  "score_cout_logement":13.04,
+  "rang_p05":8,
+  "rang_p95":68,
+  "part_runs_meme_tranche":0.99,
+  "position":"solide"
  },
  {
   "code_insee":"59630",
@@ -497,7 +593,11 @@
   "score_commerces":11.56,
   "score_sport_nature":13.97,
   "score_dynamique":8.59,
-  "score_cout_logement":10.28
+  "score_cout_logement":10.28,
+  "rang_p05":13,
+  "rang_p95":54,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59507",
@@ -517,7 +617,11 @@
   "score_commerces":15.19,
   "score_sport_nature":9.98,
   "score_dynamique":9.31,
-  "score_cout_logement":6.54
+  "score_cout_logement":6.54,
+  "rang_p05":15,
+  "rang_p95":68,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59544",
@@ -537,7 +641,11 @@
   "score_commerces":15.69,
   "score_sport_nature":12.84,
   "score_dynamique":7.82,
-  "score_cout_logement":11.93
+  "score_cout_logement":11.93,
+  "rang_p05":14,
+  "rang_p95":48,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59129",
@@ -557,7 +665,11 @@
   "score_commerces":11.52,
   "score_sport_nature":13.67,
   "score_dynamique":10.84,
-  "score_cout_logement":7.98
+  "score_cout_logement":7.98,
+  "rang_p05":13,
+  "rang_p95":73,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59079",
@@ -577,7 +689,11 @@
   "score_commerces":14.96,
   "score_sport_nature":10.89,
   "score_dynamique":10.68,
-  "score_cout_logement":15.16
+  "score_cout_logement":15.16,
+  "rang_p05":13,
+  "rang_p95":47,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59165",
@@ -597,7 +713,11 @@
   "score_commerces":15.95,
   "score_sport_nature":12.93,
   "score_dynamique":8.96,
-  "score_cout_logement":11.63
+  "score_cout_logement":11.63,
+  "rang_p05":18,
+  "rang_p95":50,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59378",
@@ -617,7 +737,11 @@
   "score_commerces":17.99,
   "score_sport_nature":10.79,
   "score_dynamique":11.45,
-  "score_cout_logement":3.92
+  "score_cout_logement":3.92,
+  "rang_p05":19,
+  "rang_p95":86,
+  "part_runs_meme_tranche":0.94,
+  "position":"solide"
  },
  {
   "code_insee":"59452",
@@ -637,7 +761,11 @@
   "score_commerces":15.1,
   "score_sport_nature":12.97,
   "score_dynamique":16.31,
-  "score_cout_logement":12.0
+  "score_cout_logement":12.0,
+  "rang_p05":12,
+  "rang_p95":73,
+  "part_runs_meme_tranche":0.97,
+  "position":"solide"
  },
  {
   "code_insee":"59653",
@@ -657,7 +785,11 @@
   "score_commerces":13.8,
   "score_sport_nature":10.18,
   "score_dynamique":10.92,
-  "score_cout_logement":6.75
+  "score_cout_logement":6.75,
+  "rang_p05":24,
+  "rang_p95":57,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59557",
@@ -677,7 +809,11 @@
   "score_commerces":13.58,
   "score_sport_nature":12.47,
   "score_dynamique":11.84,
-  "score_cout_logement":10.74
+  "score_cout_logement":10.74,
+  "rang_p05":20,
+  "rang_p95":56,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59328",
@@ -697,7 +833,11 @@
   "score_commerces":17.07,
   "score_sport_nature":10.01,
   "score_dynamique":8.99,
-  "score_cout_logement":1.67
+  "score_cout_logement":1.67,
+  "rang_p05":21,
+  "rang_p95":99,
+  "part_runs_meme_tranche":0.91,
+  "position":"solide"
  },
  {
   "code_insee":"62865",
@@ -717,7 +857,11 @@
   "score_commerces":16.89,
   "score_sport_nature":11.15,
   "score_dynamique":10.1,
-  "score_cout_logement":12.57
+  "score_cout_logement":12.57,
+  "rang_p05":17,
+  "rang_p95":57,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59034",
@@ -737,7 +881,11 @@
   "score_commerces":15.98,
   "score_sport_nature":13.99,
   "score_dynamique":3.92,
-  "score_cout_logement":5.5
+  "score_cout_logement":5.5,
+  "rang_p05":14,
+  "rang_p95":106,
+  "part_runs_meme_tranche":0.88,
+  "position":"solide"
  },
  {
   "code_insee":"62004",
@@ -757,7 +905,11 @@
   "score_commerces":15.2,
   "score_sport_nature":10.72,
   "score_dynamique":11.22,
-  "score_cout_logement":9.18
+  "score_cout_logement":9.18,
+  "rang_p05":24,
+  "rang_p95":58,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59043",
@@ -777,7 +929,11 @@
   "score_commerces":15.37,
   "score_sport_nature":13.85,
   "score_dynamique":8.0,
-  "score_cout_logement":10.34
+  "score_cout_logement":10.34,
+  "rang_p05":19,
+  "rang_p95":77,
+  "part_runs_meme_tranche":0.97,
+  "position":"solide"
  },
  {
   "code_insee":"59456",
@@ -797,7 +953,11 @@
   "score_commerces":15.5,
   "score_sport_nature":12.39,
   "score_dynamique":10.74,
-  "score_cout_logement":14.15
+  "score_cout_logement":14.15,
+  "rang_p05":22,
+  "rang_p95":55,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59170",
@@ -817,7 +977,11 @@
   "score_commerces":14.5,
   "score_sport_nature":10.66,
   "score_dynamique":7.43,
-  "score_cout_logement":15.43
+  "score_cout_logement":15.43,
+  "rang_p05":19,
+  "rang_p95":68,
+  "part_runs_meme_tranche":0.99,
+  "position":"solide"
  },
  {
   "code_insee":"59585",
@@ -837,7 +1001,11 @@
   "score_commerces":13.45,
   "score_sport_nature":11.11,
   "score_dynamique":12.06,
-  "score_cout_logement":6.83
+  "score_cout_logement":6.83,
+  "rang_p05":25,
+  "rang_p95":87,
+  "part_runs_meme_tranche":0.94,
+  "position":"solide"
  },
  {
   "code_insee":"62764",
@@ -857,7 +1025,11 @@
   "score_commerces":12.15,
   "score_sport_nature":12.12,
   "score_dynamique":3.6,
-  "score_cout_logement":12.07
+  "score_cout_logement":12.07,
+  "rang_p05":14,
+  "rang_p95":88,
+  "part_runs_meme_tranche":0.92,
+  "position":"solide"
  },
  {
   "code_insee":"59410",
@@ -877,7 +1049,11 @@
   "score_commerces":16.76,
   "score_sport_nature":9.41,
   "score_dynamique":12.25,
-  "score_cout_logement":4.56
+  "score_cout_logement":4.56,
+  "rang_p05":26,
+  "rang_p95":111,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"59044",
@@ -897,7 +1073,11 @@
   "score_commerces":17.24,
   "score_sport_nature":11.18,
   "score_dynamique":16.87,
-  "score_cout_logement":4.96
+  "score_cout_logement":4.96,
+  "rang_p05":21,
+  "rang_p95":116,
+  "part_runs_meme_tranche":0.79,
+  "position":"solide"
  },
  {
   "code_insee":"59553",
@@ -917,7 +1097,11 @@
   "score_commerces":15.02,
   "score_sport_nature":12.66,
   "score_dynamique":7.14,
-  "score_cout_logement":5.65
+  "score_cout_logement":5.65,
+  "rang_p05":33,
+  "rang_p95":82,
+  "part_runs_meme_tranche":0.95,
+  "position":"solide"
  },
  {
   "code_insee":"59051",
@@ -937,7 +1121,11 @@
   "score_commerces":18.49,
   "score_sport_nature":7.5,
   "score_dynamique":11.34,
-  "score_cout_logement":13.1
+  "score_cout_logement":13.1,
+  "rang_p05":21,
+  "rang_p95":91,
+  "part_runs_meme_tranche":0.92,
+  "position":"solide"
  },
  {
   "code_insee":"59156",
@@ -957,7 +1145,11 @@
   "score_commerces":12.77,
   "score_sport_nature":9.95,
   "score_dynamique":7.36,
-  "score_cout_logement":14.31
+  "score_cout_logement":14.31,
+  "rang_p05":23,
+  "rang_p95":76,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59569",
@@ -977,7 +1169,11 @@
   "score_commerces":16.29,
   "score_sport_nature":10.88,
   "score_dynamique":11.6,
-  "score_cout_logement":15.38
+  "score_cout_logement":15.38,
+  "rang_p05":28,
+  "rang_p95":86,
+  "part_runs_meme_tranche":0.93,
+  "position":"solide"
  },
  {
   "code_insee":"59005",
@@ -997,7 +1193,11 @@
   "score_commerces":13.31,
   "score_sport_nature":9.99,
   "score_dynamique":10.34,
-  "score_cout_logement":9.6
+  "score_cout_logement":9.6,
+  "rang_p05":36,
+  "rang_p95":85,
+  "part_runs_meme_tranche":0.93,
+  "position":"solide"
  },
  {
   "code_insee":"62276",
@@ -1017,7 +1217,11 @@
   "score_commerces":16.65,
   "score_sport_nature":8.05,
   "score_dynamique":15.73,
-  "score_cout_logement":9.58
+  "score_cout_logement":9.58,
+  "rang_p05":28,
+  "rang_p95":106,
+  "part_runs_meme_tranche":0.82,
+  "position":"solide"
  },
  {
   "code_insee":"62173",
@@ -1037,7 +1241,11 @@
   "score_commerces":13.88,
   "score_sport_nature":8.86,
   "score_dynamique":13.01,
-  "score_cout_logement":12.76
+  "score_cout_logement":12.76,
+  "rang_p05":32,
+  "rang_p95":83,
+  "part_runs_meme_tranche":0.95,
+  "position":"solide"
  },
  {
   "code_insee":"59508",
@@ -1057,7 +1265,11 @@
   "score_commerces":17.72,
   "score_sport_nature":12.51,
   "score_dynamique":9.82,
-  "score_cout_logement":5.99
+  "score_cout_logement":5.99,
+  "rang_p05":29,
+  "rang_p95":124,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59654",
@@ -1077,7 +1289,11 @@
   "score_commerces":17.26,
   "score_sport_nature":11.2,
   "score_dynamique":9.18,
-  "score_cout_logement":15.36
+  "score_cout_logement":15.36,
+  "rang_p05":34,
+  "rang_p95":86,
+  "part_runs_meme_tranche":0.93,
+  "position":"solide"
  },
  {
   "code_insee":"59178",
@@ -1097,7 +1313,11 @@
   "score_commerces":18.56,
   "score_sport_nature":11.81,
   "score_dynamique":10.53,
-  "score_cout_logement":13.58
+  "score_cout_logement":13.58,
+  "rang_p05":25,
+  "rang_p95":117,
+  "part_runs_meme_tranche":0.8,
+  "position":"solide"
  },
  {
   "code_insee":"59158",
@@ -1117,7 +1337,11 @@
   "score_commerces":9.71,
   "score_sport_nature":12.25,
   "score_dynamique":15.01,
-  "score_cout_logement":7.9
+  "score_cout_logement":7.9,
+  "rang_p05":26,
+  "rang_p95":124,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59155",
@@ -1137,7 +1361,11 @@
   "score_commerces":17.22,
   "score_sport_nature":10.22,
   "score_dynamique":8.05,
-  "score_cout_logement":8.91
+  "score_cout_logement":8.91,
+  "rang_p05":37,
+  "rang_p95":100,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"59431",
@@ -1157,7 +1385,11 @@
   "score_commerces":15.49,
   "score_sport_nature":11.31,
   "score_dynamique":10.58,
-  "score_cout_logement":8.56
+  "score_cout_logement":8.56,
+  "rang_p05":32,
+  "rang_p95":126,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62528",
@@ -1177,7 +1409,11 @@
   "score_commerces":16.89,
   "score_sport_nature":11.89,
   "score_dynamique":10.26,
-  "score_cout_logement":12.02
+  "score_cout_logement":12.02,
+  "rang_p05":38,
+  "rang_p95":100,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"59088",
@@ -1197,7 +1433,11 @@
   "score_commerces":10.6,
   "score_sport_nature":12.4,
   "score_dynamique":15.28,
-  "score_cout_logement":6.9
+  "score_cout_logement":6.9,
+  "rang_p05":28,
+  "rang_p95":142,
+  "part_runs_meme_tranche":0.63,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59512",
@@ -1217,7 +1457,11 @@
   "score_commerces":19.43,
   "score_sport_nature":7.73,
   "score_dynamique":11.57,
-  "score_cout_logement":12.95
+  "score_cout_logement":12.95,
+  "rang_p05":23,
+  "rang_p95":148,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59526",
@@ -1237,7 +1481,11 @@
   "score_commerces":17.12,
   "score_sport_nature":10.93,
   "score_dynamique":8.12,
-  "score_cout_logement":12.96
+  "score_cout_logement":12.96,
+  "rang_p05":30,
+  "rang_p95":113,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"59271",
@@ -1257,7 +1505,11 @@
   "score_commerces":17.21,
   "score_sport_nature":14.47,
   "score_dynamique":3.39,
-  "score_cout_logement":13.85
+  "score_cout_logement":13.85,
+  "rang_p05":24,
+  "rang_p95":128,
+  "part_runs_meme_tranche":0.71,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59220",
@@ -1277,7 +1529,11 @@
   "score_commerces":17.15,
   "score_sport_nature":9.04,
   "score_dynamique":12.31,
-  "score_cout_logement":4.56
+  "score_cout_logement":4.56,
+  "rang_p05":36,
+  "rang_p95":162,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59032",
@@ -1297,7 +1553,11 @@
   "score_commerces":16.58,
   "score_sport_nature":10.83,
   "score_dynamique":7.12,
-  "score_cout_logement":15.69
+  "score_cout_logement":15.69,
+  "rang_p05":36,
+  "rang_p95":95,
+  "part_runs_meme_tranche":0.86,
+  "position":"solide"
  },
  {
   "code_insee":"62263",
@@ -1317,7 +1577,11 @@
   "score_commerces":14.21,
   "score_sport_nature":12.25,
   "score_dynamique":8.47,
-  "score_cout_logement":10.01
+  "score_cout_logement":10.01,
+  "rang_p05":47,
+  "rang_p95":99,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"59120",
@@ -1337,7 +1601,11 @@
   "score_commerces":16.25,
   "score_sport_nature":13.05,
   "score_dynamique":8.15,
-  "score_cout_logement":12.08
+  "score_cout_logement":12.08,
+  "rang_p05":39,
+  "rang_p95":104,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"62863",
@@ -1357,7 +1625,11 @@
   "score_commerces":13.91,
   "score_sport_nature":8.82,
   "score_dynamique":14.7,
-  "score_cout_logement":13.45
+  "score_cout_logement":13.45,
+  "rang_p05":35,
+  "rang_p95":120,
+  "part_runs_meme_tranche":0.69,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62847",
@@ -1377,7 +1649,11 @@
   "score_commerces":10.03,
   "score_sport_nature":12.06,
   "score_dynamique":14.69,
-  "score_cout_logement":12.53
+  "score_cout_logement":12.53,
+  "rang_p05":34,
+  "rang_p95":130,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59592",
@@ -1397,7 +1673,11 @@
   "score_commerces":14.67,
   "score_sport_nature":14.25,
   "score_dynamique":13.2,
-  "score_cout_logement":9.23
+  "score_cout_logement":9.23,
+  "rang_p05":33,
+  "rang_p95":133,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62041",
@@ -1417,7 +1697,11 @@
   "score_commerces":19.3,
   "score_sport_nature":11.65,
   "score_dynamique":12.42,
-  "score_cout_logement":9.87
+  "score_cout_logement":9.87,
+  "rang_p05":35,
+  "rang_p95":152,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59670",
@@ -1437,7 +1721,11 @@
   "score_commerces":9.72,
   "score_sport_nature":10.72,
   "score_dynamique":14.23,
-  "score_cout_logement":8.93
+  "score_cout_logement":8.93,
+  "rang_p05":37,
+  "rang_p95":137,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62744",
@@ -1457,7 +1745,11 @@
   "score_commerces":14.42,
   "score_sport_nature":12.23,
   "score_dynamique":7.93,
-  "score_cout_logement":8.15
+  "score_cout_logement":8.15,
+  "rang_p05":49,
+  "rang_p95":114,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62617",
@@ -1477,7 +1769,11 @@
   "score_commerces":17.82,
   "score_sport_nature":12.67,
   "score_dynamique":3.77,
-  "score_cout_logement":13.42
+  "score_cout_logement":13.42,
+  "rang_p05":38,
+  "rang_p95":125,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59459",
@@ -1497,7 +1793,11 @@
   "score_commerces":16.67,
   "score_sport_nature":10.64,
   "score_dynamique":11.85,
-  "score_cout_logement":13.7
+  "score_cout_logement":13.7,
+  "rang_p05":52,
+  "rang_p95":117,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59228",
@@ -1517,7 +1817,11 @@
   "score_commerces":11.52,
   "score_sport_nature":8.81,
   "score_dynamique":6.22,
-  "score_cout_logement":13.92
+  "score_cout_logement":13.92,
+  "rang_p05":35,
+  "rang_p95":123,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59523",
@@ -1537,7 +1841,11 @@
   "score_commerces":17.71,
   "score_sport_nature":12.47,
   "score_dynamique":10.42,
-  "score_cout_logement":4.3
+  "score_cout_logement":4.3,
+  "rang_p05":55,
+  "rang_p95":156,
+  "part_runs_meme_tranche":0.37,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59133",
@@ -1557,7 +1865,11 @@
   "score_commerces":5.74,
   "score_sport_nature":9.61,
   "score_dynamique":16.51,
-  "score_cout_logement":9.41
+  "score_cout_logement":9.41,
+  "rang_p05":33,
+  "rang_p95":179,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59414",
@@ -1577,7 +1889,11 @@
   "score_commerces":13.6,
   "score_sport_nature":12.31,
   "score_dynamique":3.44,
-  "score_cout_logement":13.71
+  "score_cout_logement":13.71,
+  "rang_p05":41,
+  "rang_p95":129,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62498",
@@ -1597,7 +1913,11 @@
   "score_commerces":18.6,
   "score_sport_nature":11.21,
   "score_dynamique":12.7,
-  "score_cout_logement":12.18
+  "score_cout_logement":12.18,
+  "rang_p05":39,
+  "rang_p95":168,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59421",
@@ -1617,7 +1937,11 @@
   "score_commerces":16.74,
   "score_sport_nature":9.49,
   "score_dynamique":7.95,
-  "score_cout_logement":2.25
+  "score_cout_logement":2.25,
+  "rang_p05":52,
+  "rang_p95":184,
+  "part_runs_meme_tranche":0.37,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62240",
@@ -1637,7 +1961,11 @@
   "score_commerces":14.41,
   "score_sport_nature":10.42,
   "score_dynamique":5.77,
-  "score_cout_logement":15.65
+  "score_cout_logement":15.65,
+  "rang_p05":37,
+  "rang_p95":125,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59636",
@@ -1657,7 +1985,11 @@
   "score_commerces":16.85,
   "score_sport_nature":12.0,
   "score_dynamique":10.15,
-  "score_cout_logement":1.35
+  "score_cout_logement":1.35,
+  "rang_p05":60,
+  "rang_p95":182,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62338",
@@ -1677,7 +2009,11 @@
   "score_commerces":12.98,
   "score_sport_nature":10.62,
   "score_dynamique":12.45,
-  "score_cout_logement":4.23
+  "score_cout_logement":4.23,
+  "rang_p05":62,
+  "rang_p95":167,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62848",
@@ -1697,7 +2033,11 @@
   "score_commerces":11.48,
   "score_sport_nature":11.08,
   "score_dynamique":8.96,
-  "score_cout_logement":13.11
+  "score_cout_logement":13.11,
+  "rang_p05":59,
+  "rang_p95":118,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59435",
@@ -1717,7 +2057,11 @@
   "score_commerces":8.46,
   "score_sport_nature":11.96,
   "score_dynamique":11.5,
-  "score_cout_logement":11.68
+  "score_cout_logement":11.68,
+  "rang_p05":46,
+  "rang_p95":156,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59173",
@@ -1737,7 +2081,11 @@
   "score_commerces":7.68,
   "score_sport_nature":11.77,
   "score_dynamique":15.13,
-  "score_cout_logement":5.5
+  "score_cout_logement":5.5,
+  "rang_p05":40,
+  "rang_p95":206,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59599",
@@ -1757,7 +2105,11 @@
   "score_commerces":18.37,
   "score_sport_nature":8.17,
   "score_dynamique":10.06,
-  "score_cout_logement":10.56
+  "score_cout_logement":10.56,
+  "rang_p05":52,
+  "rang_p95":165,
+  "part_runs_meme_tranche":0.55,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59632",
@@ -1777,7 +2129,11 @@
   "score_commerces":15.04,
   "score_sport_nature":11.9,
   "score_dynamique":10.3,
-  "score_cout_logement":15.21
+  "score_cout_logement":15.21,
+  "rang_p05":58,
+  "rang_p95":119,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59611",
@@ -1797,7 +2153,11 @@
   "score_commerces":9.42,
   "score_sport_nature":13.9,
   "score_dynamique":13.92,
-  "score_cout_logement":3.94
+  "score_cout_logement":3.94,
+  "rang_p05":49,
+  "rang_p95":205,
+  "part_runs_meme_tranche":0.55,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59367",
@@ -1817,7 +2177,11 @@
   "score_commerces":17.44,
   "score_sport_nature":8.66,
   "score_dynamique":13.05,
-  "score_cout_logement":6.8
+  "score_cout_logement":6.8,
+  "rang_p05":56,
+  "rang_p95":184,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59258",
@@ -1837,7 +2201,11 @@
   "score_commerces":7.73,
   "score_sport_nature":13.51,
   "score_dynamique":12.91,
-  "score_cout_logement":5.15
+  "score_cout_logement":5.15,
+  "rang_p05":49,
+  "rang_p95":190,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59346",
@@ -1857,7 +2225,11 @@
   "score_commerces":16.3,
   "score_sport_nature":10.8,
   "score_dynamique":3.75,
-  "score_cout_logement":5.11
+  "score_cout_logement":5.11,
+  "rang_p05":34,
+  "rang_p95":243,
+  "part_runs_meme_tranche":0.36,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59457",
@@ -1877,7 +2249,11 @@
   "score_commerces":16.28,
   "score_sport_nature":8.7,
   "score_dynamique":10.1,
-  "score_cout_logement":4.35
+  "score_cout_logement":4.35,
+  "rang_p05":63,
+  "rang_p95":197,
+  "part_runs_meme_tranche":0.63,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59126",
@@ -1897,7 +2273,11 @@
   "score_commerces":6.01,
   "score_sport_nature":9.14,
   "score_dynamique":15.82,
-  "score_cout_logement":14.88
+  "score_cout_logement":14.88,
+  "rang_p05":33,
+  "rang_p95":192,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62735",
@@ -1917,7 +2297,11 @@
   "score_commerces":11.67,
   "score_sport_nature":8.61,
   "score_dynamique":14.62,
-  "score_cout_logement":10.6
+  "score_cout_logement":10.6,
+  "rang_p05":57,
+  "rang_p95":167,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62480",
@@ -1937,7 +2321,11 @@
   "score_commerces":11.8,
   "score_sport_nature":9.99,
   "score_dynamique":9.16,
-  "score_cout_logement":13.51
+  "score_cout_logement":13.51,
+  "rang_p05":58,
+  "rang_p95":148,
+  "part_runs_meme_tranche":0.73,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59027",
@@ -1957,7 +2345,11 @@
   "score_commerces":10.78,
   "score_sport_nature":9.94,
   "score_dynamique":6.58,
-  "score_cout_logement":14.1
+  "score_cout_logement":14.1,
+  "rang_p05":56,
+  "rang_p95":145,
+  "part_runs_meme_tranche":0.72,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59250",
@@ -1977,7 +2369,11 @@
   "score_commerces":14.21,
   "score_sport_nature":13.5,
   "score_dynamique":5.11,
-  "score_cout_logement":6.16
+  "score_cout_logement":6.16,
+  "rang_p05":63,
+  "rang_p95":166,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"59029",
@@ -1997,7 +2393,11 @@
   "score_commerces":6.71,
   "score_sport_nature":12.99,
   "score_dynamique":10.92,
-  "score_cout_logement":10.51
+  "score_cout_logement":10.51,
+  "rang_p05":53,
+  "rang_p95":175,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59470",
@@ -2017,7 +2417,11 @@
   "score_commerces":10.34,
   "score_sport_nature":11.76,
   "score_dynamique":6.52,
-  "score_cout_logement":4.17
+  "score_cout_logement":4.17,
+  "rang_p05":67,
+  "rang_p95":190,
+  "part_runs_meme_tranche":0.72,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59375",
@@ -2037,7 +2441,11 @@
   "score_commerces":15.69,
   "score_sport_nature":14.33,
   "score_dynamique":8.31,
-  "score_cout_logement":12.02
+  "score_cout_logement":12.02,
+  "rang_p05":54,
+  "rang_p95":166,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59509",
@@ -2057,7 +2465,11 @@
   "score_commerces":15.99,
   "score_sport_nature":11.09,
   "score_dynamique":4.92,
-  "score_cout_logement":11.82
+  "score_cout_logement":11.82,
+  "rang_p05":68,
+  "rang_p95":151,
+  "part_runs_meme_tranche":0.8,
+  "position":"solide"
  },
  {
   "code_insee":"59064",
@@ -2077,7 +2489,11 @@
   "score_commerces":11.37,
   "score_sport_nature":11.92,
   "score_dynamique":9.88,
-  "score_cout_logement":14.72
+  "score_cout_logement":14.72,
+  "rang_p05":69,
+  "rang_p95":140,
+  "part_runs_meme_tranche":0.83,
+  "position":"solide"
  },
  {
   "code_insee":"59011",
@@ -2097,7 +2513,11 @@
   "score_commerces":15.77,
   "score_sport_nature":9.64,
   "score_dynamique":9.62,
-  "score_cout_logement":9.71
+  "score_cout_logement":9.71,
+  "rang_p05":84,
+  "rang_p95":143,
+  "part_runs_meme_tranche":0.96,
+  "position":"solide"
  },
  {
   "code_insee":"59564",
@@ -2117,7 +2537,11 @@
   "score_commerces":18.33,
   "score_sport_nature":9.92,
   "score_dynamique":10.72,
-  "score_cout_logement":13.97
+  "score_cout_logement":13.97,
+  "rang_p05":56,
+  "rang_p95":184,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62032",
@@ -2137,7 +2561,11 @@
   "score_commerces":15.79,
   "score_sport_nature":13.34,
   "score_dynamique":9.79,
-  "score_cout_logement":11.58
+  "score_cout_logement":11.58,
+  "rang_p05":76,
+  "rang_p95":141,
+  "part_runs_meme_tranche":0.9,
+  "position":"solide"
  },
  {
   "code_insee":"62034",
@@ -2157,7 +2585,11 @@
   "score_commerces":12.35,
   "score_sport_nature":7.92,
   "score_dynamique":7.83,
-  "score_cout_logement":13.94
+  "score_cout_logement":13.94,
+  "rang_p05":49,
+  "rang_p95":171,
+  "part_runs_meme_tranche":0.67,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59014",
@@ -2177,7 +2609,11 @@
   "score_commerces":17.25,
   "score_sport_nature":9.82,
   "score_dynamique":9.68,
-  "score_cout_logement":16.75
+  "score_cout_logement":16.75,
+  "rang_p05":64,
+  "rang_p95":160,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59183",
@@ -2197,7 +2633,11 @@
   "score_commerces":19.38,
   "score_sport_nature":11.8,
   "score_dynamique":6.74,
-  "score_cout_logement":8.33
+  "score_cout_logement":8.33,
+  "rang_p05":69,
+  "rang_p95":183,
+  "part_runs_meme_tranche":0.71,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62765",
@@ -2217,7 +2657,11 @@
   "score_commerces":18.83,
   "score_sport_nature":11.48,
   "score_dynamique":8.79,
-  "score_cout_logement":15.0
+  "score_cout_logement":15.0,
+  "rang_p05":53,
+  "rang_p95":184,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62128",
@@ -2237,7 +2681,11 @@
   "score_commerces":14.8,
   "score_sport_nature":10.97,
   "score_dynamique":16.6,
-  "score_cout_logement":12.99
+  "score_cout_logement":12.99,
+  "rang_p05":49,
+  "rang_p95":197,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59197",
@@ -2257,7 +2705,11 @@
   "score_commerces":5.1,
   "score_sport_nature":15.0,
   "score_dynamique":14.86,
-  "score_cout_logement":4.79
+  "score_cout_logement":4.79,
+  "rang_p05":58,
+  "rang_p95":230,
+  "part_runs_meme_tranche":0.53,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59252",
@@ -2277,7 +2729,11 @@
   "score_commerces":9.79,
   "score_sport_nature":10.18,
   "score_dynamique":14.37,
-  "score_cout_logement":8.14
+  "score_cout_logement":8.14,
+  "rang_p05":69,
+  "rang_p95":195,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62587",
@@ -2297,7 +2753,11 @@
   "score_commerces":14.6,
   "score_sport_nature":10.46,
   "score_dynamique":5.64,
-  "score_cout_logement":12.44
+  "score_cout_logement":12.44,
+  "rang_p05":72,
+  "rang_p95":171,
+  "part_runs_meme_tranche":0.8,
+  "position":"solide"
  },
  {
   "code_insee":"59302",
@@ -2317,7 +2777,11 @@
   "score_commerces":10.19,
   "score_sport_nature":8.92,
   "score_dynamique":11.13,
-  "score_cout_logement":14.37
+  "score_cout_logement":14.37,
+  "rang_p05":75,
+  "rang_p95":160,
+  "part_runs_meme_tranche":0.88,
+  "position":"solide"
  },
  {
   "code_insee":"59606",
@@ -2337,7 +2801,11 @@
   "score_commerces":18.9,
   "score_sport_nature":10.5,
   "score_dynamique":8.0,
-  "score_cout_logement":12.76
+  "score_cout_logement":12.76,
+  "rang_p05":65,
+  "rang_p95":197,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59524",
@@ -2357,7 +2825,11 @@
   "score_commerces":14.36,
   "score_sport_nature":10.71,
   "score_dynamique":9.11,
-  "score_cout_logement":8.64
+  "score_cout_logement":8.64,
+  "rang_p05":79,
+  "rang_p95":183,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"59163",
@@ -2377,7 +2849,11 @@
   "score_commerces":17.78,
   "score_sport_nature":8.64,
   "score_dynamique":8.07,
-  "score_cout_logement":5.71
+  "score_cout_logement":5.71,
+  "rang_p05":67,
+  "rang_p95":230,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62279",
@@ -2397,7 +2873,11 @@
   "score_commerces":7.78,
   "score_sport_nature":13.62,
   "score_dynamique":11.59,
-  "score_cout_logement":15.08
+  "score_cout_logement":15.08,
+  "rang_p05":58,
+  "rang_p95":193,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62119",
@@ -2417,7 +2897,11 @@
   "score_commerces":19.03,
   "score_sport_nature":11.5,
   "score_dynamique":9.44,
-  "score_cout_logement":12.52
+  "score_cout_logement":12.52,
+  "rang_p05":72,
+  "rang_p95":200,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59052",
@@ -2437,7 +2921,11 @@
   "score_commerces":14.79,
   "score_sport_nature":8.19,
   "score_dynamique":7.61,
-  "score_cout_logement":10.73
+  "score_cout_logement":10.73,
+  "rang_p05":81,
+  "rang_p95":179,
+  "part_runs_meme_tranche":0.82,
+  "position":"solide"
  },
  {
   "code_insee":"59292",
@@ -2457,7 +2945,11 @@
   "score_commerces":14.14,
   "score_sport_nature":11.18,
   "score_dynamique":10.98,
-  "score_cout_logement":14.63
+  "score_cout_logement":14.63,
+  "rang_p05":81,
+  "rang_p95":159,
+  "part_runs_meme_tranche":0.91,
+  "position":"solide"
  },
  {
   "code_insee":"59193",
@@ -2477,7 +2969,11 @@
   "score_commerces":13.63,
   "score_sport_nature":14.1,
   "score_dynamique":5.51,
-  "score_cout_logement":5.2
+  "score_cout_logement":5.2,
+  "rang_p05":75,
+  "rang_p95":213,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59487",
@@ -2497,7 +2993,11 @@
   "score_commerces":6.83,
   "score_sport_nature":10.72,
   "score_dynamique":9.67,
-  "score_cout_logement":5.4
+  "score_cout_logement":5.4,
+  "rang_p05":82,
+  "rang_p95":218,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59477",
@@ -2517,7 +3017,11 @@
   "score_commerces":14.2,
   "score_sport_nature":7.49,
   "score_dynamique":12.96,
-  "score_cout_logement":11.19
+  "score_cout_logement":11.19,
+  "rang_p05":87,
+  "rang_p95":182,
+  "part_runs_meme_tranche":0.84,
+  "position":"solide"
  },
  {
   "code_insee":"59390",
@@ -2537,7 +3041,11 @@
   "score_commerces":14.38,
   "score_sport_nature":11.48,
   "score_dynamique":7.01,
-  "score_cout_logement":14.59
+  "score_cout_logement":14.59,
+  "rang_p05":83,
+  "rang_p95":166,
+  "part_runs_meme_tranche":0.9,
+  "position":"solide"
  },
  {
   "code_insee":"59434",
@@ -2557,7 +3065,11 @@
   "score_commerces":8.11,
   "score_sport_nature":9.42,
   "score_dynamique":13.39,
-  "score_cout_logement":13.72
+  "score_cout_logement":13.72,
+  "rang_p05":58,
+  "rang_p95":217,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62557",
@@ -2577,7 +3089,11 @@
   "score_commerces":13.46,
   "score_sport_nature":14.2,
   "score_dynamique":6.91,
-  "score_cout_logement":9.13
+  "score_cout_logement":9.13,
+  "rang_p05":81,
+  "rang_p95":194,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59646",
@@ -2597,7 +3113,11 @@
   "score_commerces":17.8,
   "score_sport_nature":9.41,
   "score_dynamique":8.3,
-  "score_cout_logement":1.79
+  "score_cout_logement":1.79,
+  "rang_p05":81,
+  "rang_p95":261,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59189",
@@ -2617,7 +3137,11 @@
   "score_commerces":8.59,
   "score_sport_nature":8.46,
   "score_dynamique":8.54,
-  "score_cout_logement":15.39
+  "score_cout_logement":15.39,
+  "rang_p05":75,
+  "rang_p95":183,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"59098",
@@ -2637,7 +3161,11 @@
   "score_commerces":14.75,
   "score_sport_nature":13.6,
   "score_dynamique":9.74,
-  "score_cout_logement":7.1
+  "score_cout_logement":7.1,
+  "rang_p05":99,
+  "rang_p95":198,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"59247",
@@ -2657,7 +3185,11 @@
   "score_commerces":10.96,
   "score_sport_nature":12.97,
   "score_dynamique":14.51,
-  "score_cout_logement":3.62
+  "score_cout_logement":3.62,
+  "rang_p05":79,
+  "rang_p95":254,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59080",
@@ -2677,7 +3209,11 @@
   "score_commerces":13.23,
   "score_sport_nature":12.09,
   "score_dynamique":11.57,
-  "score_cout_logement":9.26
+  "score_cout_logement":9.26,
+  "rang_p05":78,
+  "rang_p95":212,
+  "part_runs_meme_tranche":0.63,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59401",
@@ -2697,7 +3233,11 @@
   "score_commerces":12.19,
   "score_sport_nature":13.65,
   "score_dynamique":5.07,
-  "score_cout_logement":13.44
+  "score_cout_logement":13.44,
+  "rang_p05":78,
+  "rang_p95":196,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59015",
@@ -2717,7 +3257,11 @@
   "score_commerces":13.84,
   "score_sport_nature":12.16,
   "score_dynamique":6.61,
-  "score_cout_logement":14.4
+  "score_cout_logement":14.4,
+  "rang_p05":84,
+  "rang_p95":185,
+  "part_runs_meme_tranche":0.79,
+  "position":"solide"
  },
  {
   "code_insee":"59332",
@@ -2737,7 +3281,11 @@
   "score_commerces":18.56,
   "score_sport_nature":9.34,
   "score_dynamique":9.91,
-  "score_cout_logement":9.7
+  "score_cout_logement":9.7,
+  "rang_p05":99,
+  "rang_p95":198,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"59314",
@@ -2757,7 +3305,11 @@
   "score_commerces":15.77,
   "score_sport_nature":15.45,
   "score_dynamique":9.0,
-  "score_cout_logement":15.76
+  "score_cout_logement":15.76,
+  "rang_p05":65,
+  "rang_p95":218,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62132",
@@ -2777,7 +3329,11 @@
   "score_commerces":14.05,
   "score_sport_nature":8.77,
   "score_dynamique":15.66,
-  "score_cout_logement":10.54
+  "score_cout_logement":10.54,
+  "rang_p05":85,
+  "rang_p95":212,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62099",
@@ -2797,7 +3353,11 @@
   "score_commerces":14.56,
   "score_sport_nature":10.95,
   "score_dynamique":4.93,
-  "score_cout_logement":10.22
+  "score_cout_logement":10.22,
+  "rang_p05":99,
+  "rang_p95":189,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"62753",
@@ -2817,7 +3377,11 @@
   "score_commerces":15.41,
   "score_sport_nature":11.62,
   "score_dynamique":4.99,
-  "score_cout_logement":11.12
+  "score_cout_logement":11.12,
+  "rang_p05":95,
+  "rang_p95":195,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"59329",
@@ -2837,7 +3401,11 @@
   "score_commerces":18.0,
   "score_sport_nature":12.84,
   "score_dynamique":3.51,
-  "score_cout_logement":13.65
+  "score_cout_logement":13.65,
+  "rang_p05":69,
+  "rang_p95":226,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59299",
@@ -2857,7 +3425,11 @@
   "score_commerces":16.2,
   "score_sport_nature":10.71,
   "score_dynamique":5.73,
-  "score_cout_logement":3.94
+  "score_cout_logement":3.94,
+  "rang_p05":81,
+  "rang_p95":259,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59179",
@@ -2877,7 +3449,11 @@
   "score_commerces":15.48,
   "score_sport_nature":8.73,
   "score_dynamique":4.8,
-  "score_cout_logement":15.32
+  "score_cout_logement":15.32,
+  "rang_p05":82,
+  "rang_p95":197,
+  "part_runs_meme_tranche":0.73,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59284",
@@ -2897,7 +3473,11 @@
   "score_commerces":12.95,
   "score_sport_nature":9.95,
   "score_dynamique":8.2,
-  "score_cout_logement":12.3
+  "score_cout_logement":12.3,
+  "rang_p05":82,
+  "rang_p95":215,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59327",
@@ -2917,7 +3497,11 @@
   "score_commerces":15.23,
   "score_sport_nature":10.37,
   "score_dynamique":8.18,
-  "score_cout_logement":13.16
+  "score_cout_logement":13.16,
+  "rang_p05":103,
+  "rang_p95":181,
+  "part_runs_meme_tranche":0.8,
+  "position":"solide"
  },
  {
   "code_insee":"59114",
@@ -2937,7 +3521,11 @@
   "score_commerces":7.3,
   "score_sport_nature":13.09,
   "score_dynamique":8.89,
-  "score_cout_logement":16.2
+  "score_cout_logement":16.2,
+  "rang_p05":59,
+  "rang_p95":226,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59408",
@@ -2957,7 +3545,11 @@
   "score_commerces":9.98,
   "score_sport_nature":11.53,
   "score_dynamique":15.7,
-  "score_cout_logement":10.3
+  "score_cout_logement":10.3,
+  "rang_p05":79,
+  "rang_p95":233,
+  "part_runs_meme_tranche":0.53,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59345",
@@ -2977,7 +3569,11 @@
   "score_commerces":13.36,
   "score_sport_nature":12.65,
   "score_dynamique":9.6,
-  "score_cout_logement":14.78
+  "score_cout_logement":14.78,
+  "rang_p05":111,
+  "rang_p95":170,
+  "part_runs_meme_tranche":0.9,
+  "position":"solide"
  },
  {
   "code_insee":"62810",
@@ -2997,7 +3593,11 @@
   "score_commerces":4.36,
   "score_sport_nature":12.84,
   "score_dynamique":14.62,
-  "score_cout_logement":12.58
+  "score_cout_logement":12.58,
+  "rang_p05":62,
+  "rang_p95":256,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59588",
@@ -3017,7 +3617,11 @@
   "score_commerces":16.03,
   "score_sport_nature":11.97,
   "score_dynamique":8.42,
-  "score_cout_logement":5.74
+  "score_cout_logement":5.74,
+  "rang_p05":115,
+  "rang_p95":216,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62401",
@@ -3037,7 +3641,11 @@
   "score_commerces":11.36,
   "score_sport_nature":5.62,
   "score_dynamique":11.27,
-  "score_cout_logement":12.71
+  "score_cout_logement":12.71,
+  "rang_p05":89,
+  "rang_p95":215,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59603",
@@ -3057,7 +3665,11 @@
   "score_commerces":13.41,
   "score_sport_nature":11.55,
   "score_dynamique":6.96,
-  "score_cout_logement":15.25
+  "score_cout_logement":15.25,
+  "rang_p05":103,
+  "rang_p95":181,
+  "part_runs_meme_tranche":0.81,
+  "position":"solide"
  },
  {
   "code_insee":"62497",
@@ -3077,7 +3689,11 @@
   "score_commerces":16.82,
   "score_sport_nature":11.5,
   "score_dynamique":7.98,
-  "score_cout_logement":9.97
+  "score_cout_logement":9.97,
+  "rang_p05":108,
+  "rang_p95":206,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62637",
@@ -3097,7 +3713,11 @@
   "score_commerces":16.54,
   "score_sport_nature":11.25,
   "score_dynamique":13.07,
-  "score_cout_logement":10.33
+  "score_cout_logement":10.33,
+  "rang_p05":102,
+  "rang_p95":215,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59399",
@@ -3117,7 +3737,11 @@
   "score_commerces":6.51,
   "score_sport_nature":13.83,
   "score_dynamique":12.86,
-  "score_cout_logement":12.92
+  "score_cout_logement":12.92,
+  "rang_p05":81,
+  "rang_p95":240,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59609",
@@ -3137,7 +3761,11 @@
   "score_commerces":9.99,
   "score_sport_nature":7.92,
   "score_dynamique":8.51,
-  "score_cout_logement":4.91
+  "score_cout_logement":4.91,
+  "rang_p05":83,
+  "rang_p95":269,
+  "part_runs_meme_tranche":0.44,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62013",
@@ -3157,7 +3785,11 @@
   "score_commerces":11.34,
   "score_sport_nature":12.45,
   "score_dynamique":6.25,
-  "score_cout_logement":13.76
+  "score_cout_logement":13.76,
+  "rang_p05":91,
+  "rang_p95":206,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59172",
@@ -3177,7 +3809,11 @@
   "score_commerces":17.19,
   "score_sport_nature":9.5,
   "score_dynamique":14.02,
-  "score_cout_logement":17.33
+  "score_cout_logement":17.33,
+  "rang_p05":77,
+  "rang_p95":229,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59279",
@@ -3197,7 +3833,11 @@
   "score_commerces":16.41,
   "score_sport_nature":12.1,
   "score_dynamique":8.71,
-  "score_cout_logement":9.36
+  "score_cout_logement":9.36,
+  "rang_p05":106,
+  "rang_p95":220,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62274",
@@ -3217,7 +3857,11 @@
   "score_commerces":15.3,
   "score_sport_nature":10.37,
   "score_dynamique":12.09,
-  "score_cout_logement":12.23
+  "score_cout_logement":12.23,
+  "rang_p05":109,
+  "rang_p95":209,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59168",
@@ -3237,7 +3881,11 @@
   "score_commerces":18.21,
   "score_sport_nature":13.89,
   "score_dynamique":2.8,
-  "score_cout_logement":4.78
+  "score_cout_logement":4.78,
+  "rang_p05":83,
+  "rang_p95":259,
+  "part_runs_meme_tranche":0.43,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62737",
@@ -3257,7 +3905,11 @@
   "score_commerces":15.78,
   "score_sport_nature":10.58,
   "score_dynamique":6.38,
-  "score_cout_logement":11.86
+  "score_cout_logement":11.86,
+  "rang_p05":102,
+  "rang_p95":209,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59651",
@@ -3277,7 +3929,11 @@
   "score_commerces":12.05,
   "score_sport_nature":10.74,
   "score_dynamique":7.22,
-  "score_cout_logement":16.67
+  "score_cout_logement":16.67,
+  "rang_p05":88,
+  "rang_p95":208,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59504",
@@ -3297,7 +3953,11 @@
   "score_commerces":14.69,
   "score_sport_nature":8.95,
   "score_dynamique":6.53,
-  "score_cout_logement":17.38
+  "score_cout_logement":17.38,
+  "rang_p05":97,
+  "rang_p95":194,
+  "part_runs_meme_tranche":0.28,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59166",
@@ -3317,7 +3977,11 @@
   "score_commerces":7.32,
   "score_sport_nature":12.99,
   "score_dynamique":15.37,
-  "score_cout_logement":12.31
+  "score_cout_logement":12.31,
+  "rang_p05":87,
+  "rang_p95":256,
+  "part_runs_meme_tranche":0.4,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59028",
@@ -3337,7 +4001,11 @@
   "score_commerces":13.84,
   "score_sport_nature":12.55,
   "score_dynamique":8.89,
-  "score_cout_logement":13.12
+  "score_cout_logement":13.12,
+  "rang_p05":127,
+  "rang_p95":190,
+  "part_runs_meme_tranche":0.4,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62035",
@@ -3357,7 +4025,11 @@
   "score_commerces":13.12,
   "score_sport_nature":10.74,
   "score_dynamique":7.35,
-  "score_cout_logement":14.37
+  "score_cout_logement":14.37,
+  "rang_p05":115,
+  "rang_p95":203,
+  "part_runs_meme_tranche":0.38,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62178",
@@ -3377,7 +4049,11 @@
   "score_commerces":18.31,
   "score_sport_nature":10.63,
   "score_dynamique":9.41,
-  "score_cout_logement":14.25
+  "score_cout_logement":14.25,
+  "rang_p05":101,
+  "rang_p95":222,
+  "part_runs_meme_tranche":0.44,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59263",
@@ -3397,7 +4073,11 @@
   "score_commerces":3.41,
   "score_sport_nature":9.8,
   "score_dynamique":9.88,
-  "score_cout_logement":14.1
+  "score_cout_logement":14.1,
+  "rang_p05":75,
+  "rang_p95":254,
+  "part_runs_meme_tranche":0.41,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59122",
@@ -3417,7 +4097,11 @@
   "score_commerces":18.45,
   "score_sport_nature":11.45,
   "score_dynamique":4.58,
-  "score_cout_logement":17.08
+  "score_cout_logement":17.08,
+  "rang_p05":71,
+  "rang_p95":259,
+  "part_runs_meme_tranche":0.37,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62443",
@@ -3437,7 +4121,11 @@
   "score_commerces":12.8,
   "score_sport_nature":13.65,
   "score_dynamique":7.54,
-  "score_cout_logement":15.37
+  "score_cout_logement":15.37,
+  "rang_p05":114,
+  "rang_p95":210,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59022",
@@ -3457,7 +4145,11 @@
   "score_commerces":8.5,
   "score_sport_nature":12.45,
   "score_dynamique":8.63,
-  "score_cout_logement":8.64
+  "score_cout_logement":8.64,
+  "rang_p05":127,
+  "rang_p95":236,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59574",
@@ -3477,7 +4169,11 @@
   "score_commerces":17.95,
   "score_sport_nature":12.8,
   "score_dynamique":5.23,
-  "score_cout_logement":15.21
+  "score_cout_logement":15.21,
+  "rang_p05":100,
+  "rang_p95":229,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59128",
@@ -3497,7 +4193,11 @@
   "score_commerces":12.09,
   "score_sport_nature":5.38,
   "score_dynamique":8.92,
-  "score_cout_logement":3.8
+  "score_cout_logement":3.8,
+  "rang_p05":97,
+  "rang_p95":302,
+  "part_runs_meme_tranche":0.44,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59112",
@@ -3517,7 +4217,11 @@
   "score_commerces":16.2,
   "score_sport_nature":8.7,
   "score_dynamique":10.06,
-  "score_cout_logement":14.26
+  "score_cout_logement":14.26,
+  "rang_p05":130,
+  "rang_p95":217,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59650",
@@ -3537,7 +4241,11 @@
   "score_commerces":16.91,
   "score_sport_nature":6.73,
   "score_dynamique":7.93,
-  "score_cout_logement":7.75
+  "score_cout_logement":7.75,
+  "rang_p05":103,
+  "rang_p95":281,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59090",
@@ -3557,7 +4265,11 @@
   "score_commerces":16.78,
   "score_sport_nature":12.96,
   "score_dynamique":3.87,
-  "score_cout_logement":2.69
+  "score_cout_logement":2.69,
+  "rang_p05":104,
+  "rang_p95":313,
+  "part_runs_meme_tranche":0.46,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59398",
@@ -3577,7 +4289,11 @@
   "score_commerces":10.72,
   "score_sport_nature":13.68,
   "score_dynamique":14.18,
-  "score_cout_logement":4.16
+  "score_cout_logement":4.16,
+  "rang_p05":117,
+  "rang_p95":295,
+  "part_runs_meme_tranche":0.55,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62386",
@@ -3597,7 +4313,11 @@
   "score_commerces":15.4,
   "score_sport_nature":9.1,
   "score_dynamique":7.19,
-  "score_cout_logement":12.56
+  "score_cout_logement":12.56,
+  "rang_p05":126,
+  "rang_p95":232,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59491",
@@ -3617,7 +4337,11 @@
   "score_commerces":15.75,
   "score_sport_nature":11.51,
   "score_dynamique":6.24,
-  "score_cout_logement":13.99
+  "score_cout_logement":13.99,
+  "rang_p05":112,
+  "rang_p95":240,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62019",
@@ -3637,7 +4361,11 @@
   "score_commerces":10.52,
   "score_sport_nature":11.55,
   "score_dynamique":8.72,
-  "score_cout_logement":13.08
+  "score_cout_logement":13.08,
+  "rang_p05":141,
+  "rang_p95":222,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"59320",
@@ -3657,7 +4385,11 @@
   "score_commerces":8.83,
   "score_sport_nature":11.79,
   "score_dynamique":15.17,
-  "score_cout_logement":8.92
+  "score_cout_logement":8.92,
+  "rang_p05":126,
+  "rang_p95":268,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59071",
@@ -3677,7 +4409,11 @@
   "score_commerces":10.71,
   "score_sport_nature":13.73,
   "score_dynamique":12.06,
-  "score_cout_logement":11.05
+  "score_cout_logement":11.05,
+  "rang_p05":137,
+  "rang_p95":238,
+  "part_runs_meme_tranche":0.73,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62400",
@@ -3697,7 +4433,11 @@
   "score_commerces":15.16,
   "score_sport_nature":6.9,
   "score_dynamique":9.78,
-  "score_cout_logement":14.89
+  "score_cout_logement":14.89,
+  "rang_p05":137,
+  "rang_p95":226,
+  "part_runs_meme_tranche":0.72,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59423",
@@ -3717,7 +4457,11 @@
   "score_commerces":7.9,
   "score_sport_nature":8.74,
   "score_dynamique":17.6,
-  "score_cout_logement":12.11
+  "score_cout_logement":12.11,
+  "rang_p05":97,
+  "rang_p95":287,
+  "part_runs_meme_tranche":0.45,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59234",
@@ -3737,7 +4481,11 @@
   "score_commerces":15.54,
   "score_sport_nature":12.06,
   "score_dynamique":4.34,
-  "score_cout_logement":12.21
+  "score_cout_logement":12.21,
+  "rang_p05":126,
+  "rang_p95":248,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62793",
@@ -3757,7 +4505,11 @@
   "score_commerces":4.6,
   "score_sport_nature":11.9,
   "score_dynamique":12.95,
-  "score_cout_logement":13.26
+  "score_cout_logement":13.26,
+  "rang_p05":96,
+  "rang_p95":289,
+  "part_runs_meme_tranche":0.44,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62540",
@@ -3777,7 +4529,11 @@
   "score_commerces":4.33,
   "score_sport_nature":11.5,
   "score_dynamique":9.17,
-  "score_cout_logement":13.65
+  "score_cout_logement":13.65,
+  "rang_p05":105,
+  "rang_p95":277,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62321",
@@ -3797,7 +4553,11 @@
   "score_commerces":12.42,
   "score_sport_nature":10.75,
   "score_dynamique":10.52,
-  "score_cout_logement":11.99
+  "score_cout_logement":11.99,
+  "rang_p05":163,
+  "rang_p95":225,
+  "part_runs_meme_tranche":0.94,
+  "position":"solide"
  },
  {
   "code_insee":"59426",
@@ -3817,7 +4577,11 @@
   "score_commerces":15.86,
   "score_sport_nature":10.9,
   "score_dynamique":6.05,
-  "score_cout_logement":5.62
+  "score_cout_logement":5.62,
+  "rang_p05":117,
+  "rang_p95":303,
+  "part_runs_meme_tranche":0.52,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59335",
@@ -3837,7 +4601,11 @@
   "score_commerces":9.82,
   "score_sport_nature":9.55,
   "score_dynamique":14.2,
-  "score_cout_logement":12.83
+  "score_cout_logement":12.83,
+  "rang_p05":111,
+  "rang_p95":277,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62371",
@@ -3857,7 +4625,11 @@
   "score_commerces":10.76,
   "score_sport_nature":13.61,
   "score_dynamique":12.13,
-  "score_cout_logement":14.07
+  "score_cout_logement":14.07,
+  "rang_p05":136,
+  "rang_p95":245,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59212",
@@ -3877,7 +4649,11 @@
   "score_commerces":16.8,
   "score_sport_nature":8.94,
   "score_dynamique":8.81,
-  "score_cout_logement":14.6
+  "score_cout_logement":14.6,
+  "rang_p05":116,
+  "rang_p95":263,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62249",
@@ -3897,7 +4673,11 @@
   "score_commerces":14.9,
   "score_sport_nature":8.78,
   "score_dynamique":9.04,
-  "score_cout_logement":12.9
+  "score_cout_logement":12.9,
+  "rang_p05":149,
+  "rang_p95":235,
+  "part_runs_meme_tranche":0.83,
+  "position":"solide"
  },
  {
   "code_insee":"62310",
@@ -3917,7 +4697,11 @@
   "score_commerces":12.77,
   "score_sport_nature":12.41,
   "score_dynamique":9.72,
-  "score_cout_logement":13.86
+  "score_cout_logement":13.86,
+  "rang_p05":126,
+  "rang_p95":254,
+  "part_runs_meme_tranche":0.69,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62841",
@@ -3937,7 +4721,11 @@
   "score_commerces":14.47,
   "score_sport_nature":10.21,
   "score_dynamique":4.79,
-  "score_cout_logement":13.61
+  "score_cout_logement":13.61,
+  "rang_p05":118,
+  "rang_p95":262,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59348",
@@ -3957,7 +4745,11 @@
   "score_commerces":12.02,
   "score_sport_nature":10.64,
   "score_dynamique":13.92,
-  "score_cout_logement":16.86
+  "score_cout_logement":16.86,
+  "rang_p05":118,
+  "rang_p95":262,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59221",
@@ -3977,7 +4769,11 @@
   "score_commerces":12.98,
   "score_sport_nature":10.96,
   "score_dynamique":7.74,
-  "score_cout_logement":14.04
+  "score_cout_logement":14.04,
+  "rang_p05":162,
+  "rang_p95":228,
+  "part_runs_meme_tranche":0.94,
+  "position":"solide"
  },
  {
   "code_insee":"59256",
@@ -3997,7 +4793,11 @@
   "score_commerces":10.52,
   "score_sport_nature":12.47,
   "score_dynamique":5.76,
-  "score_cout_logement":6.63
+  "score_cout_logement":6.63,
+  "rang_p05":145,
+  "rang_p95":283,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59025",
@@ -4017,7 +4817,11 @@
   "score_commerces":9.91,
   "score_sport_nature":15.63,
   "score_dynamique":13.04,
-  "score_cout_logement":10.14
+  "score_cout_logement":10.14,
+  "rang_p05":139,
+  "rang_p95":289,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59550",
@@ -4037,7 +4841,11 @@
   "score_commerces":10.52,
   "score_sport_nature":9.88,
   "score_dynamique":13.94,
-  "score_cout_logement":10.05
+  "score_cout_logement":10.05,
+  "rang_p05":156,
+  "rang_p95":270,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59002",
@@ -4057,7 +4865,11 @@
   "score_commerces":11.88,
   "score_sport_nature":10.87,
   "score_dynamique":3.78,
-  "score_cout_logement":16.93
+  "score_cout_logement":16.93,
+  "rang_p05":133,
+  "rang_p95":254,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59388",
@@ -4077,7 +4889,11 @@
   "score_commerces":8.78,
   "score_sport_nature":11.74,
   "score_dynamique":8.36,
-  "score_cout_logement":8.64
+  "score_cout_logement":8.64,
+  "rang_p05":149,
+  "rang_p95":275,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59578",
@@ -4097,7 +4913,11 @@
   "score_commerces":7.82,
   "score_sport_nature":13.97,
   "score_dynamique":3.53,
-  "score_cout_logement":17.55
+  "score_cout_logement":17.55,
+  "rang_p05":110,
+  "rang_p95":280,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59024",
@@ -4117,7 +4937,11 @@
   "score_commerces":14.35,
   "score_sport_nature":11.79,
   "score_dynamique":12.03,
-  "score_cout_logement":15.58
+  "score_cout_logement":15.58,
+  "rang_p05":155,
+  "rang_p95":248,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"59340",
@@ -4137,7 +4961,11 @@
   "score_commerces":15.1,
   "score_sport_nature":12.68,
   "score_dynamique":4.15,
-  "score_cout_logement":6.52
+  "score_cout_logement":6.52,
+  "rang_p05":157,
+  "rang_p95":280,
+  "part_runs_meme_tranche":0.67,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62048",
@@ -4157,7 +4985,11 @@
   "score_commerces":17.65,
   "score_sport_nature":10.9,
   "score_dynamique":7.93,
-  "score_cout_logement":15.37
+  "score_cout_logement":15.37,
+  "rang_p05":127,
+  "rang_p95":273,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62160",
@@ -4177,7 +5009,11 @@
   "score_commerces":19.22,
   "score_sport_nature":7.79,
   "score_dynamique":8.15,
-  "score_cout_logement":12.27
+  "score_cout_logement":12.27,
+  "rang_p05":117,
+  "rang_p95":307,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62170",
@@ -4197,7 +5033,11 @@
   "score_commerces":8.05,
   "score_sport_nature":14.9,
   "score_dynamique":5.7,
-  "score_cout_logement":12.97
+  "score_cout_logement":12.97,
+  "rang_p05":128,
+  "rang_p95":283,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62291",
@@ -4217,7 +5057,11 @@
   "score_commerces":12.53,
   "score_sport_nature":13.06,
   "score_dynamique":4.61,
-  "score_cout_logement":11.9
+  "score_cout_logement":11.9,
+  "rang_p05":162,
+  "rang_p95":267,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"59123",
@@ -4237,7 +5081,11 @@
   "score_commerces":8.57,
   "score_sport_nature":10.77,
   "score_dynamique":11.78,
-  "score_cout_logement":8.97
+  "score_cout_logement":8.97,
+  "rang_p05":153,
+  "rang_p95":292,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62516",
@@ -4257,7 +5105,11 @@
   "score_commerces":16.76,
   "score_sport_nature":10.22,
   "score_dynamique":9.63,
-  "score_cout_logement":15.38
+  "score_cout_logement":15.38,
+  "rang_p05":144,
+  "rang_p95":273,
+  "part_runs_meme_tranche":0.72,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59486",
@@ -4277,7 +5129,11 @@
   "score_commerces":13.86,
   "score_sport_nature":11.75,
   "score_dynamique":6.58,
-  "score_cout_logement":12.59
+  "score_cout_logement":12.59,
+  "rang_p05":177,
+  "rang_p95":251,
+  "part_runs_meme_tranche":0.92,
+  "position":"solide"
  },
  {
   "code_insee":"62510",
@@ -4297,7 +5153,11 @@
   "score_commerces":17.13,
   "score_sport_nature":12.08,
   "score_dynamique":7.29,
-  "score_cout_logement":11.84
+  "score_cout_logement":11.84,
+  "rang_p05":156,
+  "rang_p95":289,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62525",
@@ -4317,7 +5177,11 @@
   "score_commerces":15.92,
   "score_sport_nature":12.4,
   "score_dynamique":5.23,
-  "score_cout_logement":13.29
+  "score_cout_logement":13.29,
+  "rang_p05":142,
+  "rang_p95":293,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59566",
@@ -4337,7 +5201,11 @@
   "score_commerces":9.73,
   "score_sport_nature":9.79,
   "score_dynamique":6.89,
-  "score_cout_logement":5.56
+  "score_cout_logement":5.56,
+  "rang_p05":150,
+  "rang_p95":322,
+  "part_runs_meme_tranche":0.53,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59602",
@@ -4357,7 +5225,11 @@
   "score_commerces":11.17,
   "score_sport_nature":10.47,
   "score_dynamique":7.71,
-  "score_cout_logement":3.78
+  "score_cout_logement":3.78,
+  "rang_p05":175,
+  "rang_p95":314,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62250",
@@ -4377,7 +5249,11 @@
   "score_commerces":16.75,
   "score_sport_nature":11.62,
   "score_dynamique":5.45,
-  "score_cout_logement":11.76
+  "score_cout_logement":11.76,
+  "rang_p05":155,
+  "rang_p95":284,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62351",
@@ -4397,7 +5273,11 @@
   "score_commerces":14.66,
   "score_sport_nature":11.15,
   "score_dynamique":6.63,
-  "score_cout_logement":14.83
+  "score_cout_logement":14.83,
+  "rang_p05":164,
+  "rang_p95":266,
+  "part_runs_meme_tranche":0.79,
+  "position":"solide"
  },
  {
   "code_insee":"59392",
@@ -4417,7 +5297,11 @@
   "score_commerces":17.69,
   "score_sport_nature":11.75,
   "score_dynamique":7.22,
-  "score_cout_logement":16.41
+  "score_cout_logement":16.41,
+  "rang_p05":145,
+  "rang_p95":281,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62801",
@@ -4437,7 +5321,11 @@
   "score_commerces":14.29,
   "score_sport_nature":12.42,
   "score_dynamique":12.57,
-  "score_cout_logement":11.94
+  "score_cout_logement":11.94,
+  "rang_p05":165,
+  "rang_p95":290,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62609",
@@ -4457,7 +5345,11 @@
   "score_commerces":8.52,
   "score_sport_nature":14.45,
   "score_dynamique":12.83,
-  "score_cout_logement":11.88
+  "score_cout_logement":11.88,
+  "rang_p05":155,
+  "rang_p95":301,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59501",
@@ -4477,7 +5369,11 @@
   "score_commerces":11.1,
   "score_sport_nature":14.83,
   "score_dynamique":1.6,
-  "score_cout_logement":12.76
+  "score_cout_logement":12.76,
+  "rang_p05":151,
+  "rang_p95":292,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62489",
@@ -4497,7 +5393,11 @@
   "score_commerces":12.39,
   "score_sport_nature":12.02,
   "score_dynamique":8.38,
-  "score_cout_logement":12.61
+  "score_cout_logement":12.61,
+  "rang_p05":175,
+  "rang_p95":274,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59316",
@@ -4517,7 +5417,11 @@
   "score_commerces":11.29,
   "score_sport_nature":12.01,
   "score_dynamique":4.59,
-  "score_cout_logement":6.62
+  "score_cout_logement":6.62,
+  "rang_p05":177,
+  "rang_p95":310,
+  "part_runs_meme_tranche":0.55,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59330",
@@ -4537,7 +5441,11 @@
   "score_commerces":9.77,
   "score_sport_nature":9.11,
   "score_dynamique":10.0,
-  "score_cout_logement":9.78
+  "score_cout_logement":9.78,
+  "rang_p05":173,
+  "rang_p95":290,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62194",
@@ -4557,7 +5465,11 @@
   "score_commerces":15.31,
   "score_sport_nature":11.79,
   "score_dynamique":8.09,
-  "score_cout_logement":16.73
+  "score_cout_logement":16.73,
+  "rang_p05":177,
+  "rang_p95":266,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"62037",
@@ -4577,7 +5489,11 @@
   "score_commerces":12.02,
   "score_sport_nature":12.42,
   "score_dynamique":7.71,
-  "score_cout_logement":7.1
+  "score_cout_logement":7.1,
+  "rang_p05":185,
+  "rang_p95":301,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59214",
@@ -4597,7 +5513,11 @@
   "score_commerces":3.71,
   "score_sport_nature":11.54,
   "score_dynamique":6.39,
-  "score_cout_logement":14.5
+  "score_cout_logement":14.5,
+  "rang_p05":137,
+  "rang_p95":304,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59084",
@@ -4617,7 +5537,11 @@
   "score_commerces":13.08,
   "score_sport_nature":9.8,
   "score_dynamique":7.34,
-  "score_cout_logement":15.12
+  "score_cout_logement":15.12,
+  "rang_p05":165,
+  "rang_p95":279,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62846",
@@ -4637,7 +5561,11 @@
   "score_commerces":15.78,
   "score_sport_nature":7.91,
   "score_dynamique":8.16,
-  "score_cout_logement":12.91
+  "score_cout_logement":12.91,
+  "rang_p05":177,
+  "rang_p95":282,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62624",
@@ -4657,7 +5585,11 @@
   "score_commerces":17.6,
   "score_sport_nature":10.56,
   "score_dynamique":6.62,
-  "score_cout_logement":12.64
+  "score_cout_logement":12.64,
+  "rang_p05":145,
+  "rang_p95":329,
+  "part_runs_meme_tranche":0.47,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62200",
@@ -4677,7 +5609,11 @@
   "score_commerces":12.43,
   "score_sport_nature":4.92,
   "score_dynamique":8.71,
-  "score_cout_logement":14.49
+  "score_cout_logement":14.49,
+  "rang_p05":160,
+  "rang_p95":300,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62350",
@@ -4697,7 +5633,11 @@
   "score_commerces":11.85,
   "score_sport_nature":8.53,
   "score_dynamique":10.97,
-  "score_cout_logement":14.32
+  "score_cout_logement":14.32,
+  "rang_p05":182,
+  "rang_p95":291,
+  "part_runs_meme_tranche":0.63,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62215",
@@ -4717,7 +5657,11 @@
   "score_commerces":17.03,
   "score_sport_nature":10.76,
   "score_dynamique":11.64,
-  "score_cout_logement":10.75
+  "score_cout_logement":10.75,
+  "rang_p05":184,
+  "rang_p95":310,
+  "part_runs_meme_tranche":0.52,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59146",
@@ -4737,7 +5681,11 @@
   "score_commerces":10.95,
   "score_sport_nature":13.14,
   "score_dynamique":8.01,
-  "score_cout_logement":2.7
+  "score_cout_logement":2.7,
+  "rang_p05":183,
+  "rang_p95":334,
+  "part_runs_meme_tranche":0.37,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59203",
@@ -4757,7 +5705,11 @@
   "score_commerces":12.66,
   "score_sport_nature":11.89,
   "score_dynamique":7.29,
-  "score_cout_logement":13.24
+  "score_cout_logement":13.24,
+  "rang_p05":194,
+  "rang_p95":275,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62033",
@@ -4777,7 +5729,11 @@
   "score_commerces":14.4,
   "score_sport_nature":9.69,
   "score_dynamique":11.06,
-  "score_cout_logement":14.11
+  "score_cout_logement":14.11,
+  "rang_p05":199,
+  "rang_p95":279,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62427",
@@ -4797,7 +5753,11 @@
   "score_commerces":17.68,
   "score_sport_nature":9.36,
   "score_dynamique":9.39,
-  "score_cout_logement":13.14
+  "score_cout_logement":13.14,
+  "rang_p05":161,
+  "rang_p95":323,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62051",
@@ -4817,7 +5777,11 @@
   "score_commerces":18.04,
   "score_sport_nature":5.86,
   "score_dynamique":8.72,
-  "score_cout_logement":11.24
+  "score_cout_logement":11.24,
+  "rang_p05":184,
+  "rang_p95":306,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59124",
@@ -4837,7 +5801,11 @@
   "score_commerces":8.39,
   "score_sport_nature":8.31,
   "score_dynamique":12.18,
-  "score_cout_logement":3.72
+  "score_cout_logement":3.72,
+  "rang_p05":178,
+  "rang_p95":343,
+  "part_runs_meme_tranche":0.38,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59598",
@@ -4857,7 +5825,11 @@
   "score_commerces":12.34,
   "score_sport_nature":8.97,
   "score_dynamique":9.8,
-  "score_cout_logement":7.54
+  "score_cout_logement":7.54,
+  "rang_p05":201,
+  "rang_p95":314,
+  "part_runs_meme_tranche":0.42,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59656",
@@ -4877,7 +5849,11 @@
   "score_commerces":15.13,
   "score_sport_nature":12.35,
   "score_dynamique":7.26,
-  "score_cout_logement":5.73
+  "score_cout_logement":5.73,
+  "rang_p05":187,
+  "rang_p95":328,
+  "part_runs_meme_tranche":0.38,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59013",
@@ -4897,7 +5873,11 @@
   "score_commerces":7.61,
   "score_sport_nature":9.54,
   "score_dynamique":15.42,
-  "score_cout_logement":3.19
+  "score_cout_logement":3.19,
+  "rang_p05":183,
+  "rang_p95":337,
+  "part_runs_meme_tranche":0.35,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59416",
@@ -4917,7 +5897,11 @@
   "score_commerces":6.6,
   "score_sport_nature":15.21,
   "score_dynamique":8.29,
-  "score_cout_logement":16.19
+  "score_cout_logement":16.19,
+  "rang_p05":134,
+  "rang_p95":326,
+  "part_runs_meme_tranche":0.42,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59257",
@@ -4937,7 +5921,11 @@
   "score_commerces":5.37,
   "score_sport_nature":14.75,
   "score_dynamique":17.56,
-  "score_cout_logement":8.52
+  "score_cout_logement":8.52,
+  "rang_p05":154,
+  "rang_p95":343,
+  "part_runs_meme_tranche":0.42,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62626",
@@ -4957,7 +5945,11 @@
   "score_commerces":10.62,
   "score_sport_nature":7.53,
   "score_dynamique":4.65,
-  "score_cout_logement":11.8
+  "score_cout_logement":11.8,
+  "rang_p05":168,
+  "rang_p95":313,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59594",
@@ -4977,7 +5969,11 @@
   "score_commerces":3.06,
   "score_sport_nature":7.9,
   "score_dynamique":9.35,
-  "score_cout_logement":13.91
+  "score_cout_logement":13.91,
+  "rang_p05":134,
+  "rang_p95":325,
+  "part_runs_meme_tranche":0.44,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59475",
@@ -4997,7 +5993,11 @@
   "score_commerces":15.11,
   "score_sport_nature":10.83,
   "score_dynamique":6.58,
-  "score_cout_logement":14.58
+  "score_cout_logement":14.58,
+  "rang_p05":201,
+  "rang_p95":287,
+  "part_runs_meme_tranche":0.47,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59522",
@@ -5017,7 +6017,11 @@
   "score_commerces":8.74,
   "score_sport_nature":12.53,
   "score_dynamique":14.24,
-  "score_cout_logement":3.69
+  "score_cout_logement":3.69,
+  "rang_p05":163,
+  "rang_p95":358,
+  "part_runs_meme_tranche":0.46,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59276",
@@ -5037,7 +6041,11 @@
   "score_commerces":14.86,
   "score_sport_nature":9.62,
   "score_dynamique":7.52,
-  "score_cout_logement":14.07
+  "score_cout_logement":14.07,
+  "rang_p05":198,
+  "rang_p95":299,
+  "part_runs_meme_tranche":0.53,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59113",
@@ -5057,7 +6065,11 @@
   "score_commerces":4.88,
   "score_sport_nature":13.74,
   "score_dynamique":10.17,
-  "score_cout_logement":14.42
+  "score_cout_logement":14.42,
+  "rang_p05":172,
+  "rang_p95":312,
+  "part_runs_meme_tranche":0.52,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59660",
@@ -5077,7 +6089,11 @@
   "score_commerces":15.23,
   "score_sport_nature":12.81,
   "score_dynamique":8.03,
-  "score_cout_logement":6.75
+  "score_cout_logement":6.75,
+  "rang_p05":197,
+  "rang_p95":337,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59356",
@@ -5097,7 +6113,11 @@
   "score_commerces":8.99,
   "score_sport_nature":11.9,
   "score_dynamique":4.28,
-  "score_cout_logement":3.91
+  "score_cout_logement":3.91,
+  "rang_p05":188,
+  "rang_p95":341,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59511",
@@ -5117,7 +6137,11 @@
   "score_commerces":8.32,
   "score_sport_nature":9.8,
   "score_dynamique":11.92,
-  "score_cout_logement":12.56
+  "score_cout_logement":12.56,
+  "rang_p05":187,
+  "rang_p95":317,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59207",
@@ -5137,7 +6161,11 @@
   "score_commerces":13.3,
   "score_sport_nature":8.25,
   "score_dynamique":8.18,
-  "score_cout_logement":15.81
+  "score_cout_logement":15.81,
+  "rang_p05":192,
+  "rang_p95":305,
+  "part_runs_meme_tranche":0.52,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59042",
@@ -5157,7 +6185,11 @@
   "score_commerces":4.83,
   "score_sport_nature":7.14,
   "score_dynamique":14.69,
-  "score_cout_logement":3.72
+  "score_cout_logement":3.72,
+  "rang_p05":157,
+  "rang_p95":348,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59641",
@@ -5177,7 +6209,11 @@
   "score_commerces":9.91,
   "score_sport_nature":11.08,
   "score_dynamique":7.74,
-  "score_cout_logement":12.04
+  "score_cout_logement":12.04,
+  "rang_p05":187,
+  "rang_p95":311,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59663",
@@ -5197,7 +6233,11 @@
   "score_commerces":15.49,
   "score_sport_nature":11.09,
   "score_dynamique":6.34,
-  "score_cout_logement":11.41
+  "score_cout_logement":11.41,
+  "rang_p05":165,
+  "rang_p95":339,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62262",
@@ -5217,7 +6257,11 @@
   "score_commerces":8.7,
   "score_sport_nature":7.12,
   "score_dynamique":10.31,
-  "score_cout_logement":13.07
+  "score_cout_logement":13.07,
+  "rang_p05":193,
+  "rang_p95":314,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59227",
@@ -5237,7 +6281,11 @@
   "score_commerces":16.18,
   "score_sport_nature":12.12,
   "score_dynamique":11.66,
-  "score_cout_logement":15.47
+  "score_cout_logement":15.47,
+  "rang_p05":186,
+  "rang_p95":312,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59004",
@@ -5257,7 +6305,11 @@
   "score_commerces":0.44,
   "score_sport_nature":8.34,
   "score_dynamique":16.4,
-  "score_cout_logement":10.09
+  "score_cout_logement":10.09,
+  "rang_p05":136,
+  "rang_p95":351,
+  "part_runs_meme_tranche":0.41,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59205",
@@ -5277,7 +6329,11 @@
   "score_commerces":16.43,
   "score_sport_nature":12.04,
   "score_dynamique":4.87,
-  "score_cout_logement":17.69
+  "score_cout_logement":17.69,
+  "rang_p05":169,
+  "rang_p95":324,
+  "part_runs_meme_tranche":0.5,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59268",
@@ -5297,7 +6353,11 @@
   "score_commerces":15.9,
   "score_sport_nature":8.46,
   "score_dynamique":8.52,
-  "score_cout_logement":14.86
+  "score_cout_logement":14.86,
+  "rang_p05":190,
+  "rang_p95":319,
+  "part_runs_meme_tranche":0.55,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59082",
@@ -5317,7 +6377,11 @@
   "score_commerces":8.7,
   "score_sport_nature":10.14,
   "score_dynamique":3.99,
-  "score_cout_logement":7.52
+  "score_cout_logement":7.52,
+  "rang_p05":200,
+  "rang_p95":326,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59479",
@@ -5337,7 +6401,11 @@
   "score_commerces":14.31,
   "score_sport_nature":13.5,
   "score_dynamique":11.54,
-  "score_cout_logement":14.84
+  "score_cout_logement":14.84,
+  "rang_p05":180,
+  "rang_p95":327,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59361",
@@ -5357,7 +6425,11 @@
   "score_commerces":14.5,
   "score_sport_nature":9.55,
   "score_dynamique":6.73,
-  "score_cout_logement":16.78
+  "score_cout_logement":16.78,
+  "rang_p05":172,
+  "rang_p95":332,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59419",
@@ -5377,7 +6449,11 @@
   "score_commerces":2.18,
   "score_sport_nature":11.36,
   "score_dynamique":12.15,
-  "score_cout_logement":5.63
+  "score_cout_logement":5.63,
+  "rang_p05":167,
+  "rang_p95":349,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62842",
@@ -5397,7 +6473,11 @@
   "score_commerces":14.66,
   "score_sport_nature":10.31,
   "score_dynamique":6.27,
-  "score_cout_logement":11.09
+  "score_cout_logement":11.09,
+  "rang_p05":232,
+  "rang_p95":311,
+  "part_runs_meme_tranche":0.84,
+  "position":"solide"
  },
  {
   "code_insee":"59253",
@@ -5417,7 +6497,11 @@
   "score_commerces":14.7,
   "score_sport_nature":8.41,
   "score_dynamique":8.18,
-  "score_cout_logement":15.56
+  "score_cout_logement":15.56,
+  "rang_p05":209,
+  "rang_p95":315,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59339",
@@ -5437,7 +6521,11 @@
   "score_commerces":15.44,
   "score_sport_nature":8.34,
   "score_dynamique":5.89,
-  "score_cout_logement":5.58
+  "score_cout_logement":5.58,
+  "rang_p05":184,
+  "rang_p95":368,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62224",
@@ -5457,7 +6545,11 @@
   "score_commerces":15.33,
   "score_sport_nature":9.78,
   "score_dynamique":5.65,
-  "score_cout_logement":13.25
+  "score_cout_logement":13.25,
+  "rang_p05":190,
+  "rang_p95":331,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59616",
@@ -5477,7 +6569,11 @@
   "score_commerces":13.84,
   "score_sport_nature":7.34,
   "score_dynamique":8.12,
-  "score_cout_logement":15.57
+  "score_cout_logement":15.57,
+  "rang_p05":194,
+  "rang_p95":320,
+  "part_runs_meme_tranche":0.63,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62491",
@@ -5497,7 +6593,11 @@
   "score_commerces":15.38,
   "score_sport_nature":10.71,
   "score_dynamique":7.65,
-  "score_cout_logement":10.13
+  "score_cout_logement":10.13,
+  "rang_p05":211,
+  "rang_p95":327,
+  "part_runs_meme_tranche":0.71,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62065",
@@ -5517,7 +6617,11 @@
   "score_commerces":16.03,
   "score_sport_nature":11.2,
   "score_dynamique":8.11,
-  "score_cout_logement":11.96
+  "score_cout_logement":11.96,
+  "rang_p05":211,
+  "rang_p95":341,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59458",
@@ -5537,7 +6641,11 @@
   "score_commerces":1.35,
   "score_sport_nature":12.15,
   "score_dynamique":17.61,
-  "score_cout_logement":3.93
+  "score_cout_logement":3.93,
+  "rang_p05":163,
+  "rang_p95":367,
+  "part_runs_meme_tranche":0.39,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62464",
@@ -5557,7 +6665,11 @@
   "score_commerces":15.17,
   "score_sport_nature":9.66,
   "score_dynamique":5.21,
-  "score_cout_logement":12.3
+  "score_cout_logement":12.3,
+  "rang_p05":220,
+  "rang_p95":325,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"62907",
@@ -5577,7 +6689,11 @@
   "score_commerces":15.54,
   "score_sport_nature":12.92,
   "score_dynamique":5.74,
-  "score_cout_logement":11.92
+  "score_cout_logement":11.92,
+  "rang_p05":190,
+  "rang_p95":354,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59535",
@@ -5597,7 +6713,11 @@
   "score_commerces":4.61,
   "score_sport_nature":13.07,
   "score_dynamique":2.32,
-  "score_cout_logement":13.31
+  "score_cout_logement":13.31,
+  "rang_p05":171,
+  "rang_p95":344,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59352",
@@ -5617,7 +6737,11 @@
   "score_commerces":14.86,
   "score_sport_nature":11.05,
   "score_dynamique":5.6,
-  "score_cout_logement":4.87
+  "score_cout_logement":4.87,
+  "rang_p05":224,
+  "rang_p95":348,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62724",
@@ -5637,7 +6761,11 @@
   "score_commerces":15.2,
   "score_sport_nature":8.48,
   "score_dynamique":8.45,
-  "score_cout_logement":12.87
+  "score_cout_logement":12.87,
+  "rang_p05":236,
+  "rang_p95":321,
+  "part_runs_meme_tranche":0.87,
+  "position":"solide"
  },
  {
   "code_insee":"59482",
@@ -5657,7 +6785,11 @@
   "score_commerces":15.95,
   "score_sport_nature":10.3,
   "score_dynamique":11.15,
-  "score_cout_logement":5.79
+  "score_cout_logement":5.79,
+  "rang_p05":221,
+  "rang_p95":355,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62014",
@@ -5677,7 +6809,11 @@
   "score_commerces":16.66,
   "score_sport_nature":12.94,
   "score_dynamique":5.45,
-  "score_cout_logement":15.6
+  "score_cout_logement":15.6,
+  "rang_p05":182,
+  "rang_p95":347,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62083",
@@ -5697,7 +6833,11 @@
   "score_commerces":15.81,
   "score_sport_nature":11.84,
   "score_dynamique":3.98,
-  "score_cout_logement":14.37
+  "score_cout_logement":14.37,
+  "rang_p05":217,
+  "rang_p95":324,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"59303",
@@ -5717,7 +6857,11 @@
   "score_commerces":9.2,
   "score_sport_nature":14.17,
   "score_dynamique":3.32,
-  "score_cout_logement":8.25
+  "score_cout_logement":8.25,
+  "rang_p05":208,
+  "rang_p95":346,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62457",
@@ -5737,7 +6881,11 @@
   "score_commerces":15.6,
   "score_sport_nature":10.17,
   "score_dynamique":5.75,
-  "score_cout_logement":14.66
+  "score_cout_logement":14.66,
+  "rang_p05":223,
+  "rang_p95":322,
+  "part_runs_meme_tranche":0.82,
+  "position":"solide"
  },
  {
   "code_insee":"62383",
@@ -5757,7 +6905,11 @@
   "score_commerces":6.76,
   "score_sport_nature":9.98,
   "score_dynamique":7.53,
-  "score_cout_logement":15.42
+  "score_cout_logement":15.42,
+  "rang_p05":199,
+  "rang_p95":323,
+  "part_runs_meme_tranche":0.74,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62413",
@@ -5777,7 +6929,11 @@
   "score_commerces":16.26,
   "score_sport_nature":11.19,
   "score_dynamique":6.25,
-  "score_cout_logement":13.45
+  "score_cout_logement":13.45,
+  "rang_p05":238,
+  "rang_p95":323,
+  "part_runs_meme_tranche":0.88,
+  "position":"solide"
  },
  {
   "code_insee":"59210",
@@ -5797,7 +6953,11 @@
   "score_commerces":13.53,
   "score_sport_nature":9.57,
   "score_dynamique":7.72,
-  "score_cout_logement":13.62
+  "score_cout_logement":13.62,
+  "rang_p05":190,
+  "rang_p95":343,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59447",
@@ -5817,7 +6977,11 @@
   "score_commerces":16.21,
   "score_sport_nature":10.48,
   "score_dynamique":6.99,
-  "score_cout_logement":15.94
+  "score_cout_logement":15.94,
+  "rang_p05":222,
+  "rang_p95":330,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"59239",
@@ -5837,7 +7001,11 @@
   "score_commerces":14.59,
   "score_sport_nature":11.85,
   "score_dynamique":10.46,
-  "score_cout_logement":11.64
+  "score_cout_logement":11.64,
+  "rang_p05":218,
+  "rang_p95":331,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"62895",
@@ -5857,7 +7025,11 @@
   "score_commerces":17.07,
   "score_sport_nature":9.32,
   "score_dynamique":7.67,
-  "score_cout_logement":13.41
+  "score_cout_logement":13.41,
+  "rang_p05":231,
+  "rang_p95":329,
+  "part_runs_meme_tranche":0.82,
+  "position":"solide"
  },
  {
   "code_insee":"62573",
@@ -5877,7 +7049,11 @@
   "score_commerces":14.35,
   "score_sport_nature":7.59,
   "score_dynamique":7.37,
-  "score_cout_logement":11.16
+  "score_cout_logement":11.16,
+  "rang_p05":236,
+  "rang_p95":323,
+  "part_runs_meme_tranche":0.89,
+  "position":"solide"
  },
  {
   "code_insee":"59019",
@@ -5897,7 +7073,11 @@
   "score_commerces":7.19,
   "score_sport_nature":11.1,
   "score_dynamique":8.18,
-  "score_cout_logement":16.5
+  "score_cout_logement":16.5,
+  "rang_p05":176,
+  "rang_p95":340,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62133",
@@ -5917,7 +7097,11 @@
   "score_commerces":17.41,
   "score_sport_nature":10.35,
   "score_dynamique":9.37,
-  "score_cout_logement":14.59
+  "score_cout_logement":14.59,
+  "rang_p05":202,
+  "rang_p95":359,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62193",
@@ -5937,7 +7121,11 @@
   "score_commerces":18.28,
   "score_sport_nature":10.42,
   "score_dynamique":2.46,
-  "score_cout_logement":14.36
+  "score_cout_logement":14.36,
+  "rang_p05":194,
+  "rang_p95":354,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62040",
@@ -5957,7 +7145,11 @@
   "score_commerces":15.81,
   "score_sport_nature":15.52,
   "score_dynamique":6.03,
-  "score_cout_logement":14.1
+  "score_cout_logement":14.1,
+  "rang_p05":199,
+  "rang_p95":360,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59054",
@@ -5977,7 +7169,11 @@
   "score_commerces":7.54,
   "score_sport_nature":5.79,
   "score_dynamique":14.72,
-  "score_cout_logement":14.89
+  "score_cout_logement":14.89,
+  "rang_p05":192,
+  "rang_p95":342,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59152",
@@ -5997,7 +7193,11 @@
   "score_commerces":15.36,
   "score_sport_nature":9.76,
   "score_dynamique":10.61,
-  "score_cout_logement":9.54
+  "score_cout_logement":9.54,
+  "rang_p05":241,
+  "rang_p95":351,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"59135",
@@ -6017,7 +7217,11 @@
   "score_commerces":17.18,
   "score_sport_nature":11.92,
   "score_dynamique":4.98,
-  "score_cout_logement":15.81
+  "score_cout_logement":15.81,
+  "rang_p05":213,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62126",
@@ -6037,7 +7241,11 @@
   "score_commerces":13.89,
   "score_sport_nature":10.94,
   "score_dynamique":3.27,
-  "score_cout_logement":13.41
+  "score_cout_logement":13.41,
+  "rang_p05":232,
+  "rang_p95":348,
+  "part_runs_meme_tranche":0.73,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59185",
@@ -6057,7 +7265,11 @@
   "score_commerces":9.92,
   "score_sport_nature":11.92,
   "score_dynamique":6.35,
-  "score_cout_logement":14.35
+  "score_cout_logement":14.35,
+  "rang_p05":246,
+  "rang_p95":331,
+  "part_runs_meme_tranche":0.89,
+  "position":"solide"
  },
  {
   "code_insee":"62861",
@@ -6077,7 +7289,11 @@
   "score_commerces":9.93,
   "score_sport_nature":11.43,
   "score_dynamique":6.39,
-  "score_cout_logement":11.01
+  "score_cout_logement":11.01,
+  "rang_p05":249,
+  "rang_p95":335,
+  "part_runs_meme_tranche":0.86,
+  "position":"solide"
  },
  {
   "code_insee":"59615",
@@ -6097,7 +7313,11 @@
   "score_commerces":7.17,
   "score_sport_nature":11.42,
   "score_dynamique":12.39,
-  "score_cout_logement":14.21
+  "score_cout_logement":14.21,
+  "rang_p05":226,
+  "rang_p95":348,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59546",
@@ -6117,7 +7337,11 @@
   "score_commerces":6.88,
   "score_sport_nature":11.52,
   "score_dynamique":4.95,
-  "score_cout_logement":14.3
+  "score_cout_logement":14.3,
+  "rang_p05":227,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59008",
@@ -6137,7 +7361,11 @@
   "score_commerces":17.32,
   "score_sport_nature":11.76,
   "score_dynamique":9.01,
-  "score_cout_logement":16.44
+  "score_cout_logement":16.44,
+  "rang_p05":236,
+  "rang_p95":362,
+  "part_runs_meme_tranche":0.67,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59094",
@@ -6157,7 +7385,11 @@
   "score_commerces":16.76,
   "score_sport_nature":14.42,
   "score_dynamique":7.38,
-  "score_cout_logement":13.88
+  "score_cout_logement":13.88,
+  "rang_p05":250,
+  "rang_p95":354,
+  "part_runs_meme_tranche":0.73,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59489",
@@ -6177,7 +7409,11 @@
   "score_commerces":14.71,
   "score_sport_nature":12.13,
   "score_dynamique":6.55,
-  "score_cout_logement":12.46
+  "score_cout_logement":12.46,
+  "rang_p05":249,
+  "rang_p95":347,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"59026",
@@ -6197,7 +7433,11 @@
   "score_commerces":15.54,
   "score_sport_nature":10.23,
   "score_dynamique":8.98,
-  "score_cout_logement":16.39
+  "score_cout_logement":16.39,
+  "rang_p05":220,
+  "rang_p95":356,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59260",
@@ -6217,7 +7457,11 @@
   "score_commerces":12.84,
   "score_sport_nature":13.42,
   "score_dynamique":6.81,
-  "score_cout_logement":10.87
+  "score_cout_logement":10.87,
+  "rang_p05":261,
+  "rang_p95":349,
+  "part_runs_meme_tranche":0.75,
+  "position":"solide"
  },
  {
   "code_insee":"62563",
@@ -6237,7 +7481,11 @@
   "score_commerces":15.91,
   "score_sport_nature":10.3,
   "score_dynamique":10.4,
-  "score_cout_logement":13.42
+  "score_cout_logement":13.42,
+  "rang_p05":264,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.76,
+  "position":"solide"
  },
  {
   "code_insee":"62476",
@@ -6257,7 +7505,11 @@
   "score_commerces":4.63,
   "score_sport_nature":11.34,
   "score_dynamique":10.79,
-  "score_cout_logement":11.78
+  "score_cout_logement":11.78,
+  "rang_p05":230,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59309",
@@ -6277,7 +7529,11 @@
   "score_commerces":16.89,
   "score_sport_nature":10.46,
   "score_dynamique":7.54,
-  "score_cout_logement":12.14
+  "score_cout_logement":12.14,
+  "rang_p05":228,
+  "rang_p95":366,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59369",
@@ -6297,7 +7553,11 @@
   "score_commerces":13.0,
   "score_sport_nature":9.79,
   "score_dynamique":5.3,
-  "score_cout_logement":15.14
+  "score_cout_logement":15.14,
+  "rang_p05":243,
+  "rang_p95":342,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"62736",
@@ -6317,7 +7577,11 @@
   "score_commerces":15.2,
   "score_sport_nature":9.77,
   "score_dynamique":6.27,
-  "score_cout_logement":11.32
+  "score_cout_logement":11.32,
+  "rang_p05":267,
+  "rang_p95":356,
+  "part_runs_meme_tranche":0.72,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59196",
@@ -6337,7 +7601,11 @@
   "score_commerces":9.1,
   "score_sport_nature":10.61,
   "score_dynamique":3.47,
-  "score_cout_logement":8.01
+  "score_cout_logement":8.01,
+  "rang_p05":228,
+  "rang_p95":382,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62520",
@@ -6357,7 +7625,11 @@
   "score_commerces":9.81,
   "score_sport_nature":10.43,
   "score_dynamique":3.56,
-  "score_cout_logement":13.3
+  "score_cout_logement":13.3,
+  "rang_p05":249,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.7,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59305",
@@ -6377,7 +7649,11 @@
   "score_commerces":14.54,
   "score_sport_nature":12.27,
   "score_dynamique":9.19,
-  "score_cout_logement":13.0
+  "score_cout_logement":13.0,
+  "rang_p05":247,
+  "rang_p95":356,
+  "part_runs_meme_tranche":0.65,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62454",
@@ -6397,7 +7673,11 @@
   "score_commerces":9.01,
   "score_sport_nature":11.67,
   "score_dynamique":5.6,
-  "score_cout_logement":11.66
+  "score_cout_logement":11.66,
+  "rang_p05":259,
+  "rang_p95":349,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62284",
@@ -6417,7 +7697,11 @@
   "score_commerces":14.26,
   "score_sport_nature":11.41,
   "score_dynamique":10.15,
-  "score_cout_logement":14.55
+  "score_cout_logement":14.55,
+  "rang_p05":230,
+  "rang_p95":359,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59418",
@@ -6437,7 +7721,11 @@
   "score_commerces":11.66,
   "score_sport_nature":8.28,
   "score_dynamique":7.26,
-  "score_cout_logement":16.64
+  "score_cout_logement":16.64,
+  "rang_p05":242,
+  "rang_p95":350,
+  "part_runs_meme_tranche":0.69,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62349",
@@ -6457,7 +7745,11 @@
   "score_commerces":7.22,
   "score_sport_nature":6.4,
   "score_dynamique":9.42,
-  "score_cout_logement":11.67
+  "score_cout_logement":11.67,
+  "rang_p05":239,
+  "rang_p95":361,
+  "part_runs_meme_tranche":0.57,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62186",
@@ -6477,7 +7769,11 @@
   "score_commerces":15.56,
   "score_sport_nature":9.28,
   "score_dynamique":7.93,
-  "score_cout_logement":12.66
+  "score_cout_logement":12.66,
+  "rang_p05":271,
+  "rang_p95":365,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62452",
@@ -6497,7 +7793,11 @@
   "score_commerces":4.92,
   "score_sport_nature":11.42,
   "score_dynamique":10.74,
-  "score_cout_logement":16.89
+  "score_cout_logement":16.89,
+  "rang_p05":230,
+  "rang_p95":359,
+  "part_runs_meme_tranche":0.53,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59400",
@@ -6517,7 +7817,11 @@
   "score_commerces":16.98,
   "score_sport_nature":7.76,
   "score_dynamique":7.34,
-  "score_cout_logement":15.39
+  "score_cout_logement":15.39,
+  "rang_p05":250,
+  "rang_p95":369,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62628",
@@ -6537,7 +7841,11 @@
   "score_commerces":13.96,
   "score_sport_nature":11.11,
   "score_dynamique":9.67,
-  "score_cout_logement":13.38
+  "score_cout_logement":13.38,
+  "rang_p05":247,
+  "rang_p95":377,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59559",
@@ -6557,7 +7865,11 @@
   "score_commerces":7.45,
   "score_sport_nature":13.48,
   "score_dynamique":7.67,
-  "score_cout_logement":14.08
+  "score_cout_logement":14.08,
+  "rang_p05":260,
+  "rang_p95":349,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59297",
@@ -6577,7 +7889,11 @@
   "score_commerces":9.51,
   "score_sport_nature":14.76,
   "score_dynamique":7.24,
-  "score_cout_logement":17.15
+  "score_cout_logement":17.15,
+  "rang_p05":258,
+  "rang_p95":359,
+  "part_runs_meme_tranche":0.4,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62693",
@@ -6597,7 +7913,11 @@
   "score_commerces":6.47,
   "score_sport_nature":9.03,
   "score_dynamique":5.45,
-  "score_cout_logement":15.8
+  "score_cout_logement":15.8,
+  "rang_p05":240,
+  "rang_p95":358,
+  "part_runs_meme_tranche":0.47,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59638",
@@ -6617,7 +7937,11 @@
   "score_commerces":1.23,
   "score_sport_nature":8.27,
   "score_dynamique":16.36,
-  "score_cout_logement":2.83
+  "score_cout_logement":2.83,
+  "rang_p05":222,
+  "rang_p95":392,
+  "part_runs_meme_tranche":0.59,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59647",
@@ -6637,7 +7961,11 @@
   "score_commerces":16.54,
   "score_sport_nature":11.05,
   "score_dynamique":8.04,
-  "score_cout_logement":14.6
+  "score_cout_logement":14.6,
+  "rang_p05":248,
+  "rang_p95":375,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62188",
@@ -6657,7 +7985,11 @@
   "score_commerces":11.72,
   "score_sport_nature":10.19,
   "score_dynamique":6.93,
-  "score_cout_logement":16.17
+  "score_cout_logement":16.17,
+  "rang_p05":269,
+  "rang_p95":362,
+  "part_runs_meme_tranche":0.48,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62727",
@@ -6677,7 +8009,11 @@
   "score_commerces":6.45,
   "score_sport_nature":11.29,
   "score_dynamique":1.96,
-  "score_cout_logement":14.59
+  "score_cout_logement":14.59,
+  "rang_p05":262,
+  "rang_p95":367,
+  "part_runs_meme_tranche":0.52,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62529",
@@ -6697,7 +8033,11 @@
   "score_commerces":6.34,
   "score_sport_nature":8.1,
   "score_dynamique":11.28,
-  "score_cout_logement":9.83
+  "score_cout_logement":9.83,
+  "rang_p05":280,
+  "rang_p95":364,
+  "part_runs_meme_tranche":0.64,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59580",
@@ -6717,7 +8057,11 @@
   "score_commerces":15.21,
   "score_sport_nature":12.09,
   "score_dynamique":4.86,
-  "score_cout_logement":13.09
+  "score_cout_logement":13.09,
+  "rang_p05":284,
+  "rang_p95":374,
+  "part_runs_meme_tranche":0.56,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62875",
@@ -6737,7 +8081,11 @@
   "score_commerces":9.86,
   "score_sport_nature":8.76,
   "score_dynamique":5.03,
-  "score_cout_logement":17.36
+  "score_cout_logement":17.36,
+  "rang_p05":263,
+  "rang_p95":364,
+  "part_runs_meme_tranche":0.49,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62771",
@@ -6757,7 +8105,11 @@
   "score_commerces":16.69,
   "score_sport_nature":9.18,
   "score_dynamique":7.35,
-  "score_cout_logement":13.17
+  "score_cout_logement":13.17,
+  "rang_p05":247,
+  "rang_p95":388,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59117",
@@ -6777,7 +8129,11 @@
   "score_commerces":7.56,
   "score_sport_nature":11.11,
   "score_dynamique":13.11,
-  "score_cout_logement":16.55
+  "score_cout_logement":16.55,
+  "rang_p05":263,
+  "rang_p95":363,
+  "part_runs_meme_tranche":0.51,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59471",
@@ -6797,7 +8153,11 @@
   "score_commerces":9.94,
   "score_sport_nature":10.7,
   "score_dynamique":11.64,
-  "score_cout_logement":10.77
+  "score_cout_logement":10.77,
+  "rang_p05":292,
+  "rang_p95":366,
+  "part_runs_meme_tranche":0.71,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59551",
@@ -6817,7 +8177,11 @@
   "score_commerces":4.13,
   "score_sport_nature":8.02,
   "score_dynamique":9.76,
-  "score_cout_logement":9.1
+  "score_cout_logement":9.1,
+  "rang_p05":269,
+  "rang_p95":370,
+  "part_runs_meme_tranche":0.67,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62373",
@@ -6837,7 +8201,11 @@
   "score_commerces":4.06,
   "score_sport_nature":6.98,
   "score_dynamique":5.28,
-  "score_cout_logement":15.16
+  "score_cout_logement":15.16,
+  "rang_p05":247,
+  "rang_p95":370,
+  "part_runs_meme_tranche":0.58,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59244",
@@ -6857,7 +8225,11 @@
   "score_commerces":9.28,
   "score_sport_nature":12.06,
   "score_dynamique":7.69,
-  "score_cout_logement":18.46
+  "score_cout_logement":18.46,
+  "rang_p05":267,
+  "rang_p95":369,
+  "part_runs_meme_tranche":0.54,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59497",
@@ -6877,7 +8249,11 @@
   "score_commerces":10.78,
   "score_sport_nature":12.66,
   "score_dynamique":8.76,
-  "score_cout_logement":17.54
+  "score_cout_logement":17.54,
+  "rang_p05":282,
+  "rang_p95":364,
+  "part_runs_meme_tranche":0.62,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62523",
@@ -6897,7 +8273,11 @@
   "score_commerces":15.7,
   "score_sport_nature":11.31,
   "score_dynamique":4.83,
-  "score_cout_logement":13.46
+  "score_cout_logement":13.46,
+  "rang_p05":264,
+  "rang_p95":388,
+  "part_runs_meme_tranche":0.61,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62905",
@@ -6917,7 +8297,11 @@
   "score_commerces":3.61,
   "score_sport_nature":8.58,
   "score_dynamique":15.57,
-  "score_cout_logement":16.07
+  "score_cout_logement":16.07,
+  "rang_p05":226,
+  "rang_p95":382,
+  "part_runs_meme_tranche":0.6,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62684",
@@ -6937,7 +8321,11 @@
   "score_commerces":14.62,
   "score_sport_nature":9.11,
   "score_dynamique":6.65,
-  "score_cout_logement":15.22
+  "score_cout_logement":15.22,
+  "rang_p05":290,
+  "rang_p95":376,
+  "part_runs_meme_tranche":0.66,
+  "position":"à nuancer"
  },
  {
   "code_insee":"62666",
@@ -6957,7 +8345,11 @@
   "score_commerces":10.4,
   "score_sport_nature":10.29,
   "score_dynamique":8.02,
-  "score_cout_logement":16.01
+  "score_cout_logement":16.01,
+  "rang_p05":315,
+  "rang_p95":359,
+  "part_runs_meme_tranche":0.81,
+  "position":"solide"
  },
  {
   "code_insee":"59096",
@@ -6977,7 +8369,11 @@
   "score_commerces":10.27,
   "score_sport_nature":8.31,
   "score_dynamique":6.98,
-  "score_cout_logement":5.31
+  "score_cout_logement":5.31,
+  "rang_p05":305,
+  "rang_p95":380,
+  "part_runs_meme_tranche":0.81,
+  "position":"solide"
  },
  {
   "code_insee":"62181",
@@ -6997,7 +8393,11 @@
   "score_commerces":15.04,
   "score_sport_nature":8.3,
   "score_dynamique":12.87,
-  "score_cout_logement":16.17
+  "score_cout_logement":16.17,
+  "rang_p05":264,
+  "rang_p95":382,
+  "part_runs_meme_tranche":0.68,
+  "position":"à nuancer"
  },
  {
   "code_insee":"59334",
@@ -7017,7 +8417,11 @@
   "score_commerces":11.13,
   "score_sport_nature":9.37,
   "score_dynamique":4.05,
-  "score_cout_logement":10.76
+  "score_cout_logement":10.76,
+  "rang_p05":319,
+  "rang_p95":380,
+  "part_runs_meme_tranche":0.86,
+  "position":"solide"
  },
  {
   "code_insee":"59411",
@@ -7037,7 +8441,11 @@
   "score_commerces":13.79,
   "score_sport_nature":12.06,
   "score_dynamique":5.92,
-  "score_cout_logement":9.48
+  "score_cout_logement":9.48,
+  "rang_p05":324,
+  "rang_p95":378,
+  "part_runs_meme_tranche":0.92,
+  "position":"solide"
  },
  {
   "code_insee":"59262",
@@ -7057,7 +8465,11 @@
   "score_commerces":10.86,
   "score_sport_nature":8.64,
   "score_dynamique":8.76,
-  "score_cout_logement":11.31
+  "score_cout_logement":11.31,
+  "rang_p05":334,
+  "rang_p95":368,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59499",
@@ -7077,7 +8489,11 @@
   "score_commerces":15.65,
   "score_sport_nature":10.02,
   "score_dynamique":6.66,
-  "score_cout_logement":12.21
+  "score_cout_logement":12.21,
+  "rang_p05":298,
+  "rang_p95":387,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"59519",
@@ -7097,7 +8513,11 @@
   "score_commerces":9.83,
   "score_sport_nature":8.22,
   "score_dynamique":6.24,
-  "score_cout_logement":12.64
+  "score_cout_logement":12.64,
+  "rang_p05":296,
+  "rang_p95":378,
+  "part_runs_meme_tranche":0.79,
+  "position":"solide"
  },
  {
   "code_insee":"59180",
@@ -7117,7 +8537,11 @@
   "score_commerces":2.18,
   "score_sport_nature":9.77,
   "score_dynamique":6.39,
-  "score_cout_logement":12.26
+  "score_cout_logement":12.26,
+  "rang_p05":286,
+  "rang_p95":383,
+  "part_runs_meme_tranche":0.78,
+  "position":"solide"
  },
  {
   "code_insee":"59639",
@@ -7137,7 +8561,11 @@
   "score_commerces":4.42,
   "score_sport_nature":13.28,
   "score_dynamique":11.42,
-  "score_cout_logement":13.65
+  "score_cout_logement":13.65,
+  "rang_p05":290,
+  "rang_p95":379,
+  "part_runs_meme_tranche":0.8,
+  "position":"solide"
  },
  {
   "code_insee":"59281",
@@ -7157,7 +8585,11 @@
   "score_commerces":3.58,
   "score_sport_nature":7.51,
   "score_dynamique":7.18,
-  "score_cout_logement":8.77
+  "score_cout_logement":8.77,
+  "rang_p05":292,
+  "rang_p95":383,
+  "part_runs_meme_tranche":0.82,
+  "position":"solide"
  },
  {
   "code_insee":"62323",
@@ -7177,7 +8609,11 @@
   "score_commerces":7.19,
   "score_sport_nature":8.81,
   "score_dynamique":13.91,
-  "score_cout_logement":11.53
+  "score_cout_logement":11.53,
+  "rang_p05":300,
+  "rang_p95":379,
+  "part_runs_meme_tranche":0.84,
+  "position":"solide"
  },
  {
   "code_insee":"59629",
@@ -7197,7 +8633,11 @@
   "score_commerces":4.88,
   "score_sport_nature":13.44,
   "score_dynamique":4.14,
-  "score_cout_logement":11.74
+  "score_cout_logement":11.74,
+  "rang_p05":302,
+  "rang_p95":380,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"62391",
@@ -7217,7 +8657,11 @@
   "score_commerces":9.92,
   "score_sport_nature":9.08,
   "score_dynamique":4.09,
-  "score_cout_logement":16.91
+  "score_cout_logement":16.91,
+  "rang_p05":306,
+  "rang_p95":375,
+  "part_runs_meme_tranche":0.83,
+  "position":"solide"
  },
  {
   "code_insee":"62471",
@@ -7237,7 +8681,11 @@
   "score_commerces":4.46,
   "score_sport_nature":8.2,
   "score_dynamique":7.2,
-  "score_cout_logement":16.75
+  "score_cout_logement":16.75,
+  "rang_p05":286,
+  "rang_p95":378,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"59275",
@@ -7257,7 +8705,11 @@
   "score_commerces":3.06,
   "score_sport_nature":9.83,
   "score_dynamique":6.45,
-  "score_cout_logement":1.93
+  "score_cout_logement":1.93,
+  "rang_p05":297,
+  "rang_p95":395,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"62073",
@@ -7277,7 +8729,11 @@
   "score_commerces":5.03,
   "score_sport_nature":8.94,
   "score_dynamique":7.79,
-  "score_cout_logement":11.81
+  "score_cout_logement":11.81,
+  "rang_p05":315,
+  "rang_p95":375,
+  "part_runs_meme_tranche":0.91,
+  "position":"solide"
  },
  {
   "code_insee":"62376",
@@ -7297,7 +8753,11 @@
   "score_commerces":8.36,
   "score_sport_nature":10.97,
   "score_dynamique":7.46,
-  "score_cout_logement":12.96
+  "score_cout_logement":12.96,
+  "rang_p05":321,
+  "rang_p95":377,
+  "part_runs_meme_tranche":0.91,
+  "position":"solide"
  },
  {
   "code_insee":"59301",
@@ -7317,7 +8777,11 @@
   "score_commerces":7.3,
   "score_sport_nature":11.52,
   "score_dynamique":8.98,
-  "score_cout_logement":14.77
+  "score_cout_logement":14.77,
+  "rang_p05":303,
+  "rang_p95":377,
+  "part_runs_meme_tranche":0.86,
+  "position":"solide"
  },
  {
   "code_insee":"62620",
@@ -7337,7 +8801,11 @@
   "score_commerces":9.35,
   "score_sport_nature":11.23,
   "score_dynamique":5.35,
-  "score_cout_logement":15.58
+  "score_cout_logement":15.58,
+  "rang_p05":310,
+  "rang_p95":378,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"59153",
@@ -7357,7 +8825,11 @@
   "score_commerces":17.23,
   "score_sport_nature":8.36,
   "score_dynamique":5.22,
-  "score_cout_logement":14.3
+  "score_cout_logement":14.3,
+  "rang_p05":290,
+  "rang_p95":392,
+  "part_runs_meme_tranche":0.77,
+  "position":"solide"
  },
  {
   "code_insee":"62042",
@@ -7377,7 +8849,11 @@
   "score_commerces":2.72,
   "score_sport_nature":9.46,
   "score_dynamique":12.04,
-  "score_cout_logement":11.65
+  "score_cout_logement":11.65,
+  "rang_p05":301,
+  "rang_p95":382,
+  "part_runs_meme_tranche":0.85,
+  "position":"solide"
  },
  {
   "code_insee":"62770",
@@ -7397,7 +8873,11 @@
   "score_commerces":14.22,
   "score_sport_nature":9.55,
   "score_dynamique":7.53,
-  "score_cout_logement":15.82
+  "score_cout_logement":15.82,
+  "rang_p05":312,
+  "rang_p95":383,
+  "part_runs_meme_tranche":0.87,
+  "position":"solide"
  },
  {
   "code_insee":"62502",
@@ -7417,7 +8897,11 @@
   "score_commerces":9.24,
   "score_sport_nature":7.87,
   "score_dynamique":15.32,
-  "score_cout_logement":14.82
+  "score_cout_logement":14.82,
+  "rang_p05":301,
+  "rang_p95":389,
+  "part_runs_meme_tranche":0.84,
+  "position":"solide"
  },
  {
   "code_insee":"59222",
@@ -7437,7 +8921,11 @@
   "score_commerces":10.2,
   "score_sport_nature":11.66,
   "score_dynamique":12.71,
-  "score_cout_logement":8.83
+  "score_cout_logement":8.83,
+  "rang_p05":331,
+  "rang_p95":389,
+  "part_runs_meme_tranche":0.96,
+  "position":"solide"
  },
  {
   "code_insee":"62479",
@@ -7457,7 +8945,11 @@
   "score_commerces":8.12,
   "score_sport_nature":9.56,
   "score_dynamique":8.67,
-  "score_cout_logement":15.56
+  "score_cout_logement":15.56,
+  "rang_p05":330,
+  "rang_p95":381,
+  "part_runs_meme_tranche":0.95,
+  "position":"solide"
  },
  {
   "code_insee":"59089",
@@ -7477,7 +8969,11 @@
   "score_commerces":16.39,
   "score_sport_nature":12.68,
   "score_dynamique":6.08,
-  "score_cout_logement":17.62
+  "score_cout_logement":17.62,
+  "rang_p05":318,
+  "rang_p95":391,
+  "part_runs_meme_tranche":0.9,
+  "position":"solide"
  },
  {
   "code_insee":"62570",
@@ -7497,7 +8993,11 @@
   "score_commerces":14.18,
   "score_sport_nature":8.84,
   "score_dynamique":7.5,
-  "score_cout_logement":11.27
+  "score_cout_logement":11.27,
+  "rang_p05":320,
+  "rang_p95":399,
+  "part_runs_meme_tranche":0.9,
+  "position":"solide"
  },
  {
   "code_insee":"62718",
@@ -7517,7 +9017,11 @@
   "score_commerces":6.04,
   "score_sport_nature":9.43,
   "score_dynamique":4.35,
-  "score_cout_logement":12.34
+  "score_cout_logement":12.34,
+  "rang_p05":344,
+  "rang_p95":387,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"62277",
@@ -7537,7 +9041,11 @@
   "score_commerces":11.52,
   "score_sport_nature":6.98,
   "score_dynamique":9.15,
-  "score_cout_logement":11.96
+  "score_cout_logement":11.96,
+  "rang_p05":346,
+  "rang_p95":392,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62331",
@@ -7557,7 +9065,11 @@
   "score_commerces":4.6,
   "score_sport_nature":9.28,
   "score_dynamique":5.43,
-  "score_cout_logement":14.87
+  "score_cout_logement":14.87,
+  "rang_p05":337,
+  "rang_p95":388,
+  "part_runs_meme_tranche":0.97,
+  "position":"solide"
  },
  {
   "code_insee":"59581",
@@ -7577,7 +9089,11 @@
   "score_commerces":9.84,
   "score_sport_nature":10.7,
   "score_dynamique":4.05,
-  "score_cout_logement":10.91
+  "score_cout_logement":10.91,
+  "rang_p05":352,
+  "rang_p95":395,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62584",
@@ -7597,7 +9113,11 @@
   "score_commerces":2.72,
   "score_sport_nature":11.31,
   "score_dynamique":7.99,
-  "score_cout_logement":15.14
+  "score_cout_logement":15.14,
+  "rang_p05":342,
+  "rang_p95":389,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59105",
@@ -7617,7 +9137,11 @@
   "score_commerces":0.25,
   "score_sport_nature":11.67,
   "score_dynamique":9.9,
-  "score_cout_logement":13.37
+  "score_cout_logement":13.37,
+  "rang_p05":322,
+  "rang_p95":395,
+  "part_runs_meme_tranche":0.94,
+  "position":"solide"
  },
  {
   "code_insee":"59293",
@@ -7637,7 +9161,11 @@
   "score_commerces":7.44,
   "score_sport_nature":9.71,
   "score_dynamique":5.77,
-  "score_cout_logement":17.07
+  "score_cout_logement":17.07,
+  "rang_p05":350,
+  "rang_p95":391,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59502",
@@ -7657,7 +9185,11 @@
   "score_commerces":9.1,
   "score_sport_nature":8.1,
   "score_dynamique":7.11,
-  "score_cout_logement":18.82
+  "score_cout_logement":18.82,
+  "rang_p05":345,
+  "rang_p95":389,
+  "part_runs_meme_tranche":0.98,
+  "position":"solide"
  },
  {
   "code_insee":"59086",
@@ -7677,7 +9209,11 @@
   "score_commerces":7.84,
   "score_sport_nature":12.19,
   "score_dynamique":8.92,
-  "score_cout_logement":14.07
+  "score_cout_logement":14.07,
+  "rang_p05":357,
+  "rang_p95":392,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59409",
@@ -7697,7 +9233,11 @@
   "score_commerces":9.0,
   "score_sport_nature":9.11,
   "score_dynamique":10.56,
-  "score_cout_logement":15.49
+  "score_cout_logement":15.49,
+  "rang_p05":366,
+  "rang_p95":390,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59238",
@@ -7717,7 +9257,11 @@
   "score_commerces":6.89,
   "score_sport_nature":9.14,
   "score_dynamique":8.89,
-  "score_cout_logement":16.56
+  "score_cout_logement":16.56,
+  "rang_p05":360,
+  "rang_p95":394,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59637",
@@ -7737,7 +9281,11 @@
   "score_commerces":6.85,
   "score_sport_nature":13.52,
   "score_dynamique":9.62,
-  "score_cout_logement":13.74
+  "score_cout_logement":13.74,
+  "rang_p05":360,
+  "rang_p95":396,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62330",
@@ -7757,7 +9305,11 @@
   "score_commerces":7.99,
   "score_sport_nature":5.57,
   "score_dynamique":6.83,
-  "score_cout_logement":13.48
+  "score_cout_logement":13.48,
+  "rang_p05":368,
+  "rang_p95":398,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62543",
@@ -7777,7 +9329,11 @@
   "score_commerces":10.2,
   "score_sport_nature":9.19,
   "score_dynamique":7.05,
-  "score_cout_logement":18.02
+  "score_cout_logement":18.02,
+  "rang_p05":372,
+  "rang_p95":394,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62311",
@@ -7797,7 +9353,11 @@
   "score_commerces":7.98,
   "score_sport_nature":9.62,
   "score_dynamique":5.7,
-  "score_cout_logement":10.84
+  "score_cout_logement":10.84,
+  "rang_p05":383,
+  "rang_p95":401,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62869",
@@ -7817,7 +9377,11 @@
   "score_commerces":0.45,
   "score_sport_nature":7.84,
   "score_dynamique":4.87,
-  "score_cout_logement":13.77
+  "score_cout_logement":13.77,
+  "rang_p05":369,
+  "rang_p95":403,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62638",
@@ -7837,7 +9401,11 @@
   "score_commerces":9.48,
   "score_sport_nature":11.35,
   "score_dynamique":6.37,
-  "score_cout_logement":17.68
+  "score_cout_logement":17.68,
+  "rang_p05":379,
+  "rang_p95":399,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59018",
@@ -7857,7 +9425,11 @@
   "score_commerces":10.02,
   "score_sport_nature":10.56,
   "score_dynamique":2.44,
-  "score_cout_logement":13.22
+  "score_cout_logement":13.22,
+  "rang_p05":377,
+  "rang_p95":403,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62713",
@@ -7877,7 +9449,11 @@
   "score_commerces":9.18,
   "score_sport_nature":9.73,
   "score_dynamique":5.2,
-  "score_cout_logement":16.45
+  "score_cout_logement":16.45,
+  "rang_p05":382,
+  "rang_p95":402,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59662",
@@ -7897,7 +9473,11 @@
   "score_commerces":6.88,
   "score_sport_nature":9.53,
   "score_dynamique":9.07,
-  "score_cout_logement":14.77
+  "score_cout_logement":14.77,
+  "rang_p05":389,
+  "rang_p95":401,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62712",
@@ -7917,7 +9497,11 @@
   "score_commerces":3.26,
   "score_sport_nature":8.5,
   "score_dynamique":8.17,
-  "score_cout_logement":17.09
+  "score_cout_logement":17.09,
+  "rang_p05":382,
+  "rang_p95":402,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62606",
@@ -7937,7 +9521,11 @@
   "score_commerces":5.61,
   "score_sport_nature":4.24,
   "score_dynamique":5.87,
-  "score_cout_logement":9.31
+  "score_cout_logement":9.31,
+  "rang_p05":382,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59387",
@@ -7957,7 +9545,11 @@
   "score_commerces":9.11,
   "score_sport_nature":6.12,
   "score_dynamique":10.37,
-  "score_cout_logement":18.13
+  "score_cout_logement":18.13,
+  "rang_p05":387,
+  "rang_p95":402,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59265",
@@ -7977,7 +9569,11 @@
   "score_commerces":6.83,
   "score_sport_nature":12.84,
   "score_dynamique":7.57,
-  "score_cout_logement":17.6
+  "score_cout_logement":17.6,
+  "rang_p05":386,
+  "rang_p95":403,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59610",
@@ -7997,7 +9593,11 @@
   "score_commerces":0.25,
   "score_sport_nature":11.71,
   "score_dynamique":15.73,
-  "score_cout_logement":18.65
+  "score_cout_logement":18.65,
+  "rang_p05":370,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62190",
@@ -8017,7 +9617,11 @@
   "score_commerces":6.85,
   "score_sport_nature":12.86,
   "score_dynamique":4.42,
-  "score_cout_logement":16.94
+  "score_cout_logement":16.94,
+  "rang_p05":389,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62164",
@@ -8037,7 +9641,11 @@
   "score_commerces":3.13,
   "score_sport_nature":11.4,
   "score_dynamique":7.48,
-  "score_cout_logement":18.72
+  "score_cout_logement":18.72,
+  "rang_p05":385,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62412",
@@ -8057,7 +9665,11 @@
   "score_commerces":10.18,
   "score_sport_nature":8.01,
   "score_dynamique":8.3,
-  "score_cout_logement":17.03
+  "score_cout_logement":17.03,
+  "rang_p05":393,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59485",
@@ -8077,7 +9689,11 @@
   "score_commerces":8.12,
   "score_sport_nature":8.23,
   "score_dynamique":10.54,
-  "score_cout_logement":17.49
+  "score_cout_logement":17.49,
+  "rang_p05":395,
+  "rang_p95":405,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62252",
@@ -8097,7 +9713,11 @@
   "score_commerces":7.46,
   "score_sport_nature":8.63,
   "score_dynamique":3.75,
-  "score_cout_logement":14.79
+  "score_cout_logement":14.79,
+  "rang_p05":394,
+  "rang_p95":406,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62195",
@@ -8117,7 +9737,11 @@
   "score_commerces":3.95,
   "score_sport_nature":5.81,
   "score_dynamique":10.05,
-  "score_cout_logement":15.25
+  "score_cout_logement":15.25,
+  "rang_p05":405,
+  "rang_p95":410,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59382",
@@ -8137,7 +9761,11 @@
   "score_commerces":5.97,
   "score_sport_nature":7.23,
   "score_dynamique":6.0,
-  "score_cout_logement":18.19
+  "score_cout_logement":18.19,
+  "rang_p05":405,
+  "rang_p95":410,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59038",
@@ -8157,7 +9785,11 @@
   "score_commerces":4.31,
   "score_sport_nature":7.4,
   "score_dynamique":6.92,
-  "score_cout_logement":16.79
+  "score_cout_logement":16.79,
+  "rang_p05":406,
+  "rang_p95":410,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"62706",
@@ -8177,7 +9809,11 @@
   "score_commerces":7.3,
   "score_sport_nature":8.15,
   "score_dynamique":6.98,
-  "score_cout_logement":13.2
+  "score_cout_logement":13.2,
+  "rang_p05":407,
+  "rang_p95":411,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59622",
@@ -8197,7 +9833,11 @@
   "score_commerces":4.21,
   "score_sport_nature":7.18,
   "score_dynamique":2.32,
-  "score_cout_logement":15.6
+  "score_cout_logement":15.6,
+  "rang_p05":407,
+  "rang_p95":411,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  },
  {
   "code_insee":"59224",
@@ -8217,6 +9857,10 @@
   "score_commerces":14.19,
   "score_sport_nature":8.62,
   "score_dynamique":3.96,
-  "score_cout_logement":16.49
+  "score_cout_logement":16.49,
+  "rang_p05":406,
+  "rang_p95":411,
+  "part_runs_meme_tranche":1.0,
+  "position":"solide"
  }
 ]
