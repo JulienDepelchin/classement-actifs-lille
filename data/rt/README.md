@@ -44,7 +44,41 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 2. repo poussé sur GitHub, onglet **Actions** activé
 3. le workflow tourne seul ; `workflow_dispatch` pour un test manuel
 
-## Exploitation (après ~3-4 semaines)
+## Fiabilité des autoroutes vers Lille (parallèle au TER)
+
+- **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** (temps de trajet
+  maintenant) depuis 12 villes d'entrée (`corridors_autoroutes.csv`) vers Lille-Flandres. Un
+  instantané par run → `data/rt/autoroutes/<date>.csv`.
+- **`.github/workflows/poll-autoroutes.yml`** (`workflow_dispatch` seul), déclenché par le **même
+  Worker Cloudflare** que le TER.
+- Clé TomTom = **secret GitHub Actions** `TOMTOM_KEY` (Settings → Secrets and variables → Actions).
+
+### Mise en route (une fois)
+
+1. **GitHub → Settings → Secrets and variables → Actions → New repository secret** :
+   `TOMTOM_KEY` = la clé (contenu de `data/raw/tomtom_key.txt`)
+2. **Cloudflare Worker `poll-ter`** → Edit code → ajouter, à la fin du handler `scheduled`,
+   juste avant la fin de la fonction :
+   ```javascript
+   const r2 = await fetch(
+     "https://api.github.com/repos/JulienDepelchin/classement-actifs-lille/actions/workflows/poll-autoroutes.yml/dispatches",
+     { method: "POST", headers: {
+         "Authorization": "Bearer " + env.GH_TOKEN,
+         "Accept": "application/vnd.github+json",
+         "X-GitHub-Api-Version": "2022-11-28",
+         "User-Agent": "cf-worker-ter"
+       }, body: JSON.stringify({ ref: "main" }) }
+   );
+   console.log("autoroutes dispatch:", r2.status);
+   ```
+   → **Deploy**. Le Worker déclenche alors les deux collectes à chaque tir du cron.
+
+### Exploitation
+
+`scripts/build_regularite_autoroutes.py` (à écrire) : `autoroutes/*.csv` → par corridor : temps
+médian, **temps tampon** (p95 − médiane), pire jour, % de « jours galère » (> 1,5× la médiane).
+
+## Exploitation TER (après ~3-4 semaines)
 
 `scripts/build_regularite_reelle.py` (à écrire) : `updates/*.csv` → ponctualité par gare et par
 ligne — `% arrivées à Lille < 5 min`, `% annulations`, retard médian / p90, nb d'observations.

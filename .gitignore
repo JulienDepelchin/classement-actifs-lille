@@ -13,7 +13,9 @@ data/raw/
 data/interim/
 cache/
 
-# data/rt/ (poller GTFS-RT) et data/output/ SONT versionnes
+# data/rt/ (pollers GTFS-RT + autoroutes) et data/output/ SONT versionnes
+# le fichier de test local des autoroutes ne doit pas partir avec la cle en dur : rien a exclure,
+# le script lit la cle depuis l'env (Actions) ou data/raw/ (gitignore) -- jamais ecrite dans le CSV
 
 # --- python ---
 __pycache__/
