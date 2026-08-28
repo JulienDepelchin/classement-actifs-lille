@@ -41,7 +41,10 @@ def main() -> None:
     st = pd.read_csv(SRC)
     st = st[st["nom_poll"].isin(POLL) & (st["statut_valid"].astype(str).str.lower().isin(["t", "true"]))]
     st["valeur"] = pd.to_numeric(st["valeur"], errors="coerce")
-    st = st.dropna(subset=["valeur", "x_wgs84", "y_wgs84"])
+    st["annee"] = pd.to_numeric(st["annee"], errors="coerce")
+    st = st.dropna(subset=["valeur", "x_wgs84", "y_wgs84", "annee"])
+    # on ecarte 2020-2021 (annees COVID, NO2 anormalement bas) et on ne garde que le recent
+    st = st[st["annee"] >= 2023]
     # derniere annee valide par (station, polluant)
     st = st.sort_values("annee").groupby(["nom_station", "nom_poll"], as_index=False).last()
     st["poll"] = st["nom_poll"].map(POLL)
