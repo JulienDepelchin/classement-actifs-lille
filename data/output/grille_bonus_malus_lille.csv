@@ -1,0 +1,8 @@
+﻿theme,colonne,condition,delta,fichier_source,libelle
+transport,desserte_directe_faible,truthy,-0.3,transport_communes_candidates.csv,gare de rabattement mal desservie
+transport,option_sans_voiture,== 0,-0.4,transport_communes_candidates.csv,aucun trajet 100% sans voiture possible
+transport,gare_sur_territoire,truthy,0.2,transport_communes_candidates.csv,une gare TER dans la commune
+sante,msp_sur_place,truthy,0.2,sante_communes_candidates.csv,maison de sante pluriprofessionnelle sur place
+sante,acces_urgences_moy_min,> 20,-0.3,sante_communes_candidates.csv,urgences a plus de 20 min
+education,college_sur_place,== 1,0.25,education_communes_candidates.csv,un college dans la commune
+environnement,risque_minier,== 1,-0.3,georisques_communes_candidates.csv,"alea minier (affaissement, gaz de mine)"

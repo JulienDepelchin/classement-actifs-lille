@@ -825,48 +825,61 @@ Béthune-Bruay) cumule bouchons + désert cyclable + passoires + aléa minier + 
 zéro alternative voiture. La Lys/Flandre cumule inondation + sécheresse-argiles. La Pévèle / l'Artois
 périurbain aisé domine presque tous les axes.
 
-# Scoring — architecture
+# Scoring — architecture (v2, 2026-08-28)
 
-`scripts/build_grille_ponderation.py` → **`data/output/grille_ponderation_lille.xlsx`** (+ `.csv`).
-Modèle : classement retraite + système d'étoiles Lovable.
+`scripts/build_grille_ponderation.py` → `grille_ponderation_lille.xlsx/.csv` +
+`grille_bonus_malus_lille.csv`. Modèle : classement retraite + étoiles Lovable + reprises
+méthodo **Le Figaro** (transformation log ; bonus/malus ; phrase d'humilité).
 
-- **9 thèmes à étoiles** (le lecteur règle 1-5 ★ par thème sur `/personnaliser`) : transport,
-  prix_immobilier, sante, education, securite, cadre_urbain, environnement, commerces, sport_nature.
-  `vie_sociale` supprimé (pas de ciné/biblio/musée en data) ; `immobilier` redevient un thème à part
-  (prix très concret pour le lecteur).
-- **40 critères**, poids **fixes à l'intérieur** de chaque thème (les points ne comptent
-  qu'intra-thème — chaque `score_thème` est ramené 0-20).
-- Méthode (notebook 12 retraite) : merge sur `code_insee` → **imputation** (médiane, ou `0`, ou `p90`
-  selon la colonne `imputation` de la grille) → **winsorisation** (colonne `winsor` : p95, p90,
-  p5_p95) → **normalisation 0-20 min-max** (`normal` = haut meilleur ; `inverser` = bas meilleur).
-- `score_thème = Σ(score_critère × poids) / Σ(poids)` → 0-20.
-- `score_global` (preset par défaut) `= Σ(score_thème × ★_défaut) / Σ(★_défaut)`.
-- **Preset ★ par défaut** : transport 5 · prix_immobilier 4 · sante 3 · education 3 · securite 3 ·
-  cadre_urbain 3 · environnement 3 · commerces 2 · sport_nature 2. (Le recentrage transport vit dans
-  le preset, pas dans une pondération figée.)
-- **Hors scoring** (contexte / fiche commune / curseur budget / angles) : `reste_a_vivre_*`,
-  `bouchons_*` (sauf `indice_congestion`), `navetteurs_mel_*`, motorisation des ménages.
-- Air : gardé (thème environnement, poids 4) mais discrimine faiblement → **V1.1** : concentrations
-  NO₂/PM₂.₅ modélisées par commune (cartographie Atmo).
+- **10 thèmes à étoiles** : transport ★5 · sante ★3 · education ★3 · cadre_urbain ★3 ·
+  environnement ★3 · securite ★2 · commerces ★2 · sport_nature ★2 · **dynamique ★2** ·
+  **cout_logement ★1**.
+- **40 critères** + **7 bonus/malus**. Poids fixes intra-thème.
+- Par critère : imputation (`mediane` / `0`) → **transformation** (`log` pour les densités/comptages
+  asymétriques ; `winsor_p95` / `p90` / `p5_p95` ; `aucune`) → **min-max 0-20** (`normal` / `inverser`).
+- `score_thème = Σ(score×poids)/Σpoids`, **puis bonus/malus** (±0,2 à 0,4 pt : gare mal desservie,
+  aucun trajet sans voiture, collège sur place, aléa minier…), borné [0 ; 20].
+- `score_global_brut = Σ(score_thème × ★_défaut)/Σ★` → rescalé min-max → `score_global` (0-20).
+- **`rang`** (conservé) + **`tranche`** (5 quintiles : Défavorable → Très favorable).
 
-Sorties visées : `scores_0_20.csv`, `classement_final.json` (score_thème + score_global),
-`scores_detail.json` (40 critères) pour l'appli Lovable.
+**Changements clés v1 → v2 :**
+- `prix_immobilier` → **`cout_logement`** ★1 (prix DVF + loyers Carte des loyers + **taxe foncière**).
+- **`dynamique`** ★2 (nouveau) : croissance pop 2016-22, accélération, arrivée d'actifs (IRAN),
+  indice de vieillissement. Justifié par la validation (voir plus bas).
+- `securite` → 2 critères (cambriolages + dégradations), ★3 → ★2.
+- Air : `air_pct_jours_degrades` (indice ATMO, ne discrimine rien) → **`air_no2_ugm3`** (concentration
+  à la station de fond la plus proche ; NO₂ discrimine 6-18 µg/m³, PM2.5 non).
+- `part_actifs_tc_pct_2022` ajouté au transport (part modale **mesurée** RP 2022).
+- Binaires (`college_sur_place`, `option_sans_voiture`, `risque_minier`, `desserte_directe_faible`,
+  `msp_sur_place`) : critères → **bonus/malus**.
+- `reste_a_vivre` : **abandonné** (fourre-tout hors sujet).
 
-`scripts/build_scoring.py` → `scores_0_20.csv`, `classement_final.json`, `scores_detail.json`.
-`score_global` rescalé min-max 0-20 pour la lisibilité (rangs inchangés ; `score_global_brut`
-conservé, tassé ~7,4-13,2). **v1 (2026-08-27)** : preset transport ★5 domine (r = +0,70 avec le
-global). Top : Gondecourt, Marquette-lez-Lille, Saint-André-lez-Lille, Lesquin, Hazebrouck,
-Erquinghem-Lys, Pont-à-Marcq, Templeuve, Seclin, Ronchin — communes bien reliées en bordure de MEL
-+ Pévèle avec TER. Tensions connues : `securite` (r = −0,28) pénalise toute vraie ville
-(délinquance ∝ services) ; le bas du classement = petits villages ruraux sans gare (Cambrésis,
-Lys) — légitime pour « travailler à Lille » mais peu spectaculaire ; des villages prisés mais
-captifs de la voiture (Gruson, Camphin) se classent bas — assumé (le classement porte sur le
-trajet domicile-travail).
+## Validation externe — `scripts/valider_classement.py` + `build_dynamiques_communes.py`
+
+Le score corrèle **faiblement mais positivement** avec des signaux qui n'entrent pas dans le calcul :
+usage réel du TC **r = +0,53**, croissance démo r = +0,30, arrivée d'actifs r = +0,18,
+vieillissement r = −0,14. Décile 10 : +0,70 %/an et le plus jeune ; décile 1 : −0,14 %/an et le plus
+vieux. **Limite** : signal modéré (~9 % de variance sur la croissance) ; **8 des 50 communes du bas
+sont en croissance** (petits villages Pévèle/Mélantois sans gare — Bachy, Aix-en-Pévèle,
+Péronne-en-Mélantois : les familles y emménagent en assumant la voiture ; le classement, qui porte
+sur le trajet quotidien vers Lille, les place dans la moyenne basse).
+
+## Robustesse — `scripts/robustesse_classement.py`
+
+1 000 tirages avec les poids d'étoiles perturbés ±1 par thème :
+- **amplitude de rang médiane = ~100 places** → publier un rang précis (« 187ᵉ ») est une fausse
+  précision.
+- **Tranches extrêmes solides** : Très favorable 86 % de stabilité, Défavorable 85 %. Le top 10
+  reste toujours dans le top ~35.
+- **Milieu instable** : les 3 tranches centrales ne tiennent que 59-66 %. → présenter le milieu
+  comme un bloc, ou passer à **3 tranches** (Favorable / Intermédiaire / Défavorable).
 
 # Prochaines étapes
 
-1. Caler les poids en regardant top/flop (v1 faite).
-2. `verif-data` avant publication.
+1. Trancher : 5 tranches (+ avertissement) ou 3 tranches.
+2. Encadré méthodo « ce que ce classement ne dit pas » + phrase d'humilité.
+3. `verif-data` avant publication.
+4. Intégrer la ponctualité TER quand la collecte GTFS-RT aura tourné 3-4 semaines.
 3. Angle compagnon « sans voiture » + curseur interactif + export Lovable.
 3. Éventuelles V2 : correspondances TER, réseaux urbains hors MEL.
 4. `verif-data` avant publication.
@@ -905,8 +918,14 @@ python scripts/build_rga_communes.py        # retrait-gonflement des argiles (ov
 python scripts/build_reste_a_vivre.py       # reste à vivre (revenu FiLoSoFi − logement − trajet)
 python scripts/download_immobilier.py       # DVF 59/62 2023-2025 + Carte des loyers 2025 — 1×
 python scripts/build_immobilier_communes.py # prix (DVF) + loyers (Carte des loyers)
-python scripts/build_grille_ponderation.py  # grille de scoring (9 thèmes, 40 critères)
+python scripts/download_v2_sources.py       # fiscalité DGFiP + stations Atmo annuel — 1×
+python scripts/build_dynamiques_communes.py # dynamiques récentes (pop, migration actifs, part modale)
+python scripts/build_fiscalite_communes.py  # taxe foncière
+python scripts/build_air_stations_communes.py # concentrations NO2 (station la plus proche)
+python scripts/build_grille_ponderation.py  # grille v2 (10 thèmes, 40 critères, 7 bonus/malus)
 python scripts/build_scoring.py             # -> scores_0_20.csv + classement_final.json + scores_detail.json
+python scripts/valider_classement.py        # validation externe (dynamiques vs score)
+python scripts/robustesse_classement.py     # stabilité des rangs / tranches (bootstrap)
 python scripts/build_sante_communes.py      # APL DREES -> sante_communes_candidates.csv
 ```
 

@@ -1,18 +1,19 @@
 """
-Scoring du classement "Ou vivre quand on travaille a Lille".
-Methode = notebook 12 du classement retraite, pilotee par data/output/grille_ponderation_lille.csv.
+Scoring v2 du classement "Ou vivre quand on travaille a Lille".
+Pilote par data/output/grille_ponderation_lille.csv + grille_bonus_malus_lille.csv.
 
   1. table maitre : merge des fichiers criteres sur code_insee (411 communes)
-  2. imputation   : mediane (defaut) ou 0, selon la colonne 'imputation'
-  3. winsorisation: p95 / p90 (haute) ou p5_p95 (deux queues), selon la colonne 'winsor'
-  4. normalisation: 0-20 min-max ; 'normal' = haut meilleur, 'inverser' = bas meilleur
-  5. score_theme  = somme(score_critere x poids) / somme(poids)          -> 0-20
-  6. score_global = somme(score_theme x etoiles_defaut) / somme(etoiles)  -> 0-20 (preset editorial)
+  2. par critere : imputation -> transformation (log / winsor / aucune) -> min-max 0-20
+  3. score_theme = somme(score_critere x poids) / somme(poids)                       -> 0-20
+  4. bonus / malus : +-0,2 a 0,4 pt sur la note thematique concernee, puis borne [0 ; 20]
+  5. score_global_brut = somme(score_theme x etoiles_defaut) / somme(etoiles)
+  6. score_global = score_global_brut rescale min-max 0-20 (rangs inchanges, lisibilite)
+  7. rang + tranche (5 quintiles)
 
 Sorties (data/output/) :
-  scores_0_20.csv        detail complet (scores criteres + themes + global + rang)
-  classement_final.json  1 objet/commune : rang, score_global, score_<theme>  (appli Lovable)
-  scores_detail.json     1 objet/commune : score_<critere>                    (appli Lovable)
+  scores_0_20.csv        detail (scores criteres + themes + bonus/malus + global + rang + tranche)
+  classement_final.json  1 objet/commune : rang, tranche, score_global, score_<theme>  (Lovable)
+  scores_detail.json     1 objet/commune : score_<critere>                              (Lovable)
 """
 from __future__ import annotations
 import sys
@@ -25,24 +26,29 @@ sys.stdout.reconfigure(encoding="utf-8")
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "output"
 GRILLE = OUT / "grille_ponderation_lille.csv"
+BM = OUT / "grille_bonus_malus_lille.csv"
 CAND = OUT / "communes_candidates.csv"
 
+TRANCHES = ["Défavorable", "Peu favorable", "Moyen", "Favorable", "Très favorable"]
 
-def load_column(fichier: str, col: str) -> pd.Series:
+
+def load_col(fichier: str, col: str) -> pd.Series:
     df = pd.read_csv(OUT / fichier, dtype={"code_insee": str})
-    if col == "vols_vehicules_taux":  # fusion demandee dans la grille
+    if col == "vols_vehicules_taux":
         s = df["vols_de_vehicule_taux"].fillna(0) + df["vols_dans_vehicules_taux"].fillna(0)
     else:
         s = df[col]
     return pd.Series(s.values, index=df["code_insee"], name=col)
 
 
-def winsorise(x: pd.Series, mode: str) -> pd.Series:
-    if mode == "p95":
+def transform(x: pd.Series, mode: str) -> pd.Series:
+    if mode == "log":
+        return np.log1p(x - min(0, x.min()))
+    if mode == "winsor_p95":
         return x.clip(upper=x.quantile(0.95))
-    if mode == "p90":
+    if mode == "winsor_p90":
         return x.clip(upper=x.quantile(0.90))
-    if mode == "p5_p95":
+    if mode == "winsor_p5_p95":
         return x.clip(lower=x.quantile(0.05), upper=x.quantile(0.95))
     return x
 
@@ -51,88 +57,103 @@ def normalise(x: pd.Series, sens: str) -> pd.Series:
     lo, hi = x.min(), x.max()
     if hi == lo:
         return pd.Series(20.0, index=x.index)
-    if sens == "normal":
-        return (20 * (x - lo) / (hi - lo)).round(2)
-    return (20 * (hi - x) / (hi - lo)).round(2)
+    return ((20 * (x - lo) / (hi - lo)) if sens == "normal"
+            else (20 * (hi - x) / (hi - lo))).round(2)
+
+
+def cond_mask(s: pd.Series, cond: str) -> pd.Series:
+    op, _, val = cond.partition(" ")
+    if op == "truthy":
+        return s.fillna(0).astype(bool)
+    if op == "falsy":
+        return ~s.fillna(0).astype(bool)
+    v = float(val)
+    x = pd.to_numeric(s, errors="coerce")
+    return {"==": x.eq(v), ">": x.gt(v), "<": x.lt(v)}[op].fillna(False)
 
 
 def main() -> None:
     grille = pd.read_csv(GRILLE)
+    bm = pd.read_csv(BM)
     cand = pd.read_csv(CAND, dtype={"code_insee": str})
     master = cand[["code_insee", "commune", "dep", "PMUN", "dans_MEL"]].set_index("code_insee")
 
-    themes = (grille[["theme", "theme_libelle", "etoiles_defaut"]]
-              .drop_duplicates().set_index("theme"))
-
-    score_cols_by_theme: dict[str, list[str]] = {t: [] for t in themes.index}
-    poids: dict[str, int] = {}
+    themes = grille[["theme", "theme_libelle", "etoiles_defaut"]].drop_duplicates().set_index("theme")
+    cols_by_theme = {t: [] for t in themes.index}
+    poids = {}
 
     for r in grille.itertuples():
-        raw = load_column(r.fichier_source, r.critere_colonne).reindex(master.index)
-        win = str(r.winsor) if pd.notna(r.winsor) else ""
+        raw = load_col(r.fichier_source, r.critere_colonne).reindex(master.index)
         x = pd.to_numeric(raw, errors="coerce")
-        n_na = int(x.isna().sum())
+        na = int(x.isna().sum())
         x = x.fillna(x.median()) if r.imputation == "mediane" else x.fillna(0.0)
-        x = winsorise(x, win)
+        x = transform(x, r.transform)
         sc = normalise(x, r.sens)
         col = f"score_{r.critere_colonne}"
         master[col] = sc
-        score_cols_by_theme[r.theme].append(col)
+        cols_by_theme[r.theme].append(col)
         poids[col] = r.poids
-        print(f"  {r.theme:15s} {r.critere_colonne:32s} {r.sens:8s} w{r.poids} "
-              f"win={win or '-':6s} NA={n_na:3d}  score med {sc.median():5.1f}")
+        print(f"  {r.theme:14s} {r.critere_colonne:32s} {r.sens:8s} w{r.poids} "
+              f"{r.transform:13s} NA={na:3d}  med {sc.median():5.1f}")
 
     # --- scores thematiques ---
-    theme_score_cols = []
-    for t, cols in score_cols_by_theme.items():
+    theme_cols = []
+    for t, cols in cols_by_theme.items():
         w = np.array([poids[c] for c in cols])
-        num = (master[cols].to_numpy() * w).sum(axis=1)
-        tcol = f"score_{t}"
-        master[tcol] = (num / w.sum()).round(2)
-        theme_score_cols.append(tcol)
+        master[f"score_{t}"] = ((master[cols].to_numpy() * w).sum(axis=1) / w.sum()).round(2)
+        theme_cols.append(f"score_{t}")
 
-    # --- score global (preset d'etoiles par defaut) ---
+    # --- bonus / malus ---
+    print("\nbonus / malus :")
+    for r in bm.itertuples():
+        s = load_col(r.fichier_source, r.colonne).reindex(master.index)
+        m = cond_mask(s, r.condition)
+        master.loc[m, f"score_{r.theme}"] = (master.loc[m, f"score_{r.theme}"] + r.delta).clip(0, 20)
+        print(f"  {r.theme:14s} {r.libelle:44s} {r.delta:+.2f}  -> {int(m.sum())} communes")
+    for t in themes.index:
+        master[f"score_{t}"] = master[f"score_{t}"].round(2)
+
+    # --- score global (preset defaut) + rescale + rang + tranche ---
     et = themes["etoiles_defaut"]
-    num = sum(master[f"score_{t}"] * et[t] for t in themes.index)
-    g_brut = num / et.sum()
-    master["score_global_brut"] = g_brut.round(2)      # 0-20 theorique, en pratique tasse ~7-13
-    # rescale min-max sur 0-20 pour la lisibilite du classement (rangs inchanges)
+    g_brut = sum(master[f"score_{t}"] * et[t] for t in themes.index) / et.sum()
+    master["score_global_brut"] = g_brut.round(2)
     lo, hi = g_brut.min(), g_brut.max()
     master["score_global"] = (20 * (g_brut - lo) / (hi - lo)).round(2)
 
     master = master.sort_values("score_global", ascending=False)
     master.insert(0, "rang", range(1, len(master) + 1))
+    master["tranche"] = pd.qcut(master["score_global"], 5, labels=TRANCHES)
     master = master.reset_index()
 
     # --- exports ---
     master.to_csv(OUT / "scores_0_20.csv", index=False, encoding="utf-8-sig")
-
-    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "rang", "score_global"]
-    (master[base + theme_score_cols]
-     .to_json(OUT / "classement_final.json", orient="records", force_ascii=False, indent=1))
-    detail_cols = ["code_insee", "commune"] + [
-        c for c in master.columns if c.startswith("score_")
-        and c not in theme_score_cols and c not in ("score_global", "score_global_brut")]
-    (master[detail_cols]
-     .to_json(OUT / "scores_detail.json", orient="records", force_ascii=False, indent=1))
+    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "rang", "tranche", "score_global"]
+    master[base + theme_cols].to_json(OUT / "classement_final.json", orient="records",
+                                      force_ascii=False, indent=1)
+    detail = ["code_insee", "commune"] + [c for c in master.columns if c.startswith("score_")
+              and c not in theme_cols and c not in ("score_global", "score_global_brut")]
+    master[detail].to_json(OUT / "scores_detail.json", orient="records", force_ascii=False, indent=1)
 
     # ---------------------------------------------------------------- recap
     s = master["score_global"]
-    print(f"\nscore_global : moy {s.mean():.2f} | med {s.median():.2f} | "
-          f"min {s.min():.2f} | max {s.max():.2f} | ecart-type {s.std():.2f}")
+    print(f"\nscore_global : moy {s.mean():.1f} | med {s.median():.1f} | "
+          f"brut {g_brut.min():.2f}-{g_brut.max():.2f} | ecart-type {s.std():.1f}")
     print("\nmediane des scores thematiques :")
     for t in themes.index:
         print(f"  {themes.loc[t,'theme_libelle']:28s} ({et[t]}*) : {master[f'score_{t}'].median():.1f}")
 
-    show = ["rang", "commune", "dep", "PMUN", "score_global"] + theme_score_cols
-    ren = {f"score_{t}": t[:4] for t in themes.index}
+    ren = {f"score_{t}": t[:5] for t in themes.index}
+    show = ["rang", "commune", "dep", "tranche", "score_global"] + theme_cols
     print("\n=== TOP 25 ===")
     print(master.head(25)[show].rename(columns=ren).to_string(index=False))
-    print("\n=== FLOP 20 ===")
-    print(master.tail(20)[show].rename(columns=ren).to_string(index=False))
-
-    print("\n--- TOP 15 hors MEL ---")
-    print(master[~master["dans_MEL"]].head(15)[["rang", "commune", "dep", "score_global"]].to_string(index=False))
+    print("\n=== communes par tranche ===")
+    print(master["tranche"].value_counts().reindex(TRANCHES[::-1]).to_string())
+    print("\n--- reperes ---")
+    for n in ["Marcq-en-Barœul", "Cysoing", "Lille", "Villeneuve-d'Ascq", "Gondecourt",
+              "Templeuve-en-Pévèle", "Fromelles", "Péronne-en-Mélantois", "Denain", "Gruson"]:
+        r = master[master.commune == n]
+        if len(r):
+            print(f"  {n:24s} rang {int(r.rang.iloc[0]):3d}  {r.tranche.iloc[0]:16s} ({r.score_global.iloc[0]:.1f})")
     print(f"\n-> {OUT/'scores_0_20.csv'} + classement_final.json + scores_detail.json")
 
 
