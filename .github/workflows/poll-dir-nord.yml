@@ -1,0 +1,36 @@
+name: poll-dir-nord
+
+# Vitesse et debit sur les autoroutes vers Lille -- capteurs DIR Nord (open data, DATEX II).
+# Aucune cle. DECLENCHEMENT : Cloudflare Worker -> API workflow_dispatch (~toutes les 10 min).
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: poll-dir-nord
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/poll_dir_nord.py
+      - name: commit
+        run: |
+          git config user.name  "dir-nord-bot"
+          git config user.email "actions@github.com"
+          git add data/rt/dir_nord
+          if git diff --cached --quiet; then echo "rien a committer"; exit 0; fi
+          git commit -m "dir-nord: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+            echo "push retry $i"; sleep 5
+          done

@@ -44,7 +44,21 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 2. repo poussé sur GitHub, onglet **Actions** activé
 3. le workflow tourne seul ; `workflow_dispatch` pour un test manuel
 
-## Fiabilité des autoroutes vers Lille (parallèle au TER)
+## Autoroutes — capteurs DIR Nord (open data, source principale)
+
+- **`scripts/poll_dir_nord.py`** lit le flux national « Circulation temps réel – réseau non
+  concédé » (transport.data.gouv.fr, DATEX II, **Licence Ouverte**) et extrait **vitesse moyenne +
+  débit des 168 stations DIR Nord** (toutes autour de Lille : A25 ×46, A22 ×26+, A1 ×23, A27, A23,
+  N41, N356, N227…). Aucune clé, aucun quota.
+- Référentiel : `scripts/dir_nord_referentiel.py` → `data/rt/dir_nord_stations.csv` (code_pme →
+  route, décodé du code : `A0025…` = A25, `A22TC…` = contournement, etc. — le référentiel national
+  ne donne ni coords ni PR pour les stations DIRN, on reste à la maille **axe**).
+- **`.github/workflows/poll-dir-nord.yml`** (`workflow_dispatch`), déclenché par le Worker Cloudflare.
+- Sortie `data/rt/dir_nord/<date>.csv` : `poll_utc, feed_time, code_pme, route, vitesse_kmh, debit_vh`.
+- **Publiable sans réserve** (données de l'État). Exploitation : par axe, vitesse par tranche
+  horaire / jour de semaine, % de temps en congestion (< 50 km/h), point noir persistant, débit.
+
+## Départementales — poller TomTom (complément, Weppes / Pévèle / Mélantois)
 
 - **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** :
   - **26 points d'entrée** (`points_routes.csv`) → Lille : 12 corridors autoroutiers + 14 points
