@@ -1,14 +1,11 @@
 name: poll-ter-rt
 
 # Capture la ponctualite reelle des TER vers Lille via le GTFS-RT SNCF.
-# Toute la journee de service, 7j/7 (heure de Paris = UTC+2 jusqu'au 25/10/2026, puis UTC+1) :
-#   03:00-21:00 UTC = ~05:00-23:00 Paris  -> couvre le 1er et le dernier TER.
-# Cron toutes les 10 min ; chaque run poll ~8 min (loop interne toutes les 75 s) puis 1 commit.
-# GitHub peut retarder/sauter des runs sous charge : sans gravite pour cet usage.
+# DECLENCHEMENT : cron externe (cron-job.org) qui appelle l'API workflow_dispatch toutes les
+# 10 min (le planificateur natif de GitHub etant trop peu fiable). Voir data/rt/README.md.
+# Chaque run poll ~8 min (loop interne toutes les 75 s) puis 1 commit.
 
 on:
-  schedule:
-    - cron: "*/10 3-21 * * *"
   workflow_dispatch:
     inputs:
       minutes:
