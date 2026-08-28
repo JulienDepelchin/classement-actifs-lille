@@ -2,13 +2,14 @@
 Scoring v2 du classement "Ou vivre quand on travaille a Lille".
 Pilote par data/output/grille_ponderation_lille.csv + grille_bonus_malus_lille.csv.
 
-  1. table maitre : merge des fichiers criteres sur code_insee (411 communes)
+  0. perimetre : on ne garde que les communes a <= 63 min porte-a-porte de Lille
+     (meilleur du TER realiste ou de la voiture en pointe) ; 60-63 min = "a la limite"
+  1. table maitre : merge des fichiers criteres sur code_insee
   2. par critere : imputation -> transformation (log / winsor / aucune) -> min-max 0-20
   3. score_theme = somme(score_critere x poids) / somme(poids)                       -> 0-20
   4. bonus / malus : +-0,2 a 0,4 pt sur la note thematique concernee, puis borne [0 ; 20]
-  5. score_global_brut = somme(score_theme x etoiles_defaut) / somme(etoiles)
-  6. score_global = score_global_brut rescale min-max 0-20 (rangs inchanges, lisibilite)
-  7. rang + tranche (5 quintiles)
+  5. score_global = somme(score_theme x etoiles_defaut) / somme(etoiles)   -> note /20, sans rescale
+  6. rang + tranche (5 seuils de note fixes, cf. BINS)
 
 Sorties (data/output/) :
   scores_0_20.csv        detail (scores criteres + themes + bonus/malus + global + rang + tranche)
@@ -29,7 +30,11 @@ GRILLE = OUT / "grille_ponderation_lille.csv"
 BM = OUT / "grille_bonus_malus_lille.csv"
 CAND = OUT / "communes_candidates.csv"
 
-TRANCHES = ["Défavorable", "Peu favorable", "Moyen", "Favorable", "Très favorable"]
+# tranches par seuils de note fixes (choix editorial) sur la note /20 = moyenne
+# ponderee des 10 notes thematiques. Toutes ces communes sont a < 1 h de Lille :
+# la derniere tranche est "Peu adapte" (a ce projet de vie), pas "Defavorable".
+TRANCHES = ["Peu adapté", "Peu favorable", "Moyen", "Favorable", "Très favorable"]
+BINS = [-0.01, 9.0, 9.7, 10.5, 11.5, 20.01]
 
 
 def load_col(fichier: str, col: str) -> pd.Series:
@@ -76,7 +81,25 @@ def main() -> None:
     grille = pd.read_csv(GRILLE)
     bm = pd.read_csv(BM)
     cand = pd.read_csv(CAND, dtype={"code_insee": str})
-    master = cand[["code_insee", "commune", "dep", "PMUN", "dans_MEL"]].set_index("code_insee")
+
+    # --- perimetre "moins d'une heure de Lille" -------------------------------
+    # temps porte-a-porte = min(TER realiste, voiture en pointe), rabattement
+    # voiture+TER inclus. <= 60 min : coeur ; 60-63 min : a la limite (garde,
+    # signale) ; > 63 min : hors perimetre (exclu du classement).
+    SEUIL, TOL = 60.0, 63.0
+    tps = (pd.read_csv(OUT / "transport_communes_candidates.csv", dtype={"code_insee": str})
+             .set_index("code_insee")["meilleur_temps_vers_lille_min"])
+    cand["temps_lille_min"] = cand["code_insee"].map(tps).fillna(999)
+    cand["perimetre"] = np.where(cand["temps_lille_min"] <= SEUIL, "coeur",
+                         np.where(cand["temps_lille_min"] <= TOL, "limite", "hors"))
+    n_hors = int((cand["perimetre"] == "hors").sum())
+    n_lim = int((cand["perimetre"] == "limite").sum())
+    cand = cand[cand["perimetre"] != "hors"].copy()
+    print(f"perimetre : {len(cand)} communes gardees "
+          f"({n_hors} exclues > {TOL:.0f} min ; {n_lim} 'a la limite' {SEUIL:.0f}-{TOL:.0f} min)\n")
+
+    master = cand[["code_insee", "commune", "dep", "PMUN", "dans_MEL",
+                   "perimetre", "temps_lille_min"]].set_index("code_insee")
 
     themes = grille[["theme", "theme_libelle", "etoiles_defaut"]].drop_duplicates().set_index("theme")
     cols_by_theme = {t: [] for t in themes.index}
@@ -113,36 +136,36 @@ def main() -> None:
     for t in themes.index:
         master[f"score_{t}"] = master[f"score_{t}"].round(2)
 
-    # --- score global (preset defaut) + rescale + rang + tranche ---
+    # --- note globale (preset defaut) + rang + tranche ---
+    # PAS de rescale min-max : la note publiee est directement la moyenne ponderee
+    # des 10 notes thematiques /20 (explicable, robuste aux ajouts/retraits de communes).
     et = themes["etoiles_defaut"]
-    g_brut = sum(master[f"score_{t}"] * et[t] for t in themes.index) / et.sum()
-    master["score_global_brut"] = g_brut.round(2)
-    lo, hi = g_brut.min(), g_brut.max()
-    master["score_global"] = (20 * (g_brut - lo) / (hi - lo)).round(2)
+    master["score_global"] = (sum(master[f"score_{t}"] * et[t] for t in themes.index)
+                              / et.sum()).round(2)
 
-    master = master.sort_values(["score_global", "score_global_brut"], ascending=False)
+    master = master.sort_values("score_global", ascending=False, kind="stable")
     master.insert(0, "rang", range(1, len(master) + 1))
     # tranches par SEUILS DE NOTE fixes (choix editorial), pas par quintiles : les tailles
     # refletent la distribution reelle (le "Moyen" gonfle -> c'est la realite).
-    master["tranche"] = pd.cut(master["score_global"], bins=[-0.01, 8, 10, 12, 14, 20.01],
-                               labels=TRANCHES)
-    # le rang n'est fiable que dans le haut (amplitude ~34 sur le top 42) et le bas
+    master["tranche"] = pd.cut(master["score_global"], bins=BINS, labels=TRANCHES)
+    # le rang n'est fiable que dans le haut du tableau ; ailleurs -> fourchette (robustesse)
     master["top15"] = master["rang"] <= 15
     master = master.reset_index()
 
     # --- exports ---
     master.to_csv(OUT / "scores_0_20.csv", index=False, encoding="utf-8-sig")
-    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "rang", "top15", "tranche", "score_global"]
+    base = ["code_insee", "commune", "dep", "PMUN", "dans_MEL", "perimetre", "temps_lille_min",
+            "rang", "top15", "tranche", "score_global"]
     master[base + theme_cols].to_json(OUT / "classement_final.json", orient="records",
                                       force_ascii=False, indent=1)
     detail = ["code_insee", "commune"] + [c for c in master.columns if c.startswith("score_")
-              and c not in theme_cols and c not in ("score_global", "score_global_brut")]
+              and c not in theme_cols and c != "score_global"]
     master[detail].to_json(OUT / "scores_detail.json", orient="records", force_ascii=False, indent=1)
 
     # ---------------------------------------------------------------- recap
     s = master["score_global"]
-    print(f"\nscore_global : moy {s.mean():.1f} | med {s.median():.1f} | "
-          f"brut {g_brut.min():.2f}-{g_brut.max():.2f} | ecart-type {s.std():.1f}")
+    print(f"\nnote /20 : moy {s.mean():.1f} | med {s.median():.1f} | "
+          f"min {s.min():.2f} | max {s.max():.2f} | ecart-type {s.std():.1f}")
     print("\nmediane des scores thematiques :")
     for t in themes.index:
         print(f"  {themes.loc[t,'theme_libelle']:28s} ({et[t]}*) : {master[f'score_{t}'].median():.1f}")
@@ -151,7 +174,7 @@ def main() -> None:
     show = ["rang", "commune", "dep", "tranche", "score_global"] + theme_cols
     print("\n=== TOP 15 (rang ordonnancable) ===")
     print(master.head(15)[show].rename(columns=ren).to_string(index=False))
-    print("\n=== communes par tranche (seuils fixes 8/10/12/14) ===")
+    print(f"\n=== communes par tranche (seuils {BINS[1:-1]}) ===")
     vc = master["tranche"].value_counts().reindex(TRANCHES[::-1])
     for t, n in vc.items():
         pop = master.loc[master["tranche"] == t, "PMUN"].sum()

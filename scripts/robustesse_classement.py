@@ -25,7 +25,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "output"
 N = 1000
 RNG = np.random.default_rng(42)
-TRANCHES = ["Défavorable", "Peu favorable", "Moyen", "Favorable", "Très favorable"]
+TRANCHES = ["Peu adapté", "Peu favorable", "Moyen", "Favorable", "Très favorable"]
+BINS = [-0.01, 9.0, 9.7, 10.5, 11.5, 20.01]   # identiques a build_scoring
 
 
 def main() -> None:
@@ -35,8 +36,7 @@ def main() -> None:
     tcols = [f"score_{t}" for t in themes.index]
     M = s[tcols].to_numpy()                       # 411 x n_themes
 
-    # tranches par seuils fixes sur la note rescalee 0-20 (identique a build_scoring)
-    BINS = [-0.01, 8, 10, 12, 14, 20.01]
+    # note globale = moyenne ponderee des notes thematiques (pas de rescale, cf. build_scoring)
     ranks = np.zeros((len(s), N), dtype=int)
     tr = np.empty((len(s), N), dtype=object)
     for i in range(N):
@@ -44,8 +44,7 @@ def main() -> None:
         g = (M * w).sum(axis=1) / w.sum()
         order = pd.Series(g).rank(ascending=False, method="first").astype(int).to_numpy()
         ranks[:, i] = order
-        g20 = 20 * (g - g.min()) / (g.max() - g.min())
-        tr[:, i] = pd.cut(pd.Series(g20), bins=BINS, labels=TRANCHES).to_numpy()
+        tr[:, i] = pd.cut(pd.Series(g), bins=BINS, labels=TRANCHES).to_numpy()
 
     res = s[["code_insee", "commune", "dep", "rang", "tranche", "score_global"]].copy()
     res["rang_median"] = np.median(ranks, axis=1).astype(int)
