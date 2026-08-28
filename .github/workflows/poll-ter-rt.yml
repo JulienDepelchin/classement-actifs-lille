@@ -1,14 +1,14 @@
 name: poll-ter-rt
 
 # Capture la ponctualite reelle des TER vers Lille via le GTFS-RT SNCF.
-# Fenetres de pointe (heure de Paris = UTC+2 en septembre) :
-#   matin  06:00-10:00 Paris -> 04:00-08:00 UTC
-#   soir   16:00-20:00 Paris -> 14:00-18:00 UTC
+# Fenetres de pointe (heure de Paris = UTC+2 jusqu'au 25/10/2026, puis UTC+1) :
+#   matin  05:00-10:00 Paris -> 03:00-08:00 UTC  (les 1ers TER partent vers 05h35)
+#   soir   16:00-21:00 Paris -> 14:00-19:00 UTC
 # Chaque run poll ~4 min (loop interne toutes les 75 s) puis commit une fois.
 
 on:
   schedule:
-    - cron: "*/5 4-8,14-18 * * 1-5"
+    - cron: "*/5 3-8,14-19 * * 1-5"
   workflow_dispatch:
     inputs:
       minutes:
