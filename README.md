@@ -756,21 +756,36 @@ Tous *« moins c'est mieux »* → `Inverser`.
 
 # Cadre urbain / logement
 
-`scripts/build_cadre_urbain_communes.py` → `data/output/cadre_urbain_communes_candidates.csv` (18 col).
+`scripts/build_cadre_urbain_communes.py` → `data/output/cadre_urbain_communes_candidates.csv` (12 col).
 
 | dimension | colonnes | source |
 |---|---|---|
 | Logement | `part_logts_vacants` (méd. 5,5 %), `part_maisons`, `part_proprietaires`, `part_hlm` | **Insee RP 2023** (base chiffres clés logement, **géo 01/01/2026** = notre périmètre) |
 | **Motorisation des ménages** | `part_menages_sans_voiture` (méd. 9,6 %), `part_menages_2voit_plus` (méd. **45 %**, p90 59 %) | Insee RP 2023 — **révélateur de dépendance auto réelle** (Bondues 56 %, Gruson 65 %…) |
-| Marché immobilier | `prix_maison_m2` (méd. 1 878), `prix_appart_m2`, `loyers_maison_m2`, `loyers_appart_m2`, `evol_prix_maison_1an_pct`, `delai_vente_jours` | SeLoger / MeilleursAgents IPI **avril 2026** (`prix_avril_2026.xlsx`) |
 | Dynamique démographique | `evol_pop_2016_2022_pct` (méd. +0,3 %, p10 −4,1 %) | Insee, évol. et structure de la population 2022 |
 
-**Note scoring** : `prix_maison_m2` — poids **volontairement faible** (comme le retraite, 0,8 %) :
-les communes les moins chères (Denain, Lourches, Auchel à ~1 000 €/m²) ont aussi une **forte
-vacance et une population en déclin** — la cheapness reflète un marché en détresse, pas une bonne
-affaire. `part_logts_vacants` + `evol_pop` donnent le contexte.
 `part_menages_2voit_plus` / `part_menages_sans_voiture` : classées ici mais **pourraient alimenter
-le thème transport** (dépendance auto révélée, complément du `ratio_sansvoiture_vs_voiture` modélisé).
+le thème transport** (dépendance auto révélée, complément du `ratio_alternatif_vs_voiture` modélisé).
+
+# Immobilier — prix & loyers (sources officielles)
+
+`scripts/download_immobilier.py` + `build_immobilier_communes.py` →
+`data/output/immobilier_communes_candidates.csv` (11 col). Remplace l'ancienne estimation
+SeLoger/MeilleursAgents (`prix_avril_2026.xlsx`).
+
+| colonne | source |
+|---|---|
+| `prix_maison_m2` (méd. **1 793**), `prix_appart_m2` (208 NaN — périphérie = marché de maisons) | **DVF géolocalisées** (transactions **réelles** DGFiP), millésimes **2023-2025** mis en commun, médiane communale du prix/m². 45 500 ventes de maisons exploitées, 6 600 d'appartements. Filtres : `nature_mutation=Vente`, mutation mono-type, surface et prix/m² plausibles. |
+| `n_ventes_maison` / `n_ventes_appart` | taille d'échantillon — `prix_maison_faible_echantillon` si < 15 ventes (14 communes) |
+| `evol_prix_maison_24_25_pct` | médiane 2024 → 2025 (si ≥ 30 ventes ; 166 NaN — **contexte seulement**, bruité sur petits échantillons) |
+| `loyers_maison_m2` (méd. **9,4 €**), `loyers_appart_m2` (méd. **11,5 €**) | **« Carte des loyers » 2025** (CGDD / ANIL / ministère), indicateur d'annonce **prédit** par commune, `loypredm2`. |
+
+**Scoring** (thème `prix_immobilier`, ★1 par défaut, sens « inverser », winsor **p5_p95** deux
+queues) : `prix_maison_m2` (poids 6) + `loyers_maison_m2` (3) + `loyers_appart_m2` (2).
+`prix_appart_m2` **sorti du scoring** (imputé pour la moitié des communes).
+Poids volontairement faible (comme le retraite) : les communes les moins chères (Denain 894 €/m²,
+Fresnes-sur-Escaut, Lourches) ont aussi forte vacance + déclin démo — la cheapness reflète un
+marché en détresse. Le winsor bas empêche ces planchers de scorer 20/20.
 
 ---
 
@@ -786,7 +801,8 @@ le thème transport** (dépendance auto révélée, complément du `ratio_sansvo
 | Sécurité | `securite_communes_candidates.csv` | 19 | ✅ |
 | Sport & nature | `sport_nature_communes_candidates.csv` | 17 | ✅ |
 | Environnement | `environnement_communes_candidates.csv` | 13 | ✅ |
-| Cadre urbain / logement | `cadre_urbain_communes_candidates.csv` | 18 | ✅ |
+| Cadre urbain / logement | `cadre_urbain_communes_candidates.csv` | 12 | ✅ |
+| Immobilier (prix DVF + loyers Carte des loyers) | `immobilier_communes_candidates.csv` | 11 | ✅ |
 
 ### Compléments transport + indicateurs inédits
 
@@ -883,6 +899,8 @@ python scripts/download_georisques.py       # API Géorisques 411 communes (~6 m
 python scripts/build_georisques_communes.py # risques naturels + aléa minier
 python scripts/build_rga_communes.py        # retrait-gonflement des argiles (overlay DREAL/IGN)
 python scripts/build_reste_a_vivre.py       # reste à vivre (revenu FiLoSoFi − logement − trajet)
+python scripts/download_immobilier.py       # DVF 59/62 2023-2025 + Carte des loyers 2025 — 1×
+python scripts/build_immobilier_communes.py # prix (DVF) + loyers (Carte des loyers)
 python scripts/build_grille_ponderation.py  # grille de scoring (9 thèmes, 40 critères)
 python scripts/build_scoring.py             # -> scores_0_20.csv + classement_final.json + scores_detail.json
 python scripts/build_sante_communes.py      # APL DREES -> sante_communes_candidates.csv

@@ -61,12 +61,12 @@ C = [
   "cyclable", "normal", 3, "p90", "0", "km d'amenagements cyclables utilitaires / 1000 hab (Ecolab/Geovelo 2025)"),
 
  ("prix_immobilier", "prix_maison_m2", "Prix des maisons au m2",
-  "cadre_urbain", "inverser", 6, "p5_p95", "mediane",
-  "SeLoger/MeilleursAgents avril 2026 ; winsor DEUX queues : les prix planchers (marche en detresse) ne doivent pas scorer 20/20"),
- ("prix_immobilier", "prix_appart_m2", "Prix des appartements au m2",
-  "cadre_urbain", "inverser", 2, "p5_p95", "mediane", None),
+  "immobilier", "inverser", 6, "p5_p95", "mediane",
+  "DVF transactions reelles 2023-2025 (mediane communale) ; winsor DEUX queues : les prix planchers (marche en detresse) ne scorent pas 20/20"),
  ("prix_immobilier", "loyers_maison_m2", "Loyers des maisons au m2",
-  "cadre_urbain", "inverser", 2, "p5_p95", "mediane", None),
+  "immobilier", "inverser", 3, "p5_p95", "mediane", "Carte des loyers 2025 (indicateur d'annonce predit, CGDD/ANIL)"),
+ ("prix_immobilier", "loyers_appart_m2", "Loyers des appartements au m2",
+  "immobilier", "inverser", 2, "p5_p95", "mediane", "Carte des loyers 2025 ; pertinent surtout pour les communes MEL (locatif)"),
 
  ("sante", "apl_mg_m65", "Acces aux medecins generalistes (<= 65 ans)",
   "sante", "normal", 7, None, "mediane", "APL DREES 2024, indicateur prospectif"),

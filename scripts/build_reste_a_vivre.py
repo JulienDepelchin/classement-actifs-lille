@@ -11,7 +11,7 @@ enfant, convention Insee). Tous les montants sont MENSUELS.
 Sources :
   - Insee FiLoSoFi 2021 (dernier millesime ; 2022 annule pour qualite) : Q221 = niveau de vie
     median annuel par UC ; TP6021 = taux de pauvrete.       data/raw/insee/filosofi_2021/
-  - cadre_urbain_communes_candidates.csv : prix_maison_m2, loyers_maison_m2 (avril 2026).
+  - immobilier_communes_candidates.csv : prix_maison_m2 (DVF 2023-2025), loyers_maison_m2 (Carte des loyers 2025).
   - transport_communes_candidates.csv : cout_mensuel_meilleur_mode_eur, voiture_cout_mensuel_est_eur.
 
 Scenario LOGEMENT (cout d'ACCES, celui d'un nouvel arrivant, pas d'un proprietaire installe) :
@@ -38,7 +38,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FILO = ROOT / "data" / "raw" / "insee" / "filosofi_2021"
 MVT = ROOT / "data" / "raw" / "insee" / "v_mvt_commune_2026.csv"
 CAND = ROOT / "data" / "output" / "communes_candidates.csv"
-CU = ROOT / "data" / "output" / "cadre_urbain_communes_candidates.csv"
+CU = ROOT / "data" / "output" / "immobilier_communes_candidates.csv"
 TR = ROOT / "data" / "output" / "transport_communes_candidates.csv"
 OUT = ROOT / "data" / "output" / "reste_a_vivre_communes_candidates.csv"
 

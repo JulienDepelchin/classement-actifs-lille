@@ -7,9 +7,9 @@ transport,Transport vers Lille,5,cout_mensuel_meilleur_mode_eur,Cout mensuel du 
 transport,Transport vers Lille,5,indice_congestion,Congestion aux heures de pointe,bouchons_communes_lille.csv,inverser,4,p95,mediane,temps pointe / temps fluide (TomTom) ; pese aussi sur le rabattement voiture vers la gare ; fichier bouchons_communes_lille.csv
 transport,Transport vers Lille,5,acces_gare_proche_moy_min,Acces a une gare TER,transport_communes_candidates.csv,inverser,3,p95,mediane,temps routier moyen vers la gare la plus proche (BPE)
 transport,Transport vers Lille,5,cyclable_util_km_1000hab,Reseau cyclable utilitaire,cyclable_communes_candidates.csv,normal,3,p90,0,km d'amenagements cyclables utilitaires / 1000 hab (Ecolab/Geovelo 2025)
-prix_immobilier,Prix de l'immobilier,1,prix_maison_m2,Prix des maisons au m2,cadre_urbain_communes_candidates.csv,inverser,6,p5_p95,mediane,SeLoger/MeilleursAgents avril 2026 ; winsor DEUX queues : les prix planchers (marche en detresse) ne doivent pas scorer 20/20
-prix_immobilier,Prix de l'immobilier,1,prix_appart_m2,Prix des appartements au m2,cadre_urbain_communes_candidates.csv,inverser,2,p5_p95,mediane,
-prix_immobilier,Prix de l'immobilier,1,loyers_maison_m2,Loyers des maisons au m2,cadre_urbain_communes_candidates.csv,inverser,2,p5_p95,mediane,
+prix_immobilier,Prix de l'immobilier,1,prix_maison_m2,Prix des maisons au m2,immobilier_communes_candidates.csv,inverser,6,p5_p95,mediane,DVF transactions reelles 2023-2025 (mediane communale) ; winsor DEUX queues : les prix planchers (marche en detresse) ne scorent pas 20/20
+prix_immobilier,Prix de l'immobilier,1,loyers_maison_m2,Loyers des maisons au m2,immobilier_communes_candidates.csv,inverser,3,p5_p95,mediane,"Carte des loyers 2025 (indicateur d'annonce predit, CGDD/ANIL)"
+prix_immobilier,Prix de l'immobilier,1,loyers_appart_m2,Loyers des appartements au m2,immobilier_communes_candidates.csv,inverser,2,p5_p95,mediane,Carte des loyers 2025 ; pertinent surtout pour les communes MEL (locatif)
 sante,Santé,3,apl_mg_m65,Acces aux medecins generalistes (<= 65 ans),sante_communes_candidates.csv,normal,7,,mediane,"APL DREES 2024, indicateur prospectif"
 sante,Santé,3,apl_dent,Acces aux chirurgiens-dentistes,sante_communes_candidates.csv,normal,4,,mediane,APL DREES 2024 (profession la plus tendue)
 sante,Santé,3,acces_urgences_moy_min,Temps d'acces aux urgences,sante_communes_candidates.csv,inverser,5,p95,mediane,"BPE 2025, temps routier moyen pondere pop"
