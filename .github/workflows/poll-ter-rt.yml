@@ -1,19 +1,19 @@
 name: poll-ter-rt
 
 # Capture la ponctualite reelle des TER vers Lille via le GTFS-RT SNCF.
-# Fenetres de pointe (heure de Paris = UTC+2 jusqu'au 25/10/2026, puis UTC+1) :
-#   matin  05:00-10:00 Paris -> 03:00-08:00 UTC  (les 1ers TER partent vers 05h35)
-#   soir   16:00-21:00 Paris -> 14:00-19:00 UTC
-# Chaque run poll ~4 min (loop interne toutes les 75 s) puis commit une fois.
+# Toute la journee de service, 7j/7 (heure de Paris = UTC+2 jusqu'au 25/10/2026, puis UTC+1) :
+#   03:00-21:00 UTC = ~05:00-23:00 Paris  -> couvre le 1er et le dernier TER.
+# Cron toutes les 10 min ; chaque run poll ~8 min (loop interne toutes les 75 s) puis 1 commit.
+# GitHub peut retarder/sauter des runs sous charge : sans gravite pour cet usage.
 
 on:
   schedule:
-    - cron: "*/5 3-8,14-19 * * 1-5"
+    - cron: "*/10 3-21 * * *"
   workflow_dispatch:
     inputs:
       minutes:
         description: "duree du loop (min)"
-        default: "4"
+        default: "8"
 
 concurrency:
   group: poll-ter-rt
@@ -25,7 +25,7 @@ permissions:
 jobs:
   poll:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
@@ -36,7 +36,7 @@ jobs:
       - run: pip install --quiet gtfs-realtime-bindings
 
       - name: poll
-        run: python scripts/poll_ter_rt.py --loop "${{ github.event.inputs.minutes || '4' }}"
+        run: python scripts/poll_ter_rt.py --loop "${{ github.event.inputs.minutes || '8' }}"
 
       - name: commit
         run: |
