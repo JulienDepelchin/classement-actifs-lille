@@ -23,6 +23,10 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 
+# --- brouillons de travail (mails, notes perso) ---
+mail_*.md
+notes_*.md
+
 # --- OS ---
 Thumbs.db
 .DS_Store
