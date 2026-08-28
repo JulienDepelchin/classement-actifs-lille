@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
     inputs:
       minutes:
-        description: "duree du loop (min)"
-        default: "8"
+        description: "duree du loop (min) -- garder < intervalle du cron externe"
+        default: "5"
 
 concurrency:
   group: poll-ter-rt
