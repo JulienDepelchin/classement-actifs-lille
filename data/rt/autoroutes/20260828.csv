@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 poll_utc,origine,autoroute,temps_live_min,temps_libre_min,retard_min,distance_km
 2026-08-28T14:03:52Z,Douai,A1,37.1,31.1,6.0,42.2
 2026-08-28T14:03:52Z,Lens,A21 / A1,37.6,32.8,4.8,39.9
@@ -23,3 +24,30 @@ poll_utc,origine,autoroute,temps_live_min,temps_libre_min,retard_min,distance_km
 2026-08-28T14:20:28Z,Orchies,A23 / A27,22.7,20.2,2.5,25.7
 2026-08-28T14:20:28Z,Maubeuge,A2 / A23,67.7,57.4,10.3,87.3
 2026-08-28T14:20:28Z,Cambrai,A2 / A23,60.4,50.9,9.5,80.3
+=======
+poll_utc,origine,axe,type,temps_live_min,temps_libre_min,retard_min,distance_km
+2026-08-28T14:21:27Z,Douai,A1,autoroute,37.5,31.1,6.4,42.2
+2026-08-28T14:21:27Z,Lens,A21 / A1,autoroute,37.8,31.1,6.7,41.4
+2026-08-28T14:21:27Z,Arras,A1,autoroute,49.7,39.9,9.8,53.9
+2026-08-28T14:21:27Z,Béthune,A26 / A25,autoroute,52.7,42.4,10.3,44.5
+2026-08-28T14:21:27Z,Dunkerque,A25,autoroute,57.4,52.0,5.3,80.5
+2026-08-28T14:21:27Z,Hazebrouck,A25,autoroute,41.1,36.0,5.1,48.3
+2026-08-28T14:21:27Z,La Bassée,RN41,autoroute,30.6,26.3,4.3,28.1
+2026-08-28T14:21:27Z,Valenciennes,A23,autoroute,40.9,34.5,6.4,51.3
+2026-08-28T14:21:27Z,Tourcoing,A22,autoroute,24.6,19.7,4.9,13.9
+2026-08-28T14:21:27Z,Orchies,A23 / A27,autoroute,22.7,20.2,2.6,25.7
+2026-08-28T14:21:27Z,Maubeuge,A2 / A23,autoroute,67.5,56.0,11.5,87.1
+2026-08-28T14:21:27Z,Cambrai,A2 / A23,autoroute,60.6,50.9,9.7,80.3
+2026-08-28T14:21:27Z,Wavrin,Weppes (D),secondaire,22.5,20.0,2.5,19.3
+2026-08-28T14:21:27Z,Sainghin-en-Weppes,Weppes (D),secondaire,27.9,25.0,3.0,22.6
+2026-08-28T14:21:27Z,Herlies,Weppes (D),secondaire,25.2,22.1,3.1,23.2
+2026-08-28T14:21:27Z,Fromelles,Weppes (D),secondaire,26.7,23.8,2.9,22.1
+2026-08-28T14:21:27Z,Pérenchies,rocade NO / M652,secondaire,24.6,21.1,3.6,20.7
+2026-08-28T14:21:27Z,Prémesques,rocade NO / M652,secondaire,24.6,20.6,3.9,18.3
+2026-08-28T14:21:27Z,Templeuve-en-Pévèle,Pévèle (D),secondaire,24.9,20.9,3.9,17.8
+2026-08-28T14:21:27Z,Cappelle-en-Pévèle,Pévèle (D),secondaire,26.3,22.7,3.6,30.6
+2026-08-28T14:21:27Z,Cysoing,Pévèle (D),secondaire,27.8,23.1,4.7,17.4
+2026-08-28T14:21:27Z,Bourghelles,Pévèle (D),secondaire,27.1,24.0,3.1,23.3
+2026-08-28T14:21:27Z,Péronne-en-Mélantois,Mélantois (D),secondaire,23.6,20.2,3.3,16.9
+2026-08-28T14:21:27Z,Bouvines,Mélantois (D),secondaire,22.9,18.7,4.2,13.9
+>>>>>>> Stashed changes

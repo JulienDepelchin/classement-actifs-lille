@@ -1,15 +1,19 @@
 """
-Poller "fiabilite des autoroutes vers Lille" : temps de trajet EN DIRECT (trafic live TomTom)
-depuis 12 villes d'entree de l'agglomeration lilloise vers Lille-Flandres.
+Poller "fiabilite des routes vers Lille" : temps de trajet EN DIRECT (trafic live TomTom) depuis
+24 points d'entree vers Lille-Flandres -- 12 corridors autoroutiers + 12 points sur les axes
+DEPARTEMENTAUX la ou la voiture prime sur le train (Weppes, Pevele, Melantois, rocade NO / M652).
 
 Pendant delta au TER : on ne veut pas un temps moyen mais la DISTRIBUTION jour apres jour ->
 temps median, "temps tampon" (p95 - median), pire jour, frequence des jours galere.
 
+Fenetre : on ne poll qu'entre 04:00 et 18:00 UTC (06:00-20:00 Paris) pour rester sous le quota
+gratuit TomTom (2500/j) : 24 points x 6/h x 14h ~= 2000 appels/j.
+
 Cle : env TOMTOM_KEY (GitHub Actions secret) ou data/raw/tomtom_key.txt (local).
-A lancer regulierement (Cloudflare Worker -> workflow_dispatch, ~toutes les 10-15 min).
+A lancer regulierement (Cloudflare Worker -> workflow_dispatch, ~toutes les 10 min).
 
 Sortie : data/rt/autoroutes/<date>.csv   (append)
-  poll_utc, origine, autoroute, temps_live_min, temps_libre_min, retard_min, distance_km
+  poll_utc, origine, axe, type, temps_live_min, temps_libre_min, retard_min, distance_km
 """
 from __future__ import annotations
 import os
@@ -26,8 +30,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CORR = ROOT / "data" / "rt" / "corridors_autoroutes.csv"
 OUTDIR = ROOT / "data" / "rt" / "autoroutes"
 LILLE = "50.63658,3.07103"
-COLS = ["poll_utc", "origine", "autoroute", "temps_live_min", "temps_libre_min",
+COLS = ["poll_utc", "origine", "axe", "type", "temps_live_min", "temps_libre_min",
         "retard_min", "distance_km"]
+HEURE_MIN_UTC, HEURE_MAX_UTC = 4, 18   # 06h-20h Paris (ete)
 
 KEY = os.environ.get("TOMTOM_KEY", "").strip()
 if not KEY:
@@ -59,8 +64,12 @@ def route(lat: float, lon: float) -> dict | None:
 
 
 def one_pass() -> None:
-    poll_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    d_service = dt.date.today().strftime("%Y%m%d")
+    now = dt.datetime.now(dt.timezone.utc)
+    if not (HEURE_MIN_UTC <= now.hour < HEURE_MAX_UTC):
+        print(f"{now:%H:%M}Z hors fenetre ({HEURE_MIN_UTC}-{HEURE_MAX_UTC}h UTC) -> skip")
+        return
+    poll_utc = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    d_service = now.date().strftime("%Y%m%d")
     rows = []
     with open(CORR, encoding="utf-8-sig") as f:
         corridors = list(csv.DictReader(f))
@@ -68,7 +77,7 @@ def one_pass() -> None:
         r = route(float(c["lat"]), float(c["lon"]))
         if r:
             rows.append({"poll_utc": poll_utc, "origine": c["origine"],
-                         "autoroute": c["autoroute"], **r})
+                         "axe": c["axe"], "type": c["type"], **r})
         time.sleep(0.3)
 
     OUTDIR.mkdir(parents=True, exist_ok=True)

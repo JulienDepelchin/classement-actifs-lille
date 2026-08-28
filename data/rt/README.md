@@ -46,9 +46,11 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 
 ## Fiabilité des autoroutes vers Lille (parallèle au TER)
 
-- **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** (temps de trajet
-  maintenant) depuis 12 villes d'entrée (`corridors_autoroutes.csv`) vers Lille-Flandres. Un
-  instantané par run → `data/rt/autoroutes/<date>.csv`.
+- **`scripts/poll_autoroutes_tomtom.py`** interroge TomTom en **trafic live** depuis **24 points
+  d'entrée** (`corridors_autoroutes.csv`) vers Lille-Flandres : 12 corridors autoroutiers + 12
+  points sur les axes **départementaux** là où la voiture prime sur le train (Weppes, Pévèle,
+  Mélantois, rocade nord-ouest / M652). Un instantané par run → `data/rt/autoroutes/<date>.csv`.
+  Ne poll qu'entre 04:00 et 18:00 UTC (06 h-20 h Paris) pour tenir le quota gratuit (~2 000 appels/j).
 - **`.github/workflows/poll-autoroutes.yml`** (`workflow_dispatch` seul), déclenché par le **même
   Worker Cloudflare** que le TER.
 - Clé TomTom = **secret GitHub Actions** `TOMTOM_KEY` (Settings → Secrets and variables → Actions).
