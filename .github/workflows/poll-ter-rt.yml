@@ -1,0 +1,54 @@
+name: poll-ter-rt
+
+# Capture la ponctualite reelle des TER vers Lille via le GTFS-RT SNCF.
+# Fenetres de pointe (heure de Paris = UTC+2 en septembre) :
+#   matin  06:00-10:00 Paris -> 04:00-08:00 UTC
+#   soir   16:00-20:00 Paris -> 14:00-18:00 UTC
+# Chaque run poll ~4 min (loop interne toutes les 75 s) puis commit une fois.
+
+on:
+  schedule:
+    - cron: "*/5 4-8,14-18 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "duree du loop (min)"
+        default: "4"
+
+concurrency:
+  group: poll-ter-rt
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet gtfs-realtime-bindings
+
+      - name: poll
+        run: python scripts/poll_ter_rt.py --loop "${{ github.event.inputs.minutes || '4' }}"
+
+      - name: commit
+        run: |
+          git config user.name  "ter-rt-bot"
+          git config user.email "actions@github.com"
+          git add data/rt/updates
+          if git diff --cached --quiet; then
+            echo "rien a committer"
+            exit 0
+          fi
+          git commit -m "rt: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+            echo "push retry $i"; sleep 5
+          done

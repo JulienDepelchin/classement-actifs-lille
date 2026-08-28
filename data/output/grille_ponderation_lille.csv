@@ -1,0 +1,41 @@
+﻿theme,theme_libelle,etoiles_defaut,critere_colonne,critere_libelle,fichier_source,sens,poids,winsor,imputation,note
+transport,Transport vers Lille,5,meilleur_temps_vers_lille_min,Meilleur trajet alternatif a la voiture integrale,transport_communes_candidates.csv,inverser,7,,mediane,porte-a-porte du meilleur mode hors voiture-tout-le-trajet ; le TER inclut le rabattement voiture (park & ride) -> 0 NaN
+transport,Transport vers Lille,5,ratio_alternatif_vs_voiture,Dependance a la voiture,transport_communes_candidates.csv,inverser,4,p95,mediane,meilleur trajet alternatif / temps voiture pure ; proche de 1 = le park & ride ne bat pas la voiture -> captif ; 0 NaN
+transport,Transport vers Lille,5,option_sans_voiture,Existe-t-il une option 100% sans voiture ?,transport_communes_candidates.csv,normal,3,,0,binaire 0/1 ; 287/411 communes ont un trajet sans voiture du tout
+transport,Transport vers Lille,5,trains_arr_lille_matin,Trains directs arrivant a Lille le matin,transport_communes_candidates.csv,normal,5,p95,0,frequence a la pointe (05h30-09h30)
+transport,Transport vers Lille,5,cout_mensuel_meilleur_mode_eur,Cout mensuel du meilleur mode,transport_communes_candidates.csv,inverser,4,p95,mediane,abo TER/Ilevia net du remboursement 50% ; NOTE : pour le park & ride ne compte pas la possession + le rabattement voiture (~+30 EUR/mois)
+transport,Transport vers Lille,5,indice_congestion,Congestion aux heures de pointe,bouchons_communes_lille.csv,inverser,4,p95,mediane,temps pointe / temps fluide (TomTom) ; pese aussi sur le rabattement voiture vers la gare ; fichier bouchons_communes_lille.csv
+transport,Transport vers Lille,5,acces_gare_proche_moy_min,Acces a une gare TER,transport_communes_candidates.csv,inverser,3,p95,mediane,temps routier moyen vers la gare la plus proche (BPE)
+transport,Transport vers Lille,5,cyclable_util_km_1000hab,Reseau cyclable utilitaire,cyclable_communes_candidates.csv,normal,3,p90,0,km d'amenagements cyclables utilitaires / 1000 hab (Ecolab/Geovelo 2025)
+prix_immobilier,Prix de l'immobilier,1,prix_maison_m2,Prix des maisons au m2,cadre_urbain_communes_candidates.csv,inverser,6,p5_p95,mediane,SeLoger/MeilleursAgents avril 2026 ; winsor DEUX queues : les prix planchers (marche en detresse) ne doivent pas scorer 20/20
+prix_immobilier,Prix de l'immobilier,1,prix_appart_m2,Prix des appartements au m2,cadre_urbain_communes_candidates.csv,inverser,2,p5_p95,mediane,
+prix_immobilier,Prix de l'immobilier,1,loyers_maison_m2,Loyers des maisons au m2,cadre_urbain_communes_candidates.csv,inverser,2,p5_p95,mediane,
+sante,Santé,3,apl_mg_m65,Acces aux medecins generalistes (<= 65 ans),sante_communes_candidates.csv,normal,7,,mediane,"APL DREES 2024, indicateur prospectif"
+sante,Santé,3,apl_dent,Acces aux chirurgiens-dentistes,sante_communes_candidates.csv,normal,4,,mediane,APL DREES 2024 (profession la plus tendue)
+sante,Santé,3,acces_urgences_moy_min,Temps d'acces aux urgences,sante_communes_candidates.csv,inverser,5,p95,mediane,"BPE 2025, temps routier moyen pondere pop"
+sante,Santé,3,acces_maternite_moy_min,Temps d'acces a une maternite,sante_communes_candidates.csv,inverser,3,p95,mediane,BPE 2025
+sante,Santé,3,apl_mg_evol_pct,Trajectoire des generalistes 2022->2024,sante_communes_candidates.csv,normal,2,p5_p95,mediane,en baisse dans 296/411 communes ; a lire en tendance
+education,Éducation & petite enfance,3,couverture_petite_enfance_epci,Couverture petite enfance,education_communes_candidates.csv,normal,6,,mediane,"CNAF 2023, tous modes de garde, niveau EPCI"
+education,Éducation & petite enfance,3,acces_college_moy_min,Temps d'acces a un college,education_communes_candidates.csv,inverser,5,p95,mediane,BPE 2025
+education,Éducation & petite enfance,3,acces_lycee_moy_min,Temps d'acces a un lycee,education_communes_candidates.csv,inverser,4,p95,mediane,BPE 2025
+education,Éducation & petite enfance,3,college_sur_place,College dans la commune,education_communes_candidates.csv,normal,2,,0,0/1
+commerces,Commerces & services,2,commerces_essentiels_sur_place,Panier de commerces essentiels sur place,commerces_communes_candidates.csv,normal,6,,0,"0-7 : boulangerie, boucherie, epicerie/superette, pharmacie, poste, ecole, medecin"
+commerces,Commerces & services,2,acces_supermarche_moy_min,Temps d'acces a un supermarche,commerces_communes_candidates.csv,inverser,4,p95,mediane,BPE 2025
+commerces,Commerces & services,2,resto_pour_1000hab,Restaurants pour 1000 habitants,commerces_communes_candidates.csv,normal,2,p95,0,"BPE stock 2024, winsorise (artefact zones commerciales)"
+sport_nature,Sport & nature,2,surf_ev_m2_par_hab,Espaces verts (m2 par habitant),sport_nature_communes_candidates.csv,normal,5,p95,mediane,parcs/jardins/bois OSM x population
+sport_nature,Sport & nature,2,clubs_pour_1000hab,Clubs sportifs pour 1000 habitants,sport_nature_communes_candidates.csv,normal,4,p95,mediane,INJEP 2023
+sport_nature,Sport & nature,2,acces_piscine_moy_min,Temps d'acces a une piscine,sport_nature_communes_candidates.csv,inverser,3,p95,mediane,BPE 2025
+sport_nature,Sport & nature,2,acces_randonnee_moy_min,Temps d'acces a un sentier de randonnee,sport_nature_communes_candidates.csv,inverser,3,p95,mediane,BPE 2025
+securite,Sécurité,2,cambriolages_taux,Taux de cambriolages,securite_communes_candidates.csv,inverser,5,p95,mediane,"SSMSI, moyenne 2022-2024, pour 1000 logements ; ~45% des cellules estimees"
+securite,Sécurité,2,degradations_taux,Taux de degradations volontaires,securite_communes_candidates.csv,inverser,4,p95,mediane,SSMSI moy. 2022-2024
+securite,Sécurité,2,vols_sans_violence_taux,Taux de vols sans violence,securite_communes_candidates.csv,inverser,4,p95,mediane,SSMSI moy. 2022-2024
+securite,Sécurité,2,vols_vehicules_taux,Taux de vols lies aux vehicules,securite_communes_candidates.csv,inverser,3,p95,mediane,fusion vols_de_vehicule + vols_dans_vehicules (SSMSI) ; pertinent pour qui se gare a la gare
+environnement,Environnement & risques,3,air_pct_jours_degrades,Qualite de l'air : jours degrades,environnement_communes_candidates.csv,inverser,1,,mediane,"% de jours indice ATMO >= 3 (jan-juil 2026, 169j) ; discrimine tres peu -> poids 1 en attendant les concentrations NO2/PM modelisees (V1.1)"
+environnement,Environnement & risques,3,artif_pct_2009_2024,Rythme d'artificialisation des sols,environnement_communes_candidates.csv,inverser,3,p95,mediane,"CEREMA, flux 2009-2024"
+environnement,Environnement & risques,3,imper_pct_2021,Impermeabilisation des sols,environnement_communes_candidates.csv,inverser,2,p95,mediane,CEREMA 2021 ; correle a la densite urbaine (tension editoriale)
+environnement,Environnement & risques,3,risque_minier,Alea minier,georisques_communes_candidates.csv,inverser,3,,0,"0/1 ; affaissement, effondrement, gaz de mine (113 communes)"
+environnement,Environnement & risques,3,catnat_inondation_depuis_2010_n,Inondations recentes,georisques_communes_candidates.csv,inverser,3,p95,0,nb d'arretes CatNat inondation depuis 2010
+environnement,Environnement & risques,3,rga_pct_moyen_fort,Retrait-gonflement des argiles (exposition),rga_communes_candidates.csv,inverser,3,,0,part de la surface communale en alea moyen+fort (DREAL HdF / BRGM) ; etude de sol obligatoire avant construction depuis la loi ELAN ; 131 communes majoritairement exposees
+cadre_urbain,Cadre urbain & logement,3,part_logts_vacants,Part de logements vacants,cadre_urbain_communes_candidates.csv,inverser,4,p95,mediane,INSEE RP 2023 ; proxy de vitalite du tissu urbain
+cadre_urbain,Cadre urbain & logement,3,part_passoires_pct,Part de passoires thermiques (DPE F-G),dpe_communes_candidates.csv,inverser,4,p95,mediane,"ADEME DPE 07/2021-08/2026 ; echantillon de transactions, pas le parc complet"
+cadre_urbain,Cadre urbain & logement,3,evol_pop_2016_2022_pct,Dynamique demographique 2016-2022,cadre_urbain_communes_candidates.csv,normal,3,p5_p95,mediane,INSEE

@@ -1,0 +1,21 @@
+# --- secrets : ne JAMAIS versionner ---
+data/raw/tomtom_key.txt
+**/tomtom_key.txt
+*.key
+
+# --- donnees brutes telechargees (volumineuses, regenerables via scripts/download_*.py) ---
+data/raw/
+data/interim/
+cache/
+
+# data/rt/ (poller GTFS-RT) et data/output/ SONT versionnes
+
+# --- python ---
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# --- OS ---
+Thumbs.db
+.DS_Store
