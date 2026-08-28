@@ -1,0 +1,25 @@
+poll_utc,origine,axe,type,temps_live_min,temps_libre_min,retard_min,distance_km
+2026-08-28T14:30:28Z,Douai,A1,autoroute,40.0,31.1,8.9,42.2
+2026-08-28T14:30:28Z,Lens,A21 / A1,autoroute,38.5,31.1,7.4,41.4
+2026-08-28T14:30:28Z,Arras,A1,autoroute,49.3,39.0,10.3,54.1
+2026-08-28T14:30:28Z,Béthune,A26 / A25,autoroute,53.4,42.4,11.0,44.5
+2026-08-28T14:30:28Z,Dunkerque,A25,autoroute,57.4,52.0,5.4,80.5
+2026-08-28T14:30:28Z,Hazebrouck,A25,autoroute,41.3,36.0,5.3,48.3
+2026-08-28T14:30:28Z,La Bassée,RN41,autoroute,32.2,26.3,5.9,28.1
+2026-08-28T14:30:28Z,Valenciennes,A23,autoroute,42.1,34.5,7.6,51.3
+2026-08-28T14:30:28Z,Tourcoing,A22,autoroute,24.1,19.7,4.4,13.9
+2026-08-28T14:30:28Z,Orchies,A23 / A27,autoroute,24.9,20.2,4.7,25.7
+2026-08-28T14:30:28Z,Maubeuge,A2 / A23,autoroute,67.8,56.0,11.8,87.1
+2026-08-28T14:30:28Z,Cambrai,A2 / A23,autoroute,59.6,50.9,8.7,80.3
+2026-08-28T14:30:28Z,Wavrin,Weppes (D),secondaire,23.8,20.0,3.7,19.3
+2026-08-28T14:30:28Z,Sainghin-en-Weppes,Weppes (D),secondaire,29.3,25.0,4.3,22.6
+2026-08-28T14:30:28Z,Herlies,Weppes (D),secondaire,26.9,22.1,4.7,23.2
+2026-08-28T14:30:28Z,Fromelles,Weppes (D),secondaire,27.6,23.8,3.8,22.1
+2026-08-28T14:30:28Z,Pérenchies,rocade NO / M652,secondaire,24.0,21.1,2.9,20.7
+2026-08-28T14:30:28Z,Prémesques,rocade NO / M652,secondaire,25.6,20.6,4.9,18.3
+2026-08-28T14:30:28Z,Templeuve-en-Pévèle,Pévèle (D),secondaire,25.1,20.9,4.2,17.8
+2026-08-28T14:30:28Z,Cappelle-en-Pévèle,Pévèle (D),secondaire,28.3,22.7,5.6,30.6
+2026-08-28T14:30:28Z,Cysoing,Pévèle (D),secondaire,28.2,23.1,5.1,17.4
+2026-08-28T14:30:28Z,Bourghelles,Pévèle (D),secondaire,28.1,24.0,4.1,23.3
+2026-08-28T14:30:28Z,Péronne-en-Mélantois,Mélantois (D),secondaire,23.9,20.2,3.6,16.9
+2026-08-28T14:30:28Z,Bouvines,Mélantois (D),secondaire,23.3,18.7,4.6,13.9
