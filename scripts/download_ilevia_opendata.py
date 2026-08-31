@@ -46,18 +46,19 @@ def fetch_json(url: str) -> dict:
 
 def dump(nom: str, coll: str) -> None:
     rows: list[dict] = []
-    offset = 0
-    while True:
-        url = f"{BASE}/{coll}/items?f=application/json&limit={PAGE}&offset={offset}"
+    # GeoServer OGC API : la pagination se fait en suivant le lien rel="next"
+    # (il ignore ?offset= ; startIndex est gere via ce lien).
+    url = f"{BASE}/{coll}/items?f=application/json&limit={PAGE}"
+    matched = None
+    while url:
         fc = fetch_json(url)
         feats = fc.get("features", [])
         rows.extend(f.get("properties", {}) for f in feats)
-        matched = fc.get("numberMatched")
-        print(f"  {nom}: {len(rows)}"
-              + (f" / {matched}" if matched is not None else ""))
-        if len(feats) < PAGE:
+        matched = fc.get("numberMatched", matched)
+        print(f"  {nom}: {len(rows)}" + (f" / {matched}" if matched is not None else ""))
+        if not feats or (matched is not None and len(rows) >= matched):
             break
-        offset += PAGE
+        url = next((l["href"] for l in fc.get("links", []) if l.get("rel") == "next"), None)
 
     if not rows:
         print(f"  {nom}: vide, ignore")

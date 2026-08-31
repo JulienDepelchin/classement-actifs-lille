@@ -1,0 +1,37 @@
+name: poll-ilevia-pertu
+
+# Perturbations du reseau ilevia (metro / tram / bus) -- open data MEL, sans cle.
+# Instantane non historise -> on poll pour reconstituer la frequence/duree des incidents,
+# en priorite ceux du metro. DECLENCHEMENT : Cloudflare Worker -> workflow_dispatch (~10 min).
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: poll-ilevia-pertu
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/poll_ilevia_perturbations.py
+      - name: commit
+        run: |
+          git config user.name  "ilevia-pertu-bot"
+          git config user.email "actions@github.com"
+          git add data/rt/ilevia_perturbations
+          if git diff --cached --quiet; then echo "rien a committer"; exit 0; fi
+          git commit -m "ilevia-pertu: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && break
+            echo "push retry $i"; sleep 5
+          done

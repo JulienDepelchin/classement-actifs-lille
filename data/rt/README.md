@@ -112,6 +112,23 @@ par filtre, la **régularité vers Lille** pour le classement « à moins d'une 
 sens : temps médian, **temps tampon** (p95 − médiane), pire jour, % de « jours galère »
 (> 1,5× la médiane), courbe horaire, écart matin/soir.
 
+## Incidents réseau ilévia — métro en priorité (open data MEL)
+
+- **`scripts/poll_ilevia_perturbations.py`** interroge l'OGC API Features de la MEL
+  (`data.lillemetropole.fr/.../dsp_ilevia:perturbations/items`, Licence Ouverte, sans clé),
+  instantané rafraîchi chaque minute mais **non historisé**. On garde un snapshot par poll pour
+  reconstituer **fréquence et durée des incidents**, surtout ceux du **métro** (« défaut sur une
+  rame, ligne 1 interrompue entre REPUBLIQUE et CHU »…).
+- `cible` → `mode` : `ME1`/`ME2` = métro L1/L2, `71` = tram, reste = bus/Liane/Corolle.
+  `type` = `Perturbation` (incident en cours) vs `Information` (travaux, événement).
+- Sortie `data/rt/ilevia_perturbations/<date>/<poll_utc>.csv.gz` (~8 Ko/poll).
+- **`.github/workflows/poll-ilevia-pertu.yml`** (`workflow_dispatch`), à ajouter au Worker Cloudflare
+  (`WORKFLOWS`). Exploitation : par `id_perturbation` de type `Perturbation` sur ME1/ME2 →
+  1re vue / dernière vue = durée ; comptage par ligne et par mois ; tronçon extrait du message.
+- Le classement **ponctualité bus** ne vient PAS d'ici mais de l'open data mensuel
+  `dsp_ilevia:ponctualite` (`scripts/download_ilevia_opendata.py` + `analyse_ilevia_ponctualite.py`,
+  4 ans, par ligne : retards / avances / services non effectués → `ilevia_ponctualite_lignes.csv`).
+
 ## Exploitation TER (après ~3-4 semaines)
 
 `scripts/build_regularite_reelle.py` (à écrire) : `ter_npdc/*/*.csv.gz` → dernier état connu par
