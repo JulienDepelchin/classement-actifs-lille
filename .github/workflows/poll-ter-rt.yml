@@ -1,6 +1,6 @@
 name: poll-ter-rt
 
-# Capture la ponctualite reelle des TER vers Lille via le GTFS-RT SNCF.
+# Capture la ponctualite reelle des TER du Nord / Pas-de-Calais via le GTFS-RT SNCF.
 # DECLENCHEMENT : cron externe (cron-job.org) qui appelle l'API workflow_dispatch toutes les
 # 10 min (le planificateur natif de GitHub etant trop peu fiable). Voir data/rt/README.md.
 # Chaque run poll ~8 min (loop interne toutes les 75 s) puis 1 commit.
@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name  "ter-rt-bot"
           git config user.email "actions@github.com"
-          git add data/rt/updates
+          git add data/rt/ter_npdc data/rt/gares_npdc.csv
           if git diff --cached --quiet; then
             echo "rien a committer"
             exit 0

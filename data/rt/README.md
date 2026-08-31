@@ -1,15 +1,25 @@
-# Collecte GTFS-RT — ponctualité réelle des TER vers Lille
+# Collecte GTFS-RT — ponctualité réelle des TER du Nord / Pas-de-Calais
 
-Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
+Pallie l'absence de données SNCF de régularité à la maille ligne/gare. Sert deux livrables :
+la **fiabilité ligne par ligne** (article « les lignes TER les plus fiables du NPDC ») et,
+par filtre, la **régularité vers Lille** pour le classement « à moins d'une heure de Lille ».
 
 ## Fonctionnement
 
 - **`scripts/poll_ter_rt.py`** interroge le flux GTFS-RT SNCF
   (`https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates`, sans clé) et écrit,
-  pour chaque TER desservant Lille, le retard / l'annulation constatés aux **75 gares suivies**
-  (`gares_suivies.csv` = 2 gares de Lille + 73 gares utiles des communes candidates).
+  pour **tout TER touchant au moins une gare du 59/62**, le retard / l'annulation constatés à
+  **toutes les gares du 59/62** (`gares_npdc.csv` = 190 gares, dont Lille-Flandres / Lille-Europe
+  tagguées `role=lille`). Généré par `scripts/gares_npdc_rt.py`.
+- Sortie : **un fichier gzip par poll**, immuable —
+  `data/rt/ter_npdc/<date_service>/<poll_utc>.csv.gz`
+  (colonnes : `poll_utc, date_service, trip_id, start_time, uic, role, stop_seq, arr_delay_s,
+  dep_delay_s, trip_annule, stop_saute`). Chaque ligne = l'état connu d'un passage (train × gare)
+  à l'instant du poll ; l'agrégation prendra le **dernier état connu** par passage.
+- L'ancienne collecte restreinte à Lille (`data/rt/updates/*.csv`, 75 gares, 28-31 août 2026)
+  reste dans le dépôt comme historique — elle n'est plus alimentée.
 - **`.github/workflows/poll-ter-rt.yml`** fait le poll (loop ~8 min, une requête toutes les 75 s)
-  puis commit `data/rt/updates/`. Il n'a **que le trigger `workflow_dispatch`** — le planificateur
+  puis commit `data/rt/ter_npdc/`. Il n'a **que le trigger `workflow_dispatch`** — le planificateur
   natif de GitHub est trop peu fiable (premier run retardé de plusieurs heures, runs silencieusement
   sautés). Le déclenchement vient d'un **cron externe** (cron-job.org), toutes les 10 min.
 - Collecte visée : toute la journée de service, 7 j/7 → permet aussi l'angle « à quelle heure / quel
@@ -40,7 +50,7 @@ Pallie l'absence de données SNCF de régularité à la maille ligne/gare.
 
 ## Mise en route (à faire une fois)
 
-1. `python scripts/gares_suivies_rt.py` — (re)génère la liste des gares
+1. `python scripts/gares_npdc_rt.py` — (re)génère `gares_npdc.csv` (190 gares 59/62)
 2. repo poussé sur GitHub, onglet **Actions** activé
 3. le workflow tourne seul ; `workflow_dispatch` pour un test manuel
 
@@ -104,7 +114,12 @@ sens : temps médian, **temps tampon** (p95 − médiane), pire jour, % de « jo
 
 ## Exploitation TER (après ~3-4 semaines)
 
-`scripts/build_regularite_reelle.py` (à écrire) : `updates/*.csv` → ponctualité par gare et par
-ligne — `% arrivées à Lille < 5 min`, `% annulations`, retard médian / p90, nb d'observations.
+`scripts/build_regularite_reelle.py` (à écrire) : `ter_npdc/*/*.csv.gz` → dernier état connu par
+passage (trip × gare), puis :
+- **par ligne** (reconstruire l'appartenance ligne + l'ordre des arrêts depuis le GTFS statique,
+  `stop_sequence` étant peu fiable dans le flux) : `% arrivées < 5 min`, `% annulations`, retard
+  médian / p90 → classement des lignes NPDC.
+- **par gare** : même chose, pour la carte.
+- **filtre Lille** (`role=lille` + gares utiles) : le critère `ter_ponctualite` du classement.
 Restreindre aux trains de pointe en semaine ; signaler les jours de grève ; recouper avec le
 mensuel régional (`data/raw/sncf/regularite_ter_hdf.csv`).

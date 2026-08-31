@@ -1,20 +1,26 @@
 """
-Poller GTFS-RT SNCF : capture le retard/annulation des TER desservant Lille, aux gares suivies.
+Poller GTFS-RT SNCF : capture le retard / l'annulation des TER du Nord et du Pas-de-Calais,
+a toutes les gares du 59/62.
 
 Flux : https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates
   (protobuf GTFS-RT TripUpdates, national, sans cle, rafraichi ~toutes les 2 min).
 
-Un appel = un instantane. A lancer regulierement (GitHub Actions, cron */5 sur les fenetres de
-pointe). Chaque ligne ecrite = l'etat connu, a l'instant du poll, d'un passage (train x gare).
-L'agregation (scripts/build_regularite_reelle.py, plus tard) prendra le DERNIER etat connu par
-passage.
+Un appel = un instantane. A lancer regulierement (GitHub Actions, loop interne). Chaque ligne
+ecrite = l'etat connu, a l'instant du poll, d'un passage (train x gare). L'agregation
+(scripts/build_regularite_reelle.py, plus tard) prendra le DERNIER etat connu par passage :
+  - regularite ligne par ligne pour l'article "les lignes TER les plus fiables du NPDC" ;
+  - sous-ensemble Lille x gares utiles pour le classement "a moins d'une heure de Lille".
 
-Sortie : data/rt/updates/<date_service>.csv   (append, entete cree au besoin)
+On garde tout train qui dessert AU MOINS une gare du 59/62 (data/rt/gares_npdc.csv), et pour
+ce train tous ses arrets situes dans le 59/62.
+
+Sortie : data/rt/ter_npdc/<date_service>/<poll_utc>.csv.gz   (1 fichier gzip par poll, immuable)
   poll_utc, date_service, trip_id, start_time, uic, role, stop_seq,
   arr_delay_s, dep_delay_s, trip_annule, stop_saute
 """
 from __future__ import annotations
 import csv
+import gzip
 import re
 import sys
 import time
@@ -29,8 +35,8 @@ except ImportError:
     sys.exit("pip install gtfs-realtime-bindings")
 
 ROOT = Path(__file__).resolve().parents[1]
-GARES = ROOT / "data" / "rt" / "gares_suivies.csv"
-OUTDIR = ROOT / "data" / "rt" / "updates"
+GARES = ROOT / "data" / "rt" / "gares_npdc.csv"
+OUTDIR = ROOT / "data" / "rt" / "ter_npdc"
 FEED = "https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates"
 UIC_RE = re.compile(r"(\d{7,8})(?!.*\d)")   # dernier bloc de 7-8 chiffres du stop_id
 
@@ -70,9 +76,10 @@ def fetch() -> gtfs_realtime_pb2.FeedMessage:
 
 def main() -> None:
     gares = load_gares()
-    lille_uics = {u for u, r in gares.items() if r == "lille"}
     feed = fetch()
-    poll_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = dt.datetime.now(dt.timezone.utc)
+    poll_utc = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    stamp = now.strftime("%Y%m%dT%H%M%SZ")
 
     by_date: dict[str, list[dict]] = {}
     n_trips = 0
@@ -82,8 +89,8 @@ def main() -> None:
         tu = e.trip_update
         stus = list(tu.stop_time_update)
         uics = [uic_of(s.stop_id) for s in stus]
-        if not (lille_uics & set(u for u in uics if u)):
-            continue                                   # ce train ne dessert pas Lille
+        if not any(u in gares for u in uics if u):
+            continue                                   # ce train ne touche aucune gare 59/62
         n_trips += 1
         trip_annule = int(tu.trip.schedule_relationship == CANCELED)
         d_service = tu.trip.start_date or dt.date.today().strftime("%Y%m%d")
@@ -100,19 +107,16 @@ def main() -> None:
                 "stop_saute": int(s.schedule_relationship == STU_SKIPPED),
             })
 
-    OUTDIR.mkdir(parents=True, exist_ok=True)
     total = 0
     for d_service, rows in by_date.items():
-        path = OUTDIR / f"{d_service}.csv"
-        new = not path.exists()
-        with open(path, "a", newline="", encoding="utf-8") as f:
+        d = OUTDIR / d_service
+        d.mkdir(parents=True, exist_ok=True)
+        with gzip.open(d / f"{stamp}.csv.gz", "wt", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=COLS)
-            if new:
-                w.writeheader()
+            w.writeheader()
             w.writerows(rows)
         total += len(rows)
-    print(f"{poll_utc} | trains vers Lille : {n_trips} | lignes ecrites : {total} "
-          f"| dates : {sorted(by_date)}")
+    print(f"{poll_utc} | trains NPDC : {n_trips} | lignes : {total} | dates : {sorted(by_date)}")
 
 
 def loop(minutes: float, every_s: float = 75.0) -> None:
