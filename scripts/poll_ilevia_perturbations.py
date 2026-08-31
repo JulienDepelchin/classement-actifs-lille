@@ -27,8 +27,15 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTDIR = ROOT / "data" / "rt" / "ilevia_perturbations"
 URL = ("https://data.lillemetropole.fr/geoserver/ogc/features/v1/collections/"
        "dsp_ilevia:perturbations/items?f=application/json&limit=1000")
-COLS = ["poll_utc", "id_perturbation", "id_message", "type", "cible", "mode",
-        "heure_fin_prevue", "date_modification", "message"]
+COLS = ["poll_utc", "feed_maj_max", "feed_age_min", "id_perturbation", "id_message",
+        "type", "cible", "mode", "heure_fin_prevue", "date_modification", "message"]
+
+
+def parse_iso(s: str) -> dt.datetime | None:
+    try:
+        return dt.datetime.fromisoformat((s or "").replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def mode_of(cible: str) -> str:
@@ -47,12 +54,18 @@ def main() -> None:
     stamp = poll_utc.strftime("%Y%m%dT%H%M%SZ")
     day = poll_utc.strftime("%Y%m%d")
 
+    props = [f.get("properties", {}) for f in fc.get("features", [])]
+    majs = [m for m in (parse_iso(p.get("date_modification", "")) for p in props) if m]
+    feed_maj_max = max(majs) if majs else None
+    feed_age_min = round((poll_utc - feed_maj_max).total_seconds() / 60, 1) if feed_maj_max else ""
+
     rows = []
-    for f in fc.get("features", []):
-        p = f.get("properties", {})
+    for p in props:
         cible = (p.get("cible") or "").replace("ILEVIA:LineRef::", "").replace(":LOC", "")
         rows.append({
             "poll_utc": poll_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "feed_maj_max": feed_maj_max.strftime("%Y-%m-%dT%H:%M:%SZ") if feed_maj_max else "",
+            "feed_age_min": feed_age_min,
             "id_perturbation": p.get("identifiant_perturbation", ""),
             "id_message": p.get("identifiant_message", ""),
             "type": p.get("type_perturbation", ""),
@@ -74,8 +87,9 @@ def main() -> None:
     for r in rows:
         par_mode[r["mode"]] = par_mode.get(r["mode"], 0) + 1
     incidents = [r for r in rows if r["type"] == "Perturbation"]
-    print(f"{stamp} | {len(rows)} perturbations {par_mode} | "
-          f"dont {len(incidents)} 'en cours'"
+    gel = isinstance(feed_age_min, float) and feed_age_min > 20
+    print(f"{stamp} | {len(rows)} perturbations {par_mode} | dont {len(incidents)} 'en cours'"
+          f" | flux maj il y a {feed_age_min} min" + ("  ** FLUX GELE ? **" if gel else "")
           + (" -> " + "; ".join(f"[{i['cible']}] {i['message'][:70]}" for i in incidents)
              if incidents else ""))
 
