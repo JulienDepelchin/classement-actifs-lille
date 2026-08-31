@@ -2,6 +2,13 @@
 Premier classement de fiabilite des lignes ilevia a partir de dsp_ilevia:ponctualite
 (indices mensuels par ligne : retards, avances, services non effectues).
 
+valeur_mensuelle / moyenne_annuelle = des POURCENTAGES de passages.
+Convention contractuelle UTP / Keolis Lille (fiche horaire) :
+  - en avance  : plus de 1 min avant l'heure theorique
+  - a l'heure  : de 1 min d'avance a 5 min de retard
+  - en retard  : plus de 5 min de retard
+Donc "indice de retards" d'une ligne = % de passages a plus de 5 min de retard.
+
 Sortie console + data/output/ilevia_ponctualite_lignes.csv
 """
 from __future__ import annotations
