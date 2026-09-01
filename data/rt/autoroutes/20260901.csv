@@ -620,3 +620,29 @@ poll_utc,categorie,libelle,zone_axe,type,sens,temps_live_min,temps_libre_min,ret
 2026-09-01T09:00:35Z,point,Prémesques,rocade NO / M652,départementale,vers_lille,22.1,20.6,1.5,18.3
 2026-09-01T09:00:35Z,point,Neuville-en-Ferrain,Ferrain,départementale,vers_lille,17.9,16.5,1.4,18.2
 2026-09-01T09:00:35Z,point,Sailly-sur-la-Lys,Lys,départementale,vers_lille,27.9,26.4,1.6,28.7
+2026-09-01T09:30:35Z,point,Douai,Douaisis,autoroute A1,vers_lille,33.5,31.1,2.3,42.2
+2026-09-01T09:30:35Z,point,Lens,Gohelle,autoroute A21 / A1,vers_lille,33.7,31.1,2.7,41.4
+2026-09-01T09:30:35Z,point,Arras,Artois,autoroute A1,vers_lille,42.3,39.0,3.3,54.1
+2026-09-01T09:30:35Z,point,Béthune,Béthunois,autoroute A26 / A25,vers_lille,47.6,43.0,4.6,44.0
+2026-09-01T09:30:35Z,point,Dunkerque,Flandre maritime,autoroute A25,vers_lille,55.3,52.0,3.3,80.5
+2026-09-01T09:30:35Z,point,Hazebrouck,Flandre intérieure,autoroute A25,vers_lille,38.5,36.0,2.6,48.3
+2026-09-01T09:30:35Z,point,La Bassée,Weppes,autoroute RN41,vers_lille,28.2,26.3,1.9,28.1
+2026-09-01T09:30:35Z,point,Valenciennes,Valenciennois,autoroute A23,vers_lille,37.2,34.5,2.7,51.3
+2026-09-01T09:30:35Z,point,Tourcoing,Ferrain,autoroute A22,vers_lille,22.4,19.6,2.8,19.1
+2026-09-01T09:30:35Z,point,Orchies,Pévèle,autoroute A23 / A27,vers_lille,21.4,20.2,1.2,25.7
+2026-09-01T09:30:35Z,point,Maubeuge,Avesnois,autoroute A2 / A23,vers_lille,59.5,56.0,3.5,87.1
+2026-09-01T09:30:35Z,point,Cambrai,Cambrésis,autoroute A2 / A23,vers_lille,54.7,50.9,3.8,80.3
+2026-09-01T09:30:35Z,point,Wavrin,Weppes,départementale,vers_lille,21.8,20.0,1.7,19.3
+2026-09-01T09:30:35Z,point,Sainghin-en-Weppes,Weppes,départementale,vers_lille,26.8,25.0,1.8,22.6
+2026-09-01T09:30:35Z,point,Herlies,Weppes,départementale,vers_lille,23.7,22.1,1.5,23.2
+2026-09-01T09:30:35Z,point,Fromelles,Weppes,départementale,vers_lille,25.7,23.8,1.9,22.1
+2026-09-01T09:30:35Z,point,Templeuve-en-Pévèle,Pévèle,départementale,vers_lille,23.2,20.9,2.3,17.8
+2026-09-01T09:30:35Z,point,Cappelle-en-Pévèle,Pévèle,départementale,vers_lille,24.3,22.7,1.6,30.6
+2026-09-01T09:30:35Z,point,Cysoing,Pévèle,départementale,vers_lille,25.1,22.2,2.9,16.1
+2026-09-01T09:30:35Z,point,Bourghelles,Pévèle,départementale,vers_lille,25.5,24.0,1.5,23.3
+2026-09-01T09:30:35Z,point,Péronne-en-Mélantois,Mélantois,départementale,vers_lille,22.2,20.4,1.9,14.7
+2026-09-01T09:30:35Z,point,Bouvines,Mélantois,départementale,vers_lille,20.6,18.7,1.9,13.9
+2026-09-01T09:30:35Z,point,Pérenchies,rocade NO / M652,départementale,vers_lille,23.6,21.5,2.1,20.9
+2026-09-01T09:30:35Z,point,Prémesques,rocade NO / M652,départementale,vers_lille,22.3,20.6,1.6,18.3
+2026-09-01T09:30:35Z,point,Neuville-en-Ferrain,Ferrain,départementale,vers_lille,18.2,16.5,1.7,18.2
+2026-09-01T09:30:35Z,point,Sailly-sur-la-Lys,Lys,départementale,vers_lille,28.1,26.4,1.8,28.7
