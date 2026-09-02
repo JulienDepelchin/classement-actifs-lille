@@ -18,6 +18,7 @@ import csv
 import gzip
 import json
 import sys
+import time
 import datetime as dt
 import urllib.request
 from pathlib import Path
@@ -47,9 +48,20 @@ def mode_of(cible: str) -> str:
     return "bus"
 
 
+def fetch() -> dict:
+    for essai in (1, 2, 3):
+        try:
+            req = urllib.request.Request(URL, headers={"User-Agent": "vdn-classement-lille/1.0"})
+            return json.loads(urllib.request.urlopen(req, timeout=90).read())
+        except Exception as e:
+            if essai == 3:
+                raise
+            print(f"  retry ({e})")
+            time.sleep(10)
+
+
 def main() -> None:
-    req = urllib.request.Request(URL, headers={"User-Agent": "vdn-classement-lille/1.0"})
-    fc = json.loads(urllib.request.urlopen(req, timeout=90).read())
+    fc = fetch()
     poll_utc = dt.datetime.now(dt.timezone.utc)
     stamp = poll_utc.strftime("%Y%m%dT%H%M%SZ")
     day = poll_utc.strftime("%Y%m%d")
@@ -95,4 +107,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # une source open data indisponible = un poll saute, pas un echec de workflow
+    # (evite les mails d'alerte GitHub pour un alea reseau passager).
+    try:
+        main()
+    except Exception as e:
+        print(f"poll saute -- source indisponible : {e}")
+        sys.exit(0)

@@ -15,6 +15,7 @@ from __future__ import annotations
 import re
 import sys
 import csv
+import time
 import datetime as dt
 import urllib.request
 from pathlib import Path
@@ -41,10 +42,21 @@ def num(x: str) -> float | None:
     return None if v in SENTINELLES else v
 
 
+def fetch(url: str) -> str:
+    for essai in (1, 2, 3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "vdn-classement-lille/1.0"})
+            return urllib.request.urlopen(req, timeout=120).read().decode("utf-8", "ignore")
+        except Exception as e:
+            if essai == 3:
+                raise
+            print(f"  retry ({e})")
+            time.sleep(10)
+
+
 def main() -> None:
     routes = load_routes()
-    raw = urllib.request.urlopen(urllib.request.Request(FEED, headers={"User-Agent": "vdn-classement-lille/1.0"}),
-                                 timeout=120).read().decode("utf-8", "ignore")
+    raw = fetch(FEED)
     poll_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     rows = []
@@ -88,4 +100,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # une source open data indisponible = un poll saute, pas un echec de workflow
+    # (evite les mails d'alerte GitHub pour un alea reseau passager).
+    try:
+        main()
+    except Exception as e:
+        print(f"poll saute -- source indisponible : {e}")
+        sys.exit(0)
