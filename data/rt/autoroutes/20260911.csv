@@ -454,3 +454,34 @@ poll_utc,categorie,libelle,zone_axe,type,sens,temps_live_min,temps_libre_min,ret
 2026-09-11T06:50:29Z,troncon,Approche A1 (Fretin-Ronchin),A1 vers Lille,troncon,vers_lille,20.2,14.6,5.6,12.2
 2026-09-11T06:50:29Z,troncon,Croix - Wasquehal,A22 vers Lille,troncon,vers_lille,14.8,11.9,2.9,7.4
 2026-09-11T06:50:29Z,troncon,Haubourdin - Loos,RN41 vers Lille,troncon,vers_lille,25.2,20.7,4.5,9.4
+2026-09-11T07:01:06Z,point,Douai,Douaisis,autoroute A1,vers_lille,38.8,31.3,7.5,42.2
+2026-09-11T07:01:06Z,point,Lens,Gohelle,autoroute A21 / A1,vers_lille,36.6,33.0,3.6,39.9
+2026-09-11T07:01:06Z,point,Arras,Artois,autoroute A1,vers_lille,50.3,41.4,8.9,54.6
+2026-09-11T07:01:06Z,point,Béthune,Béthunois,autoroute A26 / A25,vers_lille,49.0,43.2,5.8,44.0
+2026-09-11T07:01:06Z,point,Dunkerque,Flandre maritime,autoroute A25,vers_lille,59.4,54.5,4.9,80.8
+2026-09-11T07:01:06Z,point,Hazebrouck,Flandre intérieure,autoroute A25,vers_lille,36.6,34.5,2.1,46.8
+2026-09-11T07:01:06Z,point,La Bassée,Weppes,autoroute RN41,vers_lille,30.9,26.4,4.5,28.1
+2026-09-11T07:01:06Z,point,Valenciennes,Valenciennois,autoroute A23,vers_lille,38.3,34.7,3.6,51.3
+2026-09-11T07:01:06Z,point,Tourcoing,Ferrain,autoroute A22,vers_lille,26.2,21.3,4.9,14.8
+2026-09-11T07:01:06Z,point,Orchies,Pévèle,autoroute A23 / A27,vers_lille,22.4,20.2,2.2,25.7
+2026-09-11T07:01:06Z,point,Maubeuge,Avesnois,autoroute A2 / A23,vers_lille,59.8,56.3,3.5,87.2
+2026-09-11T07:01:06Z,point,Cambrai,Cambrésis,autoroute A2 / A23,vers_lille,57.8,53.6,4.1,84.0
+2026-09-11T07:01:06Z,point,Wavrin,Weppes,départementale,vers_lille,23.9,20.1,3.8,19.3
+2026-09-11T07:01:06Z,point,Sainghin-en-Weppes,Weppes,départementale,vers_lille,28.6,25.1,3.5,22.6
+2026-09-11T07:01:06Z,point,Herlies,Weppes,départementale,vers_lille,25.8,22.2,3.5,23.2
+2026-09-11T07:01:06Z,point,Fromelles,Weppes,départementale,vers_lille,28.1,25.1,3.0,21.8
+2026-09-11T07:01:06Z,point,Templeuve-en-Pévèle,Pévèle,départementale,vers_lille,24.0,21.0,2.9,17.8
+2026-09-11T07:01:06Z,point,Cappelle-en-Pévèle,Pévèle,départementale,vers_lille,25.1,22.8,2.2,30.6
+2026-09-11T07:01:06Z,point,Cysoing,Pévèle,départementale,vers_lille,27.5,23.3,4.2,17.4
+2026-09-11T07:01:06Z,point,Bourghelles,Pévèle,départementale,vers_lille,28.7,24.1,4.6,23.3
+2026-09-11T07:01:06Z,point,Péronne-en-Mélantois,Mélantois,départementale,vers_lille,22.7,20.3,2.4,16.9
+2026-09-11T07:01:06Z,point,Bouvines,Mélantois,départementale,vers_lille,22.9,18.8,4.1,13.9
+2026-09-11T07:01:06Z,point,Pérenchies,rocade NO / M652,départementale,vers_lille,24.5,21.6,2.9,20.9
+2026-09-11T07:01:06Z,point,Prémesques,rocade NO / M652,départementale,vers_lille,23.2,20.7,2.5,18.3
+2026-09-11T07:01:06Z,point,Neuville-en-Ferrain,Ferrain,départementale,vers_lille,33.2,27.9,5.4,18.2
+2026-09-11T07:01:06Z,point,Sailly-sur-la-Lys,Lys,départementale,vers_lille,31.3,29.4,1.9,30.7
+2026-09-11T07:01:06Z,troncon,Échangeur d'Englos,A25 vers Lille,troncon,vers_lille,11.6,10.3,1.3,7.9
+2026-09-11T07:01:06Z,troncon,Rocade ouest (Lomme),M652 vers Lille,troncon,vers_lille,19.3,14.9,4.4,6.2
+2026-09-11T07:01:06Z,troncon,Approche A1 (Fretin-Ronchin),A1 vers Lille,troncon,vers_lille,17.1,14.6,2.5,11.8
+2026-09-11T07:01:06Z,troncon,Croix - Wasquehal,A22 vers Lille,troncon,vers_lille,14.7,11.9,2.8,7.4
+2026-09-11T07:01:06Z,troncon,Haubourdin - Loos,RN41 vers Lille,troncon,vers_lille,23.6,20.1,3.5,14.4
