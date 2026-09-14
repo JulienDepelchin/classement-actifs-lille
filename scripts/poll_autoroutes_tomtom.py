@@ -78,7 +78,13 @@ def _in(win, t):
     return win[0] <= t < win[1]
 
 
+PAUSE_FLAG = ROOT / "data" / "rt" / "AUTOROUTES_PAUSE.md"
+
+
 def one_pass() -> None:
+    if PAUSE_FLAG.exists():
+        print("collecte en pause (voir data/rt/AUTOROUTES_PAUSE.md) -- rien fait")
+        return
     now = dt.datetime.now(dt.timezone.utc)
     t = now.time()
     matin, soir = _in(POINTE_MATIN, t), _in(POINTE_SOIR, t)
