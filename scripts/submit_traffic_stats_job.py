@@ -11,10 +11,13 @@ mentionnee obligatoire, pas de calcul derive (extrapolation) a partir de ces don
 on affiche les chiffres Traffic Stats tels quels, a cote de nos autres sources.
 """
 from __future__ import annotations
+import gzip
+import io
 import os
 import sys
 import json
 import time
+import zipfile
 import urllib.request
 from pathlib import Path
 
@@ -63,13 +66,33 @@ def attendre(job_id: str, intervalle_s: int = 30, max_min: int = 30) -> dict:
     sys.exit(f"timeout apres {max_min} min, job toujours en cours (jobId={job_id})")
 
 
+def deduire_extension(brut: bytes) -> str:
+    """Les 4 exports arrivent tous gzippes en transport, quel que soit le format reel."""
+    if brut[:2] == b"\x1f\x8b":
+        brut = gzip.decompress(brut)
+    if brut[:1] == b"{":
+        return (".geojson" if b'"FeatureCollection"' in brut[:400] else ".json"), brut
+    if brut[:2] == b"PK":
+        with zipfile.ZipFile(io.BytesIO(brut)) as z:
+            noms = z.namelist()
+        if any(n.startswith("xl/") or n == "[Content_Types].xml" for n in noms):
+            return ".xlsx", brut
+        if any(n.endswith(".geojson") for n in noms):
+            return ".geojson.zip", brut
+        if any(n.endswith(".shp") for n in noms):
+            return ".shapefile.zip", brut
+        return ".zip", brut
+    return ".bin", brut
+
+
 def telecharger(urls: list[str], nom_lot: str) -> None:
     OUTDIR.mkdir(parents=True, exist_ok=True)
-    for u in urls:
-        ext = u.split("?")[0].rsplit(".", 1)[-1]
-        dest = OUTDIR / f"{nom_lot}.{ext}"
-        urllib.request.urlretrieve(u, dest)
-        print(f"  -> {dest}")
+    for i, u in enumerate(urls):
+        brut = urllib.request.urlopen(u, timeout=120).read()
+        ext, contenu = deduire_extension(brut)
+        dest = OUTDIR / f"{nom_lot}{ext}"
+        dest.write_bytes(contenu)
+        print(f"  -> {dest}  ({len(contenu):,} octets)")
 
 
 def main() -> None:
