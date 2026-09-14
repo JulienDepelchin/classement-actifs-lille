@@ -12,6 +12,14 @@ Limites du produit (doc officielle) : 200 km max par route, 20 routes max par re
 366 jours max par plage de dates (732 jours uniques cumules), 24 plages de dates, 24
 "timeSets". D'ou le decoupage en lots de 20 routes.
 
+Limites de l'ESSAI GRATUIT (dashboard TomTom, verifie 2026-09-14, peuvent differer du
+produit complet) : 20 reports au total (nos 2 lots = 2/20), 3 reports max EN COURS en
+meme temps (soumettre sequentiellement, cf submit_traffic_stats_job.py qui attend la
+fin d'un job avant de rendre la main), 200 km/route (idem produit complet), et surtout
+**fenetre de donnees limitee a juillet 2026** (pas l'archive ~2 ans du produit payant) --
+a garder en tete pour l'analyse : juillet = vacances scolaires, trafic probablement
+plus fluide qu'un mois "normal" de rentree.
+
 Sortie : data/rt/traffic_stats_requests/batch1.json, batch2.json -- prets a soumettre
 via submit_traffic_stats_job.py des qu'une cle API Traffic Stats est disponible.
 """
@@ -64,9 +72,10 @@ def build_routes() -> list[dict]:
 
 
 def build_date_ranges() -> list[dict]:
-    hier = dt.date.today() - dt.timedelta(days=1)
-    debut = hier - dt.timedelta(days=364)  # 365 jours, sous la limite de 366
-    return [{"name": "12 derniers mois", "from": debut.isoformat(), "to": hier.isoformat()}]
+    # Fenetre imposee par l'essai gratuit Traffic Stats (dashboard TomTom, 2026-09-14) :
+    # seul juillet 2026 est interrogeable, pas l'archive ~2 ans du produit complet.
+    # A ajuster si le forfait change.
+    return [{"name": "Juillet 2026", "from": "2026-07-01", "to": "2026-07-31"}]
 
 
 def build_time_sets() -> list[dict]:
