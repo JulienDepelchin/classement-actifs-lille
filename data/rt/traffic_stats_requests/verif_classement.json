@@ -1,0 +1,301 @@
+{
+  "jobName": "VDN verif classement -- echantillon rang",
+  "distanceUnit": "KILOMETERS",
+  "routes": [
+    {
+      "name": "Marquette-lez-Lille -> Lille",
+      "start": {
+        "latitude": 50.67409,
+        "longitude": 3.05946
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Wattignies -> Lille",
+      "start": {
+        "latitude": 50.58619,
+        "longitude": 3.04153
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Baisieux -> Lille",
+      "start": {
+        "latitude": 50.61083,
+        "longitude": 3.24145
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Lezennes -> Lille",
+      "start": {
+        "latitude": 50.61167,
+        "longitude": 3.11787
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Allennes-les-Marais -> Lille",
+      "start": {
+        "latitude": 50.54153,
+        "longitude": 2.94807
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Genech -> Lille",
+      "start": {
+        "latitude": 50.52863,
+        "longitude": 3.22221
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Férin -> Lille",
+      "start": {
+        "latitude": 50.33111,
+        "longitude": 3.08069
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Radinghem-en-Weppes -> Lille",
+      "start": {
+        "latitude": 50.62831,
+        "longitude": 2.89796
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Provin -> Lille",
+      "start": {
+        "latitude": 50.51296,
+        "longitude": 2.9115
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Wattrelos -> Lille",
+      "start": {
+        "latitude": 50.70535,
+        "longitude": 3.21696
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Bondues -> Lille",
+      "start": {
+        "latitude": 50.70987,
+        "longitude": 3.09563
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Landas -> Lille",
+      "start": {
+        "latitude": 50.47257,
+        "longitude": 3.2945
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Salomé -> Lille",
+      "start": {
+        "latitude": 50.53589,
+        "longitude": 2.83653
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Morbecque -> Lille",
+      "start": {
+        "latitude": 50.67668,
+        "longitude": 2.53625
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Quesnoy-sur-Deûle -> Lille",
+      "start": {
+        "latitude": 50.71295,
+        "longitude": 3.00728
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Avion -> Lille",
+      "start": {
+        "latitude": 50.40396,
+        "longitude": 2.82696
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Le Doulieu -> Lille",
+      "start": {
+        "latitude": 50.67993,
+        "longitude": 2.69943
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Monchecourt -> Lille",
+      "start": {
+        "latitude": 50.30644,
+        "longitude": 3.21053
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    }
+  ],
+  "dateRanges": [
+    {
+      "name": "Juillet 2026",
+      "from": "2026-07-01",
+      "to": "2026-07-31"
+    }
+  ],
+  "timeSets": [
+    {
+      "name": "Semaine 7h-8h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "07:00-08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 8h-9h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "08:00-09:00"
+          ]
+        }
+      ]
+    }
+  ]
+}
