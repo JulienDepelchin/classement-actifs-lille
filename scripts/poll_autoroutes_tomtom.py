@@ -131,6 +131,12 @@ def one_pass() -> None:
     tag = "POINTE" if pointe else "epaule"
     print(f"{poll_utc} [{tag}] {len(rows)} lignes | retard median {med:.0f} min")
 
+    # 0 ligne alors qu'on avait des points a interroger = panne systemique (cle TomTom
+    # invalide/expiree, pas un simple point en echec) -> on fait echouer le run pour etre
+    # alerte, plutot que de laisser des fichiers vides s'accumuler en silence.
+    if not rows and points:
+        sys.exit(f"0/{len(points)} points ont repondu -- cle TomTom invalide, expiree ou HS ?")
+
 
 if __name__ == "__main__":
     one_pass()
