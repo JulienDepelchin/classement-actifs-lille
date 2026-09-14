@@ -4,12 +4,15 @@ Poller "fiabilite des routes vers Lille" -- version gratuite optimisee.
 Trafic LIVE TomTom (sans departAt) : on veut la DISTRIBUTION jour apres jour, pas un temps moyen.
   -> temps median, "temps tampon" (p95 - median), pire jour, % de jours galere, courbe horaire.
 
-Echantillonnage adapte a l'heure pour tenir sous le quota gratuit (2500 appels/j) :
+Echantillonnage adapte a l'heure pour tenir sous le forfait GRATUIT reel de la cle
+(20 000 transactions/mois, pas 2500/jour comme suppose au depart -- forfait epuise le
+11/09 apres ~1650 appels/j depuis fin aout, cf data/rt/AUTOROUTES_PAUSE.md) :
   - POINTE matin (04:45-07:15 UTC) et soir (14:15-17:15 UTC) : tous les points + tous les
-    troncons a chaque run (cron ~10 min) ; le RETOUR (Lille -> point) uniquement le soir.
-  - EPAULE / journee (jusqu'a 18:30 UTC) : seulement aux minutes 00 et 30 (~toutes les 30 min).
+    troncons, mais seulement aux minutes 00 et 30 (cadence 30 min, plus le ~10 min d'avant) ;
+    le RETOUR (Lille -> point) uniquement le soir.
+  - EPAULE / journee (jusqu'a 18:30 UTC) : points seulement, minute 00 uniquement (~60 min).
   - NUIT : rien.
-Budget estime ~1650 appels/j.
+Budget vise ~630 appels/j (~19 000/mois, marge sous les 20 000 gratuits).
 
 Cle : env TOMTOM_KEY (secret GitHub Actions) ou data/raw/tomtom_key.txt (local).
 
@@ -91,8 +94,10 @@ def one_pass() -> None:
     pointe = matin or soir
     if not _in(JOURNEE, t):
         print(f"{now:%H:%M}Z nuit -> skip"); return
-    if not pointe and now.minute not in (0, 1, 2, 30, 31, 32):
-        print(f"{now:%H:%M}Z epaule, pas l'heure -> skip"); return
+    if pointe and now.minute not in (0, 1, 2, 30, 31, 32):
+        print(f"{now:%H:%M}Z pointe, pas l'heure (cadence 30 min) -> skip"); return
+    if not pointe and now.minute not in (0, 1, 2):
+        print(f"{now:%H:%M}Z epaule, pas l'heure (cadence 60 min) -> skip"); return
 
     poll_utc = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     with open(PTS, encoding="utf-8-sig") as f:
