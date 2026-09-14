@@ -1,0 +1,564 @@
+{
+  "jobName": "VDN classement Lille -- lot 1/2",
+  "distanceUnit": "KILOMETERS",
+  "routes": [
+    {
+      "name": "Douai -> Lille",
+      "start": {
+        "latitude": 50.38172,
+        "longitude": 3.09074
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Lens -> Lille",
+      "start": {
+        "latitude": 50.43761,
+        "longitude": 2.82108
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Arras -> Lille",
+      "start": {
+        "latitude": 50.28991,
+        "longitude": 2.76626
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Béthune -> Lille",
+      "start": {
+        "latitude": 50.52896,
+        "longitude": 2.64298
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Dunkerque -> Lille",
+      "start": {
+        "latitude": 51.03053,
+        "longitude": 2.33677
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Hazebrouck -> Lille",
+      "start": {
+        "latitude": 50.72607,
+        "longitude": 2.53861
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "La Bassée -> Lille",
+      "start": {
+        "latitude": 50.53987,
+        "longitude": 2.80943
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Valenciennes -> Lille",
+      "start": {
+        "latitude": 50.35906,
+        "longitude": 3.5163
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Tourcoing -> Lille",
+      "start": {
+        "latitude": 50.72573,
+        "longitude": 3.1596
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Orchies -> Lille",
+      "start": {
+        "latitude": 50.4687,
+        "longitude": 3.23904
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Maubeuge -> Lille",
+      "start": {
+        "latitude": 50.28423,
+        "longitude": 3.96314
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Cambrai -> Lille",
+      "start": {
+        "latitude": 50.17029,
+        "longitude": 3.24229
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Wavrin -> Lille",
+      "start": {
+        "latitude": 50.57244,
+        "longitude": 2.93299
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Sainghin-en-Weppes -> Lille",
+      "start": {
+        "latitude": 50.55913,
+        "longitude": 2.897
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Herlies -> Lille",
+      "start": {
+        "latitude": 50.58148,
+        "longitude": 2.85257
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Fromelles -> Lille",
+      "start": {
+        "latitude": 50.61068,
+        "longitude": 2.85414
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Templeuve-en-Pévèle -> Lille",
+      "start": {
+        "latitude": 50.53261,
+        "longitude": 3.17346
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Cappelle-en-Pévèle -> Lille",
+      "start": {
+        "latitude": 50.50478,
+        "longitude": 3.17443
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Cysoing -> Lille",
+      "start": {
+        "latitude": 50.56454,
+        "longitude": 3.21419
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Bourghelles -> Lille",
+      "start": {
+        "latitude": 50.5634,
+        "longitude": 3.24691
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    }
+  ],
+  "dateRanges": [
+    {
+      "name": "12 derniers mois",
+      "from": "2025-09-14",
+      "to": "2026-09-13"
+    }
+  ],
+  "timeSets": [
+    {
+      "name": "Semaine 5h-6h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "05:00-06:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 6h-7h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "06:00-07:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 7h-8h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "07:00-08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 8h-9h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "08:00-09:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 9h-10h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "09:00-10:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 10h-11h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "10:00-11:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 11h-12h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "11:00-12:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 12h-13h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "12:00-13:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 13h-14h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "13:00-14:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 14h-15h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "14:00-15:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 15h-16h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "15:00-16:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 16h-17h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "16:00-17:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 17h-18h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "17:00-18:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 18h-19h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "18:00-19:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine journee complete",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "05:00-19:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Week-end journee complete",
+      "timeGroups": [
+        {
+          "days": [
+            "SAT",
+            "SUN"
+          ],
+          "times": [
+            "05:00-19:00"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "jobName": "VDN classement Lille -- lot 2/2",
+  "distanceUnit": "KILOMETERS",
+  "routes": [
+    {
+      "name": "Péronne-en-Mélantois -> Lille",
+      "start": {
+        "latitude": 50.56434,
+        "longitude": 3.17077
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Bouvines -> Lille",
+      "start": {
+        "latitude": 50.58182,
+        "longitude": 3.19275
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Pérenchies -> Lille",
+      "start": {
+        "latitude": 50.67006,
+        "longitude": 2.96887
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Prémesques -> Lille",
+      "start": {
+        "latitude": 50.66043,
+        "longitude": 2.94886
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Neuville-en-Ferrain -> Lille",
+      "start": {
+        "latitude": 50.75394,
+        "longitude": 3.15619
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Sailly-sur-la-Lys -> Lille",
+      "start": {
+        "latitude": 50.65876,
+        "longitude": 2.78329
+      },
+      "end": {
+        "latitude": 50.63658,
+        "longitude": 3.07103
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Échangeur d'Englos",
+      "start": {
+        "latitude": 50.62622,
+        "longitude": 2.95653
+      },
+      "end": {
+        "latitude": 50.632,
+        "longitude": 3.03
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Rocade ouest (Lomme)",
+      "start": {
+        "latitude": 50.647,
+        "longitude": 2.99
+      },
+      "end": {
+        "latitude": 50.636,
+        "longitude": 3.055
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Approche A1 (Fretin-Ronchin)",
+      "start": {
+        "latitude": 50.56578,
+        "longitude": 3.13211
+      },
+      "end": {
+        "latitude": 50.62,
+        "longitude": 3.075
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Croix - Wasquehal",
+      "start": {
+        "latitude": 50.67393,
+        "longitude": 3.15516
+      },
+      "end": {
+        "latitude": 50.645,
+        "longitude": 3.09
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    },
+    {
+      "name": "Haubourdin - Loos",
+      "start": {
+        "latitude": 50.60397,
+        "longitude": 2.98706
+      },
+      "end": {
+        "latitude": 50.63,
+        "longitude": 3.06
+      },
+      "fullTraversal": false,
+      "zoneId": "Europe/Paris",
+      "probeSource": "ALL"
+    }
+  ],
+  "dateRanges": [
+    {
+      "name": "12 derniers mois",
+      "from": "2025-09-14",
+      "to": "2026-09-13"
+    }
+  ],
+  "timeSets": [
+    {
+      "name": "Semaine 5h-6h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "05:00-06:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 6h-7h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "06:00-07:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 7h-8h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "07:00-08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 8h-9h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "08:00-09:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 9h-10h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "09:00-10:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 10h-11h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "10:00-11:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 11h-12h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "11:00-12:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 12h-13h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "12:00-13:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 13h-14h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "13:00-14:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 14h-15h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "14:00-15:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 15h-16h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "15:00-16:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 16h-17h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "16:00-17:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 17h-18h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "17:00-18:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine 18h-19h",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "18:00-19:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Semaine journee complete",
+      "timeGroups": [
+        {
+          "days": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI"
+          ],
+          "times": [
+            "05:00-19:00"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Week-end journee complete",
+      "timeGroups": [
+        {
+          "days": [
+            "SAT",
+            "SUN"
+          ],
+          "times": [
+            "05:00-19:00"
+          ]
+        }
+      ]
+    }
+  ]
+}
