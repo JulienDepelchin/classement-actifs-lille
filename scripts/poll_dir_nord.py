@@ -87,6 +87,12 @@ def main() -> None:
             w.writeheader()
         w.writerows(rows)
 
+    # 0 station alors qu'on en attend ~168 = flux DIR Nord vide/malforme cette fois-ci
+    # (pas une exception, donc pas rattrape par le retry du fetch) -> echouer pour etre alerte
+    # plutot que d'ecrire des fichiers vides en silence (vu le 13/09, ~6h30 de trou).
+    if not rows:
+        sys.exit(f"0 station DIRN extraite du flux (sur {len(routes)} attendues) -- feed vide/HS ?")
+
     import collections
     v = collections.defaultdict(list)
     for r in rows:
