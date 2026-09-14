@@ -404,23 +404,6 @@
       ]
     },
     {
-      "name": "Semaine journee complete",
-      "timeGroups": [
-        {
-          "days": [
-            "MON",
-            "TUE",
-            "WED",
-            "THU",
-            "FRI"
-          ],
-          "times": [
-            "05:00-19:00"
-          ]
-        }
-      ]
-    },
-    {
       "name": "Week-end journee complete",
       "timeGroups": [
         {

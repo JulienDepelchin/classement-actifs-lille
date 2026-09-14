@@ -79,16 +79,15 @@ def build_date_ranges() -> list[dict]:
 
 
 def build_time_sets() -> list[dict]:
+    # Les timeSets doivent etre mutuellement exclusifs (contrainte API : "inclusively
+    # separate") -- pas d'agregat "journee complete" en semaine, il chevaucherait les
+    # 14 tranches horaires. On le recalcule nous-memes a partir d'elles a l'analyse.
     sets = []
     for h in HEURES_JOUR:
         sets.append({
             "name": f"Semaine {h}h-{h+1}h",
             "timeGroups": [{"days": JOURS_SEMAINE, "times": [f"{h:02d}:00-{h+1:02d}:00"]}],
         })
-    sets.append({
-        "name": "Semaine journee complete",
-        "timeGroups": [{"days": JOURS_SEMAINE, "times": [f"{min(HEURES_JOUR):02d}:00-{max(HEURES_JOUR)+1:02d}:00"]}],
-    })
     sets.append({
         "name": "Week-end journee complete",
         "timeGroups": [{"days": JOURS_WE, "times": [f"{min(HEURES_JOUR):02d}:00-{max(HEURES_JOUR)+1:02d}:00"]}],

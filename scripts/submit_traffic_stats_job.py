@@ -32,8 +32,12 @@ if not KEY:
 def call(url: str, data: bytes | None = None) -> dict:
     req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"},
                                  method="POST" if data else "GET")
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        corps = e.read().decode("utf-8", "ignore")
+        sys.exit(f"HTTP {e.code} : {corps}")
 
 
 def submit(payload_path: Path) -> str:
