@@ -24,10 +24,18 @@ jobs:
           python-version: "3.12"
       - run: python scripts/poll_dir_nord.py
       - name: commit
+        if: always()
+        # if: always() est indispensable ici : le marqueur de panne (dir_nord_derniere_alerte.txt)
+        # doit etre commite MEME quand le step precedent echoue (c'est justement le cas ou on
+        # vient de l'ecrire) -- sinon chaque run reparata d'un checkout sans le marqueur et
+        # realerterait a chaque fois (cf 45 mails la nuit du 14-15/09).
         run: |
           git config user.name  "dir-nord-bot"
           git config user.email "actions@github.com"
           git add data/rt/dir_nord
+          if [ -f data/rt/dir_nord_derniere_alerte.txt ] || git ls-files --error-unmatch data/rt/dir_nord_derniere_alerte.txt >/dev/null 2>&1; then
+            git add -A data/rt/dir_nord_derniere_alerte.txt
+          fi
           if git diff --cached --quiet; then echo "rien a committer"; exit 0; fi
           git commit -m "dir-nord: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
           for i in 1 2 3 4 5; do

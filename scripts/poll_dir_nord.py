@@ -27,6 +27,11 @@ OUTDIR = ROOT / "data" / "rt" / "dir_nord"
 FEED = "https://transport.data.gouv.fr/resources/79165/download"
 COLS = ["poll_utc", "feed_time", "code_pme", "route", "vitesse_kmh", "debit_vh"]
 SENTINELLES = {9999999.0, 999999.0, 99999.0, -1.0}
+# panne prolongee (vu le 13 et le 14/09, plusieurs heures d'affilee) -> une seule alerte par
+# episode plutot qu'un mail toutes les 10 min pendant des heures. Marqueur commite (persiste
+# entre les runs Actions, chacun repart d'un checkout propre).
+MARKER = ROOT / "data" / "rt" / "dir_nord_derniere_alerte.txt"
+RELANCE_ALERTE_APRES = dt.timedelta(hours=1)
 
 
 def load_routes() -> dict[str, str]:
@@ -90,8 +95,23 @@ def main() -> None:
     # 0 station alors qu'on en attend ~168 = flux DIR Nord vide/malforme cette fois-ci
     # (pas une exception, donc pas rattrape par le retry du fetch) -> echouer pour etre alerte
     # plutot que d'ecrire des fichiers vides en silence (vu le 13/09, ~6h30 de trou).
+    # Mais une panne dure des heures (vu le 14-15/09, 45 mails en une nuit) -> une seule alerte
+    # par episode : on ne re-echoue (mail) que si la derniere alerte date de plus d'une heure.
     if not rows:
+        now = dt.datetime.now(dt.timezone.utc)
+        if MARKER.exists():
+            derniere = dt.datetime.fromisoformat(MARKER.read_text().strip())
+            if now - derniere < RELANCE_ALERTE_APRES:
+                print(f"0 station -- panne deja signalee il y a {(now - derniere).seconds // 60} min, "
+                      f"pas de nouvelle alerte (marqueur {MARKER.name})")
+                return
+        MARKER.parent.mkdir(parents=True, exist_ok=True)
+        MARKER.write_text(now.isoformat())
         sys.exit(f"0 station DIRN extraite du flux (sur {len(routes)} attendues) -- feed vide/HS ?")
+
+    if MARKER.exists():
+        print("flux retabli -- marqueur de panne efface")
+        MARKER.unlink()
 
     import collections
     v = collections.defaultdict(list)

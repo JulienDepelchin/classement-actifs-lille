@@ -27,6 +27,9 @@ __pycache__/
 mail_*.md
 notes_*.md
 
+# --- exports de dashboards tiers (identifiant partiel de cle, compte perso) ---
+analytics.csv
+
 # --- OS ---
 Thumbs.db
 .DS_Store
