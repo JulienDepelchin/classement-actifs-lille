@@ -33,6 +33,14 @@ SENTINELLES = {9999999.0, 999999.0, 99999.0, -1.0}
 MARKER = ROOT / "data" / "rt" / "dir_nord_derniere_alerte.txt"
 RELANCE_ALERTE_APRES = dt.timedelta(hours=1)
 
+# Flux DIRN indisponible chaque nuit, quasi a l'heure pile : observe 7 nuits de suite
+# (15 au 22/09/2026) de 20:11 a 03:41 UTC -- fenetre de maintenance cote source, pas un
+# alea reseau. On saute le poll sans meme tenter le fetch : pas de retry pour rien, pas
+# d'alerte. A resurveiller apres le changement d'heure (~25/10/2026) si la fenetre glisse
+# d'1h (probable si la maintenance est calee en heure locale Paris plutot qu'UTC).
+NUIT_DEBUT = dt.time(20, 0)
+NUIT_FIN = dt.time(4, 0)
+
 
 def load_routes() -> dict[str, str]:
     with open(STATIONS, encoding="utf-8-sig") as f:
@@ -60,6 +68,11 @@ def fetch(url: str) -> str:
 
 
 def main() -> None:
+    now_utc = dt.datetime.now(dt.timezone.utc)
+    if now_utc.time() >= NUIT_DEBUT or now_utc.time() < NUIT_FIN:
+        print(f"{now_utc:%Y-%m-%dT%H:%MZ} -- fenetre de nuit (flux DIRN indisponible ~20h-4h UTC), poll saute")
+        return
+
     routes = load_routes()
     raw = fetch(FEED)
     poll_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
