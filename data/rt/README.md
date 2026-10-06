@@ -67,6 +67,10 @@ par filtre, la **régularité vers Lille** pour le classement « à moins d'une 
 - Sortie `data/rt/dir_nord/<date>.csv` : `poll_utc, feed_time, code_pme, route, vitesse_kmh, debit_vh`.
 - **Publiable sans réserve** (données de l'État). Exploitation : par axe, vitesse par tranche
   horaire / jour de semaine, % de temps en congestion (< 50 km/h), point noir persistant, débit.
+- Le même poller archive aussi les **temps de parcours** de ~20 itinéraires lillois (Bison Futé
+  `TP-DIR/TraficLille_DataTRP.xml`, fichier unique écrasé en continu) dans
+  `data/rt/dir_nord/temps_parcours/<date>.csv` (`poll_utc, mesure_time, site_id, duree_s`).
+  Itinéraires non localisés : table des sites `TraficLille` demandée à la DIR Nord (06/10/2026).
 
 ## Départementales — poller TomTom (complément, Weppes / Pévèle / Mélantois)
 

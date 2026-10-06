@@ -10,6 +10,12 @@ Aucune cle, aucun quota. A lancer regulierement (Cloudflare Worker -> workflow_d
 Entree  : data/rt/dir_nord_stations.csv  (code_pme -> route)
 Sortie  : data/rt/dir_nord/<date>.csv    (append)
   poll_utc, feed_time, code_pme, route, vitesse_kmh, debit_vh
+
+En plus : temps de parcours DIR Nord sur ~20 itineraires lillois (Bison Fute TP-DIR, fichier
+unique ecrase en continu -> sans archive, pas d'historique). Itineraires non localises tant que
+la DIR n'a pas fourni sa table des sites "TraficLille".
+Sortie  : data/rt/dir_nord/temps_parcours/<date>.csv (append)
+  poll_utc, mesure_time, site_id, duree_s
 """
 from __future__ import annotations
 import re
@@ -40,6 +46,35 @@ RELANCE_ALERTE_APRES = dt.timedelta(hours=1)
 # d'1h (probable si la maintenance est calee en heure locale Paris plutot qu'UTC).
 NUIT_DEBUT = dt.time(20, 0)
 NUIT_FIN = dt.time(4, 0)
+
+TP_FEED = "http://tipi.bison-fute.gouv.fr/bison-fute-ouvert/publicationsDIR/TP-DIR/TraficLille_DataTRP.xml"
+TP_OUTDIR = OUTDIR / "temps_parcours"
+TP_COLS = ["poll_utc", "mesure_time", "site_id", "duree_s"]
+
+
+def poll_temps_parcours() -> None:
+    raw = fetch(TP_FEED)
+    poll_utc = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    rows = []
+    for b in re.findall(r"<siteMeasurements>.*?</siteMeasurements>", raw, re.S):
+        sid = re.search(r'measurementSiteReference id="([^"]+)"', b)
+        t = re.search(r"<measurementTimeDefault>([^<]+)</", b)
+        d = re.search(r"<duration>([^<]+)</duration>", b)
+        if sid and d:
+            rows.append({"poll_utc": poll_utc, "mesure_time": t.group(1) if t else "",
+                         "site_id": sid.group(1), "duree_s": d.group(1)})
+    if not rows:
+        print("temps de parcours : 0 itineraire dans le flux -- poll saute")
+        return
+    TP_OUTDIR.mkdir(parents=True, exist_ok=True)
+    path = TP_OUTDIR / f"{dt.date.today():%Y%m%d}.csv"
+    new = not path.exists()
+    with open(path, "a", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=TP_COLS)
+        if new:
+            w.writeheader()
+        w.writerows(rows)
+    print(f"temps de parcours : {len(rows)} itineraires (mesure {rows[0]['mesure_time']})")
 
 
 def load_routes() -> dict[str, str]:
@@ -139,6 +174,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # avant main() : main() peut sys.exit (alerte 0 station), ce qui sauterait cette collecte
+    try:
+        poll_temps_parcours()
+    except Exception as e:
+        print(f"temps de parcours saute -- source indisponible : {e}")
     # une source open data indisponible = un poll saute, pas un echec de workflow
     # (evite les mails d'alerte GitHub pour un alea reseau passager).
     try:
